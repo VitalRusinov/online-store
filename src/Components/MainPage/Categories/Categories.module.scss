@@ -1,0 +1,18 @@
+.cat_container {
+  width: 1802px;
+  height: auto;
+  //background-color: red;
+
+  h2 {
+    font-weight: 500;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+  }
+
+  .categoriesList {
+    display: flex;
+    gap: 30px;
+  }
+}

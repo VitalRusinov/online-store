@@ -3,66 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
 import styles from './MainPage.module.scss';
-import BuyButton from '../BuyButton/BuyButton';
+import ProductsOfTheDay from './ProductsOfTheDay/ProductsOfTheDay';
+import Categories from './Categories/Categories';
 
 const MainPage = () => {
-  const [activeProduct, setActiveProduct] = useState(null);
-
-  const productsOfTheDayList = useSelector((state) => state.productsOfTheDay.entries);
-
-  useEffect(() => {
-    console.log(productsOfTheDayList, 'productsOfTheDayList')
-  }, [productsOfTheDayList]);
-
-  const getProductOfTheDayClasses = (product) => classNames(styles.productOfTheDay, {
-    [styles.active]: product === activeProduct,
-    [styles.inactive]: product !== activeProduct && activeProduct !== null,
-    }
-  );
-
-  let slidesCount = 0;
-
+  
   return (
     <div className={styles.main_container}>
-      <div className={styles.productsOfTheDayContainer}>
-        {productsOfTheDayList.map(product => {
-          slidesCount += 1;
-          return (
-            <div 
-              onMouseEnter={() => {
-                setActiveProduct(product);
-              }}
-              onMouseLeave={() => setActiveProduct(null)}
-              className={getProductOfTheDayClasses(product)}
-              key={product.id}
-            >
-              <div className={styles.designer_container}>
-                <p className={styles.designer_product}>Товар дня</p>
-                <span className={styles.designer}>{product.designer}</span>
-              </div>
-              <div className={styles.img_container}>
-                <img className={styles.image} src={product.image} alt="Изображение продукта" />
-              </div>
-              <div className={styles.description}>
-                <p>{product.name}</p>
-                <span>{product.description}</span>
-                <hr />
-                <div>
-                  <span className={styles.price}>{product.price}</span>
-                  <span className={styles.ruble}>&#x20bd;</span>
-                </div>
-              </div>
-              <div className={styles.button_Container}>
-                <BuyButton />
-              </div>
-              <div className={styles.slides_Container}>
-                <p>Слайд</p>
-                <span>{slidesCount}</span>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+      <ProductsOfTheDay />
+      <Categories />
     </div>
   )
 };
