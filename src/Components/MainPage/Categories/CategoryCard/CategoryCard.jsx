@@ -1,7 +1,16 @@
-import styles from './CategoriesCard.module.scss';
+import styles from './CategoryCard.module.scss';
 
-const CategoriesCard = ({category}) => {
+const CategoryCard = ({category, activeCategoryIdent, setActiveCategoryIdent}) => {
   const { id, image, name, categoryIdent } = category;
+
+  const handleClick = () => {
+    if (categoryIdent === activeCategoryIdent) {
+      setActiveCategoryIdent(null);
+      return;
+    }
+    setActiveCategoryIdent(categoryIdent);
+    return;
+  }
 
   return (
     <div key = {id} className={styles.categoriesCard}>
@@ -11,7 +20,7 @@ const CategoriesCard = ({category}) => {
           <path fillRule="evenodd" clipRule="evenodd" d="M83.6289 455.625C98.8589 469.226 121.265 458.556 132.088 441.241C146.648 417.948 169.193 403 194.5 403C219.626 403 242.029 417.735 256.598 440.741C267.533 458.011 290.025 468.583 305.196 454.884C355.264 409.675 388 334.764 388 250C388 243.069 382.224 237.709 375.336 236.937C355.438 234.707 337.984 226.446 330.992 211.451C321.908 191.971 330.108 169.463 348.347 150.371C357.937 140.333 362.795 125.802 356.517 113.42C321.885 45.1273 262.032 0 194 0C86.8568 0 0 111.929 0 250C0 335.229 33.0956 410.496 83.6289 455.625Z" fill="#CBB6FF" />
         </svg>
       </div>
-      <div className={styles.cat_button}>
+      <button className={styles.cat_button} onClick={handleClick}>
         <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_105_578)">
             <path d="M27.2734 22.6667C26.2134 22.6667 24.6306 23.7051 23.302 24.7562C21.5877 26.1077 20.092 27.7227 18.9506 29.5743C18.0949 30.9627 17.2734 32.6457 17.2734 34M17.2734 34C17.2734 32.6457 16.452 30.9612 15.5963 29.5743C14.4534 27.7227 12.9577 26.1077 11.2463 24.7562C9.9163 23.7051 8.33058 22.6667 7.27344 22.6667M17.2734 34L17.2734 -1.11265e-06" strokeWidth="2" strokeLinecap="round" />
@@ -22,7 +31,7 @@ const CategoriesCard = ({category}) => {
             </clipPath>
           </defs>
         </svg>
-      </div>
+      </button>
       <div className={styles.cat_prodCount}>
         <div className={styles.cat_prodCount_text}>
           <p>
@@ -55,4 +64,4 @@ const CategoriesCard = ({category}) => {
   )
 };
 
-export default CategoriesCard;
+export default CategoryCard;

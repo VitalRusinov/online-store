@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
 import styles from './ProductsOfTheDay.module.scss';
-import BuyButton from '../BuyButton/BuyButton';
+import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
 const ProductsOfTheDay = () => {
   const [activeProduct, setActiveProduct] = useState(null);

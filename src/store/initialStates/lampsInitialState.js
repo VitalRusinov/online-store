@@ -5,11 +5,11 @@ export const lampsInitialState = {
   entries: [
     {
       id: 'lamp_01',
-      image: 'Santa_Trinita',
+      image: Santa_Trinita,
       product: 'Лампа настольная',
       name: 'Santa Trinita',
       article: 'GNM001',
-      color: 'Лаванда',
+      color: 'lavander',
       description: 'Функциональная дизайнерская лампа для создания максимально комфортного освещения',
       designer: 'Benjamin Moor',
       size: {
@@ -19,11 +19,11 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_02',
-      image: 'Elven_Blossom',
+      image: Elven_Blossom,
       product: 'Люстра',
       name: 'Elven Blossom',
       article: 'GNM002',
-      color: 'Абрикос',
+      color: 'pink',
       description: 'Лампа в форме цветка с волшебным светом и переливами',
       designer: 'Ayla Silverleaf',
       size: {
@@ -37,7 +37,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Moonlit Branch',
       article: 'GNM003',
-      color: 'Зеленый',
+      color: 'green',
       description: 'Лампа, напоминающая изогнутую ветвь дерева с лунным светом',
       designer: 'Thalion Elensar',
       size: {
@@ -51,7 +51,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Starfall',
       article: 'GNM004',
-      color: 'розовый',
+      color: 'pink',
       description: 'Кристальная лампа в виде падающей звезды, дарящая звёздный свет',
       designer: 'Eldrin Lightweaver',
       size: {
@@ -65,7 +65,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Forest Whisper',
       article: 'GNM005',
-      color: 'голубой',
+      color: 'blue',
       description: 'Лампа в виде стебля с каплями светящейся росы, напоминающая лес',
       designer: 'Lirael Windwalker',
       size: {
@@ -79,7 +79,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Glade Flame',
       article: 'GNM006',
-      color: 'лазурный',
+      color: 'lazure',
       description: 'Лампа в виде огня в стеклянной сфере, напоминающая светлячков',
       designer: 'Finarfin Starbreeze',
       size: {
@@ -93,7 +93,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Elven Ivy',
       article: 'GNM007',
-      color: 'розовый',
+      color: 'pink',
       description: 'Лампа с металлическими ветвями плюща, создающая магическое сияние',
       designer: 'Nimrodel Leafsong',
       size: {
@@ -107,7 +107,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Sylvan Mirror',
       article: 'GNM008',
-      color: 'кедровый',
+      color: 'orange',
       description: 'Лампа-зеркало с орнаментом ветвей и игрой света и тени',
       designer: 'Elysia Moonshadow',
       size: {
@@ -121,7 +121,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Glimmering Grove',
       article: 'GNM009',
-      color: 'абрикосовый',
+      color: 'pink',
       description: 'Лампа-дерево, украшенное светящимися кристаллами из эльфийских легенд',
       designer: 'Caelith Brightblade',
       size: {
@@ -135,7 +135,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Twilight Lotus',
       article: 'GNM010',
-      color: 'лиловый',
+      color: 'lavander',
       description: 'Лампа-лотос с мягким светом, символизирующая гармонию и спокойствие',
       designer: 'Elowen Starflower',
       size: {

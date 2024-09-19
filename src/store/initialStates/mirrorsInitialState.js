@@ -9,7 +9,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало напольное',
       name: 'Lunaris',
       article: 'MIR001',
-      color: 'Лаванда',
+      color: 'lavander',
       description: 'Зеркало с лунными узорами, излучающее мягкое ночное сияние',
       designer: 'Elara Moonshadow',
       size: {
@@ -23,7 +23,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало напольное',
       name: 'Glade',
       article: 'MIR002',
-      color: 'Зелёный мох',
+      color: 'green',
       description: 'Зеркало, окруженное ветвями и кристаллами, напоминающими лесную поляну',
       designer: 'Thalion Elensar',
       size: {
@@ -37,7 +37,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Starlight',
       article: 'MIR003',
-      color: 'Звёздное серебро',
+      color: 'lazure',
       description: 'Зеркало, украшенное звёздными мотивами, отражающее небесное мерцание',
       designer: 'Lirael Windwalker',
       size: {
@@ -51,7 +51,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Sylva',
       article: 'MIR004',
-      color: 'Зеленый лес',
+      color: 'green',
       description: 'Изящное зеркало с рамкой в виде эльфийских лесных узоров',
       designer: 'Elysia Greenleaf',
       size: {
@@ -65,7 +65,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало напольное',
       name: 'Echo',
       article: 'MIR005',
-      color: 'Дубовая кора',
+      color: 'orange',
       description: 'Зеркало с рамкой из переплетающихся ветвей, создающее лесной эффект',
       designer: 'Caelith Brightblade',
       size: {
@@ -79,7 +79,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Twilight',
       article: 'MIR006',
-      color: 'Сумеречный серый',
+      color: 'blue',
       description: 'Зеркало с гранями, мерцающими в сумеречном свете',
       designer: 'Arwen Nightshade',
       size: {
@@ -93,7 +93,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Whisper',
       article: 'MIR007',
-      color: 'Туманный белый',
+      color: 'lazure',
       description: 'Зеркало, украшенное узорами, напоминающими шёпот лесных духов',
       designer: 'Nimrodel Leafsong',
       size: {
@@ -107,7 +107,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Elvara',
       article: 'MIR008',
-      color: 'Эльфийское золото',
+      color: 'pink',
       description: 'Зеркало с рамкой, отражающей эльфийскую утонченность и мастерство',
       designer: 'Ayla Silverleaf',
       size: {
@@ -121,7 +121,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало напольное',
       name: 'Mystique',
       article: 'MIR009',
-      color: 'Тайный черный',
+      color: 'blue',
       description: 'Зеркало с таинственной рамкой, вдохновлённой мифами и легендами',
       designer: 'Finarfin Starbreeze',
       size: {
@@ -135,7 +135,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало настенное',
       name: 'Fern',
       article: 'MIR010',
-      color: 'Зелёный папоротник',
+      color: 'green',
       description: 'Зеркало с рамкой, украшенной узорами листьев папоротника',
       designer: 'Lucas Fernwood',
       size: {

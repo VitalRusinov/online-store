@@ -1,0 +1,62 @@
+$yellow: #D9FF5A;
+
+.button_container {
+  position: relative;
+  width: 357px;
+  height: 156px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+
+
+  //*********************************
+  //Не работает анимация при наведении
+  &:hover {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;   
+    transform: scale(1.05); /* Увеличение при наведении */
+  }
+  
+  .ellipse_front {
+    position: absolute;
+    width: 356px;
+    height: 135px;
+    border-radius: 100%; /* Делаем эллипс */
+    border: 2px $yellow solid;
+    transform: rotate(-13deg); /* Наклон назад */
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+  
+  .icon {
+    position: absolute;
+    top: calc(50% + 25px);
+    left:calc(50% - 5px);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 24px;
+  }
+  ///////******************
+  /// // поправить местоположение надписи
+  .text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: white;
+
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+
+

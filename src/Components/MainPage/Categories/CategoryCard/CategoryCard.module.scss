@@ -18,9 +18,14 @@ $lavender: #AE97E8;
     position: absolute;
     bottom: 0px;
     left: 142px;
+    z-index: 2;
 
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+
+    &:active {
+      transform: scale(1.05);
+    }
 
     svg {
       position: absolute;

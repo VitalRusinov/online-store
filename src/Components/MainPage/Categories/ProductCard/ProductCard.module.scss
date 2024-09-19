@@ -1,0 +1,140 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+.productCard_container {
+  width: 274px;
+  height: 415px;
+  position: relative;
+  //border: 1px black solid;
+  ////////////****************
+  /// // убрать марджин
+  margin-bottom: 100px;
+
+  .img_container {
+    width: 100%;
+    height: 260px;
+
+    .ellipse {
+      position: absolute;
+      top: 7px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      border: 4px white solid;
+  
+      &.green {
+        background-color: #32b318;
+      }
+      &.lazure {
+        background-color: #21e6ec;
+      }
+      & .orange {
+        background-color: #f7a438;
+      }
+      &.pink {
+        background-color: #FA8FEF;
+      }
+      &.lavender {
+        background-color: #AE97E8;
+      }
+      &.blue {
+        background-color: #0e0af3;
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+    }
+  }
+
+  .description_container {
+    width: 100%;
+    height: 123px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .name {
+      font-weight: 500;
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+    }
+
+    .product {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 153%;
+      text-align: center;
+      color: white;
+    }
+
+    hr {
+      border: 1px solid $lime;
+      width: 100%;
+      height: 0px;
+    }
+    
+    .price {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      .numbers {
+        font-family: 'Floreste-Wavy';
+        font-weight: 400;
+        font-size: 28px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+      }
+
+      .rubles {
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        vertical-align: top;
+      }
+    }
+    .button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      text-align: inherit;
+      outline: none;
+      box-shadow: none;
+      cursor: pointer;
+
+      width: 102px;
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: white;
+
+    }
+  }
+}

@@ -9,7 +9,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Moonseat',
       article: 'CHR001',
-      color: 'Лунный серебристый',
+      color: 'lazure',
       description: 'Кресло с изгибами, напоминающими лунные световые дорожки',
       designer: 'Elara Moonshadow',
       size: {
@@ -24,7 +24,7 @@ export const chairsInitialState = {
       product: 'Стул',
       name: 'Glimmer',
       article: 'CHR002',
-      color: 'Светлый мох',
+      color: 'green',
       description: 'Стул с резными ножками и спинкой, напоминающей лесные узоры',
       designer: 'Thalion Elensar',
       size: {
@@ -39,7 +39,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Starwood',
       article: 'CHR003',
-      color: 'Звёздный серебристый',
+      color: 'lazure',
       description: 'Кресло с подлокотниками, украшенными звёздными мотивами',
       designer: 'Lirael Windwalker',
       size: {
@@ -54,7 +54,7 @@ export const chairsInitialState = {
       product: 'Стул',
       name: 'Sylvan',
       article: 'CHR004',
-      color: 'Зеленый лес',
+      color: 'green',
       description: 'Элегантный стул с изящными лесными узорами на спинке',
       designer: 'Elysia Greenleaf',
       size: {
@@ -69,7 +69,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Echoes',
       article: 'CHR005',
-      color: 'Дубовая кора',
+      color: 'orange',
       description: 'Кресло с подлокотниками, украшенными резными переплетающимися ветвями',
       designer: 'Caelith Brightblade',
       size: {
@@ -84,7 +84,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Twilight',
       article: 'CHR006',
-      color: 'Сумеречный серый',
+      color: 'blue',
       description: 'Кресло с плавными линиями, напоминающими вечерние сумерки',
       designer: 'Arwen Nightshade',
       size: {
@@ -99,7 +99,7 @@ export const chairsInitialState = {
       product: 'Стул',
       name: 'Whispers',
       article: 'CHR007',
-      color: 'Туманный белый',
+      color: 'lazure',
       description: 'Стул с резной спинкой, напоминающей эльфийские лесные узоры',
       designer: 'Nimrodel Leafsong',
       size: {
@@ -114,7 +114,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Elven',
       article: 'CHR008',
-      color: 'Эльфийское золото',
+      color: 'pink',
       description: 'Кресло с роскошными узорами, вдохновлёнными эльфийскими легендами',
       designer: 'Ayla Silverleaf',
       size: {
@@ -129,7 +129,7 @@ export const chairsInitialState = {
       product: 'Кресло',
       name: 'Mystic',
       article: 'CHR009',
-      color: 'Тайный черный',
+      color: 'blue',
       description: 'Кресло с подлокотниками и спинкой, украшенной мистическими узорами',
       designer: 'Finarfin Starbreeze',
       size: {
@@ -144,7 +144,7 @@ export const chairsInitialState = {
       product: 'Стул',
       name: 'Fernleaf',
       article: 'CHR010',
-      color: 'Зелёный папоротник',
+      color: 'green',
       description: 'Стул с узорами из листьев папоротника на спинке',
       designer: 'Lucas Fernwood',
       size: {
