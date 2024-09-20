@@ -46,16 +46,7 @@ const Categories = () => {
     }
 
   }, [fullProductsList]);
-/*
-  useEffect(() => {
-    if(fullProductsList) {
-      const priceFiltered = fullProductsList.filter(prod => prod.price <= maxPrice)
-      .filter(prod => prod.price >= minPrice);
-      const colorsFiltered = priceFiltered.filter(prod => colorsFilter.includes(prod.color));
-      productsList = colorsFiltered?.slice(0, productsCount);
-    }
-  }, [fullProductsList, maxPrice, minPrice, colorsFilter, productsCount]);
-*/
+
   useEffect(() => {
     console.log(fullProductsList, 'fullProductsList')
   }, [fullProductsList]);

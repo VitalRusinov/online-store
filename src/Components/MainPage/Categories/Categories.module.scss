@@ -1,5 +1,5 @@
 .cat_container {
-  width: 1802px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
   .categoriesList {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
 
