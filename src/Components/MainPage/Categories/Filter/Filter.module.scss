@@ -1,0 +1,155 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$darklavender: #5c4597;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+.filter {
+  width: 320px;
+  box-sizing: border-box;
+
+
+  .label {
+    width: 134px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .filter_menu {
+    box-sizing: border-box;
+
+
+    .price {
+      border-radius: 40px;
+      width: 100%;
+      height: 212px;
+      background: #cbb6ff;
+      padding: 22px 30px;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+
+      label {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: white;
+      }
+
+      .price_inputs {
+        width: 260px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          border-radius: 11px;
+          width: 123px;
+          height: 40px;
+          box-sizing: border-box;
+          background: $lavender;
+          border: none;
+
+          text-align: center;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 150%;
+          color: white;
+        }
+      }
+
+      .price_display {
+        display: flex;
+        justify-content: space-around;
+
+        span {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          color: white;
+        }
+      }
+    }
+
+    .colors {
+      border-radius: 40px;
+      width: 100%;
+      height: 304px;
+      background: #cbb6ff;
+      padding: 22px 30px;
+      box-sizing: border-box;
+
+      label {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: white;
+      }
+
+      .colors_list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .checkboxItem {
+        margin-bottom: 10px;
+      }
+
+      .checkboxLabel {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        padding-left: 40px;
+        font-size: 16px;
+      }
+
+      .checkboxInput {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0;
+        width: 0;
+      }
+
+      .customCheckbox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 14px;
+        width: 14px;
+        background-color: transparent;
+        border: 2px solid $lavender;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .checkboxInput:checked + .customCheckbox {
+        background-color: $lime;
+      }
+
+      .checkboxLabel:hover .customCheckbox {
+        border-color: $darklavender; /* Изменение цвета границ при наведении */
+      }
+    }
+  }
+}

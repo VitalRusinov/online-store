@@ -148,3 +148,25 @@ $lavender: #AE97E8;
     }
   }
 }
+
+.active {
+  .img_container {
+    transform: scale(1.05); /* Увеличение при наведении */
+  }
+
+  .inscription {
+    fill: $lime;
+  }
+
+  .cat_button {
+    background: $lime;
+
+    svg {
+      stroke: $lavender;
+    }
+  }
+
+  .cat_prodCount_text {
+    transform: rotate(23deg);
+  }
+}

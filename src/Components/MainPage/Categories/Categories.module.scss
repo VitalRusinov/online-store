@@ -23,24 +23,10 @@
 
   .filter_container {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
-
-    .filter {
-      width: 134px;
-      height: 23px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      span {
-        font-weight: 500;
-        font-size: 18px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: white;
-      }
-    }
+    z-index: 3;
 
     .products_count {
       span {
