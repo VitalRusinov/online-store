@@ -119,7 +119,7 @@ export const lampsInitialState = {
       id: 'lamp_09',
       image: null,
       product: 'Лампа настольная',
-      name: 'Glimmering Grove',
+      name: 'Glimmer Grove',
       article: 'GNM009',
       color: 'pink',
       description: 'Лампа-дерево, украшенное светящимися кристаллами из эльфийских легенд',

@@ -1,4 +1,5 @@
 $lime: #D9FF5A;
+$lavender: #AE97E8;
 
 .newsCard_container {
   width: 580px;
@@ -54,11 +55,16 @@ $lime: #D9FF5A;
     top: 13px;
     right: 13px;
 
+    overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 30px;
+
+      transition: transform 0.3s ease;
+      transform-origin: center right;
     }
   }
 
@@ -124,6 +130,22 @@ $lime: #D9FF5A;
       line-height: 20px;
       text-transform: uppercase;
       color: white;
+    }
+  }
+
+  &:hover {
+    .readingTime {
+      background: $lime;
+      p {
+        color: $lavender;
+      }  
+    }
+
+    .img_container {
+  
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }

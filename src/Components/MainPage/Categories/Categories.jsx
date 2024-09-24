@@ -90,7 +90,7 @@ const Categories = () => {
       <div className={styles.productsList}>
         {productsList && productsList.map((product) => {
           return (
-            <div key={product.id}>
+            <div key={product.id} className={styles.productCard}>
               <ProductCard prod={product}/>
             </div>
           )

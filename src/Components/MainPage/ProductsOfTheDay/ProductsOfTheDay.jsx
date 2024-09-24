@@ -9,11 +9,7 @@ const ProductsOfTheDay = () => {
   const [activeProduct, setActiveProduct] = useState(null);
 
   const productsOfTheDayList = useSelector((state) => state.productsOfTheDay.entries);
-/*
-  useEffect(() => {
-    console.log(productsOfTheDayList, 'productsOfTheDayList')
-  }, [productsOfTheDayList]);
-*/
+
   const getProductOfTheDayClasses = (product) => classNames(styles.productOfTheDay, {
     [styles.active]: product === activeProduct,
     [styles.inactive]: product !== activeProduct && activeProduct !== null,

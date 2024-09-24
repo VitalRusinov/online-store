@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'LeMurmure';
+  src: url('./LeMurmure/LeMurmure-Regular.eot');
+  src: local('LeMurmureRegular'), local('LeMurmure-Regular'),
+      url('./LeMurmure/LeMurmure-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./LeMurmure/LeMurmure-Regular.woff2') format('woff2'),
+      url('./LeMurmure/LeMurmure-Regular.woff') format('woff'),
+      url('./LeMurmure/LeMurmure-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Подключение обычного (Regular) варианта шрифта */
+@font-face {
+  font-family: 'Floreste';
+  src: url('./Floreste/Floreste.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Подключение курсивного (Italic) варианта шрифта */
+@font-face {
+  font-family: 'Floreste';
+  src: url('./Floreste/Floreste-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Подключение декоративного (Wavy) варианта шрифта */
+@font-face {
+  font-family: 'Floreste-Wavy'; /* Название может быть другое, если это отдельный стиль */
+  src: url('./Floreste/Floreste-Wavy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Подключение декоративного (Outline) варианта шрифта */
+@font-face {
+  font-family: 'Floreste Outline'; /* Название может быть другое, если это отдельный стиль */
+  src: url('./Floreste/Floreste-Outline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid'; /* Название может быть другое, если это отдельный стиль */
+  src: url('./Euclid-circular-a/Euclid\ Circular\ A\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid'; /* Название может быть другое, если это отдельный стиль */
+  src: url('./Euclid-circular-a/Euclid\ Circular\ A\ Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid'; /* Название может быть другое, если это отдельный стиль */
+  src: url('./Euclid-circular-a/Euclid\ Circular\ A\ Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
