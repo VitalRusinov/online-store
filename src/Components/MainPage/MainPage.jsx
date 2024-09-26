@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
@@ -7,17 +7,45 @@ import ProductsOfTheDay from './ProductsOfTheDay/ProductsOfTheDay';
 import Categories from './Categories/Categories';
 import Stripes from './Stripes/Stripes'
 import Blog from './Blog/Blog';
-import Menu from './Menu/Menu'
+import Menu from './Menu/Menu';
+import Footer from './Footer/Footer';
+
+import getModal from './Modals/index.js';
+
+const renderModal = (modalInfo, openModal, closeModal) => {
+  if (!modalInfo.type) {
+    return null;
+  }
+  const Component = getModal(modalInfo.type);
+  return (
+    <Component
+      modalInfo={modalInfo}
+      openModal={openModal}
+      closeModal={closeModal}
+    />
+  );
+};
 
 const MainPage = () => {
+
+  const [modalInfo, setModalInfo] = useState({ type: null, payload: null });
+
+  useEffect(() => {
+    console.log(modalInfo, 'modalInfo')
+  }, [modalInfo])
+
+  const openModal = (type, payload = null) => setModalInfo({ type, payload });
+  const closeModal = () => setModalInfo({ type: null, payload: null });
   
   return (
     <div className={styles.main_container}>
-      <Menu />
-      <ProductsOfTheDay />
+      <Menu openModal={openModal}/>
+      <ProductsOfTheDay openModal={openModal}/>
       <Categories />
       <Stripes />
       <Blog />
+      <Footer />
+      {renderModal(modalInfo, openModal, closeModal)}
     </div>
   )
 };

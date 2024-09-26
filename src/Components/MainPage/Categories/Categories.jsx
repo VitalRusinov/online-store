@@ -56,7 +56,7 @@ const Categories = () => {
   }, [productsList]);
 
   return (
-    <div className={styles.cat_container}>
+    <div className={styles.cat_container} id='categories'>
       <h2>Категории</h2>
       <div className={styles.categoriesList}>
         {categoriesList.map((category) => {

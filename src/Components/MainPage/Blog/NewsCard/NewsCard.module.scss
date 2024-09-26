@@ -21,7 +21,9 @@ $lavender: #AE97E8;
     bottom: 0;
     left: 22%;
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     p {
       margin: 0;

@@ -7,7 +7,7 @@ const Blog = () => {
   const newsList = useSelector((state) => state.news.entries);
 
   return (
-    <div className={styles.blog_container}>
+    <div className={styles.blog_container} id='blog'>
       <div className={styles.blog_header}>
         <div className={styles.title}>
           <div className={styles.dots}>

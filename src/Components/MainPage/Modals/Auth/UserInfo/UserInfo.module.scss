@@ -1,0 +1,55 @@
+$lime: #D9FF5A;
+
+.userInfo {
+  width: 610px;
+  height: 516px;
+  position: absolute;
+  top: 120px;
+  right: 60px;
+
+  padding: 48px;
+  box-sizing: border-box;
+
+  border-radius: 40px;
+  background: rgba(51, 32, 101, 0.18);
+
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная рамка */
+  backdrop-filter: blur(10px); /* Применение размытия */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .closeButton {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 23px;
+    right: 23px;
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: white;
+  }
+  
+}

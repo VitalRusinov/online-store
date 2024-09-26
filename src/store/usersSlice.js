@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  users: [],
+  entries: [],
 };
 
 const usersSlice = createSlice({
@@ -9,7 +9,8 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) => {
-      state.users.push(action.payload); // поменять
+      console.log('ADDuSER');
+      state.entries.push(action.payload); // поменять
     },
   },
 });

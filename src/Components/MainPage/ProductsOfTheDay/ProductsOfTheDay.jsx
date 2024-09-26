@@ -5,7 +5,9 @@ import classNames from 'classnames';
 import styles from './ProductsOfTheDay.module.scss';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
-const ProductsOfTheDay = () => {
+import modalTypes from '../Modals/ModalTypes';
+
+const ProductsOfTheDay = ({openModal}) => {
   const [activeProduct, setActiveProduct] = useState(null);
 
   const productsOfTheDayList = useSelector((state) => state.productsOfTheDay.entries);
@@ -28,6 +30,7 @@ const ProductsOfTheDay = () => {
               setActiveProduct(product);
             }}
             onMouseLeave={() => setActiveProduct(null)}
+            onClick={() => openModal(modalTypes.productCard, product)}
             className={getProductOfTheDayClasses(product)}
             key={product.id}
           >
