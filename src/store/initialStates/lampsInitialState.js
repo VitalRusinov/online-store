@@ -9,7 +9,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Santa Trinita',
       article: 'GNM001',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Функциональная дизайнерская лампа для создания максимально комфортного освещения',
       designer: 'Benjamin Moor',
       size: {
@@ -135,7 +135,7 @@ export const lampsInitialState = {
       product: 'Лампа настольная',
       name: 'Twilight Lotus',
       article: 'GNM010',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Лампа-лотос с мягким светом, символизирующая гармонию и спокойствие',
       designer: 'Elowen Starflower',
       size: {

@@ -21,7 +21,7 @@ const Categories = () => {
   useEffect(() => {
     //Изменяет кол-во отображаемого товара
     setProductsCount(5);
-    console.log(activeCategoryIdent, 'activeCategoryIdent');
+    //console.log(activeCategoryIdent, 'activeCategoryIdent');
   }, [activeCategoryIdent]);
 
   const categoriesList = useSelector((state) => state.categories.entries);
@@ -46,7 +46,7 @@ const Categories = () => {
     }
 
   }, [fullProductsList]);
-
+/*
   useEffect(() => {
     console.log(fullProductsList, 'fullProductsList')
   }, [fullProductsList]);
@@ -54,7 +54,7 @@ const Categories = () => {
   useEffect(() => {
     console.log(productsList, 'productsList');
   }, [productsList]);
-
+*/
   return (
     <div className={styles.cat_container} id='categories'>
       <h2>Категории</h2>

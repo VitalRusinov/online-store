@@ -11,7 +11,7 @@ export const productsOfTheDayInitialState = {
       product: 'Лампа настольная',
       name: 'Santa Trinita',
       article: 'GNM001',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Функциональная дизайнерская лампа для создания максимально комфортного освещения',
       designer: 'Benjamin Moor',
       size: {
@@ -40,7 +40,7 @@ export const productsOfTheDayInitialState = {
       product: 'Высокий стол',
       name: 'WENDY',
       article: 'TBL001',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Высокий стол для максимально удобного сидения за ним',
       designer: 'Elara Moonshadow',
       size: {

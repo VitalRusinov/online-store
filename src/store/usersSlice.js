@@ -9,8 +9,7 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) => {
-      console.log('ADDuSER');
-      state.entries.push(action.payload); // поменять
+      state.entries.push(action.payload);
     },
   },
 });

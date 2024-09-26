@@ -13,5 +13,3 @@ const Auth = ({openModal, closeModal}) => {
 }
 
 export default Auth;
-
-//      <UserInfo />

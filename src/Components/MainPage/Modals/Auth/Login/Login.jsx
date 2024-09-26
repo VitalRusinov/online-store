@@ -26,10 +26,11 @@ const Login = ({openModal, closeModal}) => {
 
   const users = useSelector((state) => state.users.entries);
 
-
+/*
   useEffect(() => {
     console.log(getStorageItem(), 'getStorageItem');
   }, []);
+  */
   // Начальные значения полей формы
   const initialValues = {
     email: '',
@@ -38,7 +39,7 @@ const Login = ({openModal, closeModal}) => {
 
   // Функция, вызываемая при отправке формы
   const handleSubmit = (values) => {
-    console.log('Данные формы:', values);
+    //console.log('Данные формы:', values);
     const user = users.find(u => u.email === values.email);
     if(!user) {
       setLoginError('Данный пользователь не зарегистрирован');

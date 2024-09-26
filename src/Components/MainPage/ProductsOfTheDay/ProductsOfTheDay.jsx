@@ -24,6 +24,7 @@ const ProductsOfTheDay = ({openModal}) => {
     <div className={styles.productsOfTheDayContainer}>
       {productsOfTheDayList.map(product => {
         slidesCount += 1;
+        const {id, designer, image, name, description, price} = product;
         return (
           <div 
             onMouseEnter={() => {
@@ -32,21 +33,21 @@ const ProductsOfTheDay = ({openModal}) => {
             onMouseLeave={() => setActiveProduct(null)}
             onClick={() => openModal(modalTypes.productCard, product)}
             className={getProductOfTheDayClasses(product)}
-            key={product.id}
+            key={id}
           >
             <div className={styles.designer_container}>
               <p className={styles.designer_product}>Товар дня</p>
-              <span className={styles.designer}>{product.designer}</span>
+              <span className={styles.designer}>{designer}</span>
             </div>
             <div className={styles.img_container}>
-              <img className={styles.image} src={product.image} alt="Изображение продукта" />
+              <img className={styles.image} src={image} alt="Изображение продукта" />
             </div>
             <div className={styles.description}>
-              <p>{product.name}</p>
-              <span>{product.description}</span>
+              <p>{name}</p>
+              <span>{description}</span>
               <hr />
               <div>
-                <span className={styles.price}>{product.price}</span>
+                <span className={styles.price}>{price}</span>
                 <span className={styles.ruble}>&#x20bd;</span>
               </div>
             </div>

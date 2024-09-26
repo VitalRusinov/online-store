@@ -47,16 +47,18 @@ const CategoryCard = ({category, activeCategoryIdent, setActiveCategoryIdent}) =
         </div>     
       </div>
       <div className={styles.inscription}>
-        <svg width="389" height="462" viewBox="0 0 389 462" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <path id="ellipsePath" d="M 194.5,231 m -169.5,0 a 169.5,206 0 1,1 339,0 a 169.5,206 0 1,1 -339,0"/>
-          </defs>
-          <text fontWeight="500" fontSize="16px" letterSpacing="0.08em">
+      <svg width="389" height="462" viewBox="0 0 389 462" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="ellipsePath" d="M 194.5,231 m -169.5,0 a 169.5,206 0 1,1 339,0 a 169.5,206 0 1,1 -339,0"/>
+        </defs>
+        <g transform="rotate(-223 194.5 231)">
+          <text font-weight="500" font-size="16px" letter-spacing="0.08em">
             <textPath href="#ellipsePath" startOffset="50%">
               изготовление на заказ
             </textPath>
           </text>
-        </svg>
+        </g>
+      </svg>
       </div>
       <div className={styles.img_container}>
         <img src={image} alt="Изображение категории" />
@@ -70,3 +72,15 @@ const CategoryCard = ({category, activeCategoryIdent, setActiveCategoryIdent}) =
 };
 
 export default CategoryCard;
+
+/*
+        <svg width="389" height="462" viewBox="0 0 389 462" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="ellipsePath" d="M 194.5,231 m -169.5,0 a 169.5,206 0 1,1 339,0 a 169.5,206 0 1,1 -339,0"/>
+          </defs>
+          <text fontWeight="500" fontSize="16px" letterSpacing="0.08em">
+            <textPath href="#ellipsePath" startOffset="50%">
+              изготовление на заказ
+            </textPath>
+          </text>
+        </svg>*/

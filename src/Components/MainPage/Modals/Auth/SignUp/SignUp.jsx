@@ -38,7 +38,7 @@ const SignUp = ({openModal, closeModal}) => {
 
   // Функция, вызываемая при отправке формы
   const handleSubmit = (values) => {
-    console.log('Данные формы:', values);
+    // console.log('Данные формы:', values);
     const user = users.find(u => u.email === values.email);
     if(user) {
       setSignUpError('Данный пользователь уже зарегистрирован');
@@ -46,15 +46,15 @@ const SignUp = ({openModal, closeModal}) => {
     }
     setSignUpError(null);
     const { confirmPassword, ...newUser } = values;
-    console.log(newUser, 'signUp values');
+    // console.log(newUser, 'signUp values');
     dispatch(addUser(newUser));
     setStorageItem({...newUser, ...{auth: true}});
     openModal(ModalTypes.auth);
   };
 
-  useEffect(() => {
-    console.log(users, 'users from signUp')
-  }, [users])
+  // useEffect(() => {
+  //   console.log(users, 'users from signUp')
+  // }, [users])
 
   return (
     <div className={styles.loginForm}>

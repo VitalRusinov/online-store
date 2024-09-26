@@ -9,7 +9,7 @@ export const mirrorsInitialState = {
       product: 'Зеркало напольное',
       name: 'Lunaris',
       article: 'MIR001',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Зеркало с лунными узорами, излучающее мягкое ночное сияние',
       designer: 'Elara Moonshadow',
       size: {

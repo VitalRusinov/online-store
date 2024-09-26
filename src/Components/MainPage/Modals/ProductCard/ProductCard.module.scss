@@ -1,9 +1,250 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$likePink: #FFB1F7;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$darklavender: #5c4597;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
 .productCard {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 85px 60px;
+  box-sizing: border-box;
+
   z-index: 10;
-  background-color: aqua;
+  background-color: $lavender;
+
+  display: flex;
+  justify-content: space-between; 
+
+  //Это под вопросом, необходимость
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;  
+
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .designer {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+    span {
+      font-family: 'Floreste-Wavy';
+      font-weight: 400;
+      font-size: 354px;
+      text-transform: uppercase;
+      color: rgba(203, 182, 255, 0.4);
+    }
+  }
+
+  .left_column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .article {
+      margin-top: 100px;
+      font-weight: 500;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .color {
+      display: flex;
+      margin-top: 135px;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .ellipse {
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        border: 3px white solid;
+        margin-left: 30px;
+        margin-right: 10px;
+    
+        &.green {
+          background-color: #32b318;
+        }
+        &.lazure {
+          background-color: #21e6ec;
+        }
+        & .orange {
+          background-color: #f7a438;
+        }
+        &.pink {
+          background-color: #FA8FEF;
+        }
+        &.lavender {
+          background-color: #AE97E8;
+        }
+        &.blue {
+          background-color: #0e0af3;
+        }
+      }
+    }
+
+    .description {
+      width: 350px;
+      margin-top: auto;
+      
+      span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 154%;
+        color: white;
+      }
+    }
+  }
+
+  .central_column {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+
+    .img_container {
+      width: 340px;
+      height: 666px;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+  
+      .image {
+        width: 100%;
+        height: 100%px;
+        object-fit: contain;
+      }
+    }
+
+    .name_price {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .name {
+        font-family: 'Floreste-Wavy';
+        font-weight: 400;
+        font-size: 100px;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .price {
+        font-family: 'Floreste-Wavy';
+        font-weight: 400;
+        font-size: 40px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $lime;
+      }
+
+      .ruble {
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        vertical-align: top;
+        color: $lime;
+      }
+    }
+  }
+  
+  .right_column {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 70px;
+
+    .closeButton {
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #dad1f2;
+        margin-right: 10px;
+      }
+    }
+
+    .likeButton {
+      width: 79px;
+      height: 79px;
+      border-radius: 100%;
+      border: 2px solid $lime;
+      background-color: rgba(255, 255, 255, 0.19);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        .path1 {
+          fill: none;
+        }
+        .path2 {
+          fill: $lime;
+        }
+      }
+      
+      //Заменить ховер на поставленный лайк
+      &:hover {
+        border-color: $likePink;
+        svg {
+          .path1 {
+            fill: white;
+          }
+          .path2 {
+            fill: $likePink;
+          }
+        }
+      }
+    }
+
+    .size {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 10px;
+      span {
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    .buy {
+      margin-top: auto;
+    }
+  }
 }

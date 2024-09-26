@@ -97,15 +97,14 @@ $lime: #D9FF5A;
       justify-content: center;
       box-sizing: border-box;
 
-        .image {
-          transition-duration: 1s;
-          transition-timing-function: ease-out;  
-          width: 200px;
-          height: 390px;
-          object-fit: contain;
-          transform: rotate(7deg);
-        }
-
+      .image {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+        width: 200px;
+        height: 390px;
+        object-fit: contain;
+        transform: rotate(7deg);
+      }
     }
 
     .description {
@@ -163,8 +162,8 @@ $lime: #D9FF5A;
       position: absolute;
       right: 0%;
       bottom: 0%;
-      width: 275px;
-      height: 196px;
+      width: 365px;
+      height: 156px;
       opacity: 0;
 
       transition-duration: 1s;
@@ -300,8 +299,8 @@ $lime: #D9FF5A;
       right: 280px;
       bottom: 190px;
       transform: translate(50%, 50%);
-      width: 275px;
-      height: 196px;
+      width: 365px;
+      height: 156px;
       text-align: start;
 
       transition-duration: 1s;

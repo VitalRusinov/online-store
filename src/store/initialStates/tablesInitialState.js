@@ -9,7 +9,7 @@ export const tablesInitialState = {
       product: 'Высокий стол',
       name: 'WENDY',
       article: 'TBL001',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Высокий стол для максимально удобного сидения за ним',
       designer: 'Elara Moonshadow',
       size: {
@@ -144,7 +144,7 @@ export const tablesInitialState = {
       product: 'Стол с цветами',
       name: 'TWILIGHT BLOSSOM',
       article: 'TBL010',
-      color: 'lavander',
+      color: 'lavender',
       description: 'Стол с цветочными узорами и инкрустациями, создающими эффект вечернего заката',
       designer: 'Amara Dewdrop',
       size: {
