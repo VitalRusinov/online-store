@@ -89,7 +89,7 @@ $lime: #D9FF5A;
         &.lazure {
           background-color: #21e6ec;
         }
-        & .orange {
+        &.orange {
           background-color: #f7a438;
         }
         &.pink {
@@ -199,25 +199,25 @@ $lime: #D9FF5A;
       width: 79px;
       height: 79px;
       border-radius: 100%;
-      border: 2px solid $lime;
       background-color: rgba(255, 255, 255, 0.19);
-
       display: flex;
       justify-content: center;
       align-items: center;
 
-      svg {
-        .path1 {
-          fill: none;
-        }
-        .path2 {
-          fill: $lime;
+      &.notLike {
+        border: 2px solid $lime;
+        svg {
+          .path1 {
+            fill: none;
+          }
+          .path2 {
+            fill: $lime;
+          }
         }
       }
       
-      //Заменить ховер на поставленный лайк
-      &:hover {
-        border-color: $likePink;
+      &.like {
+        border: 2px solid $likePink;
         svg {
           .path1 {
             fill: white;

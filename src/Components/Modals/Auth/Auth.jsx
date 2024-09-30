@@ -1,9 +1,9 @@
-import { getStorageItem } from '../../../../utils';
+import { getUserData } from '../../../utils';
 import Login from './Login/Login';
 import UserInfo from './UserInfo/UserInfo';
 
 const Auth = ({openModal, closeModal}) => {
-  const userData = JSON.parse(getStorageItem());
+  const userData = getUserData();
 
   return (
     userData.auth ? 

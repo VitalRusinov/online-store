@@ -1,14 +1,24 @@
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../../store/basketsSlice';
 import styles from './BuyButton.module.scss';
 import classNames from 'classnames';
 
 
-const BuyButton = () => {
+const BuyButton = ({ id }) => {
+  const dispatch = useDispatch();
 
   const ellipseBackClasses = classNames(styles.ellipse, styles.ellipse_back);
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);
 
+  const handle = (event) => {
+    event.stopPropagation();
+    dispatch(addProduct({ id }))
+  }
+
+
+
   return (
-    <button className={styles.button_container}>
+    <button onClick={handle} className={styles.button_container}>
       <div className={ellipseBackClasses}></div>
       <div className={ellipseFrontClasses}></div>
       <div className={styles.icon}>

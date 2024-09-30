@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styles from './ProductsOfTheDay.module.scss';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
-import modalTypes from '../Modals/ModalTypes';
+import modalTypes from '../../Modals/ModalTypes';
 
 const ProductsOfTheDay = ({openModal}) => {
   const [activeProduct, setActiveProduct] = useState(null);
@@ -52,7 +52,7 @@ const ProductsOfTheDay = ({openModal}) => {
               </div>
             </div>
             <div className={styles.button_Container}>
-              <BuyButton />
+              <BuyButton id={id}/>
             </div>
             <div className={styles.slides_Container}>
               <p>Слайд</p>

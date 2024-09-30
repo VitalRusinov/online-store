@@ -1,2 +1,3 @@
-export * from './localStorageFn';
+export * from './sessionStorageFn';
 export * from './pages';
+export * from './translate';

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser } from '../../../../../store/usersSlice';
+//import { addUser } from '../../../../store/usersSlice';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import styles from './UserInfo.module.scss';
-import { getStorageItem, removeStorageItem, setStorageItem } from '../../../../../utils';
+import { getUserData, removeUserData, setUserData } from '../../../../utils';
 import ModalTypes from '../../ModalTypes';
 
 import ExitButton from './ExitButton/ExitButton';
@@ -13,10 +13,10 @@ import ExitButton from './ExitButton/ExitButton';
 
 const UserInfo = ({openModal, closeModal}) => {
 
-  const user = JSON.parse(getStorageItem());
+  const user = getUserData();
   // Функция, вызываемая при отправке формы
   const handleSubmit = () => {
-    removeStorageItem();
+    removeUserData();
     openModal(ModalTypes.auth);
   };
 

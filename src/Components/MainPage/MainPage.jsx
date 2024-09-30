@@ -10,7 +10,7 @@ import Blog from './Blog/Blog';
 import Menu from './Menu/Menu';
 import Footer from './Footer/Footer';
 
-import getModal from './Modals/index.js';
+import getModal from '../Modals/index.js';
 
 const renderModal = (modalInfo, openModal, closeModal) => {
   if (!modalInfo.type) {
