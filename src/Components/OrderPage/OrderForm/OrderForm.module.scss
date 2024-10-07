@@ -1,0 +1,84 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+
+
+  .form_container {
+    width: 882px;
+    height: 499px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button {
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+    }
+
+    h2 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 60px;
+      text-transform: uppercase;
+      color: white;
+    }
+    
+    .form {
+      width: 100%;
+      height: 358px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .input {
+        width: 100%;
+        height: 31px;
+        padding: 8px 0; /* Убираем боковые отступы и добавляем отступ сверху и снизу */
+        border: none;
+        background: transparent; /* Прозрачный фон */
+        outline: none;
+        color: #fff;
+        border-bottom: 2px solid $lime; /* Желтая линия при фокусе */
+        transition: border-color 0.3s;
+    
+        &::placeholder {
+          font-weight: 500;
+          font-size: 15px;
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+
+      .orderButton {
+        width: 189px;
+        height: 96px;
+        position: relative;
+
+        .ellipse {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 189px;
+          height: 93px;
+          border-radius: 100%; /* Делаем эллипс */
+          border: 2px $lime solid;
+          transform: rotate(-6deg); /* Наклон назад */
+          background: rgba(255, 255, 255, 0.1);
+          z-index: 1;
+        }
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 120%;
+          color: white;
+        }
+      }
+    }
+  }
+

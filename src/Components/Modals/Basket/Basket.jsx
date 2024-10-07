@@ -39,7 +39,13 @@ const Basket = ({openModal, closeModal}) => {
         </svg>
       </button>
       <div className={styles.cards_container}>
-        {basketProducts.map((product) => <BasketCard prod={product} />)}
+        {basketProducts.map((product) => {
+          return (
+            <div key={product.id}>
+              <BasketCard prod={product} />
+            </div>
+          )
+        })}
       </div>
       <div className={styles.footer}>
         <div className={styles.totalPrice}>
@@ -47,10 +53,12 @@ const Basket = ({openModal, closeModal}) => {
           <span className={styles.price}>{totalPrice}</span>
           <span className={styles.ruble}>&#x20bd;</span>
         </div>
-        <OrderButton />
+        <OrderButton totalPrice={totalPrice}/>
       </div>
     </div>
   );
 };
 
 export default Basket;
+
+

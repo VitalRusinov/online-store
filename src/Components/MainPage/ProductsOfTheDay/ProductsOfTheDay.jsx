@@ -5,12 +5,25 @@ import classNames from 'classnames';
 import styles from './ProductsOfTheDay.module.scss';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
-import modalTypes from '../../Modals/ModalTypes';
+import modalTypes from '../../Modals/modalTypes';
 
 const ProductsOfTheDay = ({openModal}) => {
   const [activeProduct, setActiveProduct] = useState(null);
 
-  const productsOfTheDayList = useSelector((state) => state.productsOfTheDay.entries);
+  const chairs = useSelector((state) => state.chairs.entries);
+  const lamps = useSelector((state) => state.lamps.entries);
+  const mirrors = useSelector((state) => state.mirrors.entries);
+  const tables = useSelector((state) => state.tables.entries);
+  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+  
+  const productsOfTheDayIdList = useSelector((state) => state.productsOfTheDay.entries);
+
+  const productsOfTheDayList = [];
+  productsOfTheDayIdList.forEach(id => {
+    const prodById = allProducts.find(prod => prod.id === id);
+    productsOfTheDayList.push(prodById);
+  });
+
 
   const getProductOfTheDayClasses = (product) => classNames(styles.productOfTheDay, {
     [styles.active]: product === activeProduct,
@@ -21,7 +34,7 @@ const ProductsOfTheDay = ({openModal}) => {
   let slidesCount = 0;
 
   return (
-    <div className={styles.productsOfTheDayContainer}>
+    <div className={styles.productsOfTheDayContainer} id='productsOfTheDay'>
       {productsOfTheDayList.map(product => {
         slidesCount += 1;
         const {id, designer, image, name, description, price} = product;

@@ -13,6 +13,11 @@
 
   box-sizing: border-box;
 
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
   & span {
     font-weight: 500;
     font-size: 18px;
@@ -60,6 +65,10 @@
     width: 19.5%;
     display: flex;
     align-items: center;
+    button {
+      display: flex;
+      align-items: center;
+    }
   }
   
   .personalAccount {
@@ -67,10 +76,7 @@
     display: flex;
     gap: 36px;
 
-    button {
-      background-color: rgba(255, 255, 255, 0);
-      border: none;
-    }
+
 
     .auth {
 

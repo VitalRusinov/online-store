@@ -35,7 +35,13 @@ const Liked = ({openModal, closeModal}) => {
         </svg>
       </button>
       <div className={styles.cards_container}>
-        {likedProducts.map((product) => <LikedCard prod={product} />)}
+        {likedProducts.map((product) => {
+          return (
+            <div key={product.id}>
+              <LikedCard prod={product} />
+            </div>
+            )
+          })}
       </div>
     </div>
   );

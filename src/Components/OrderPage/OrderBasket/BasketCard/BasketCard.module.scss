@@ -1,0 +1,149 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$likePink: #FFB1F7;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$darklavender: #5c4597;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+.card {
+  width: 100%;
+  height: 142px;
+  display: flex;
+  justify-content: space-between;
+
+  .img_container {
+    width: 89px;
+    height: 142px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .main {
+    width: 393px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .aboveLine {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .text {
+        .name {
+          margin-bottom: 10px;
+          display: flex;
+          gap: 15px;
+
+          .ellipse {
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            border: 3px white solid;
+        
+            &.green {
+              background-color: $green;
+            }
+            &.lazure {
+              background-color: $lazure;
+            }
+            & .orange {
+              background-color: $orange;
+            }
+            &.pink {
+              background-color: $pink;
+            }
+            &.lavender {
+              background-color: $lavender;
+            }
+            &.blue {
+              background-color: $blue;
+            }
+          }
+
+          span {
+            font-weight: 500;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+          }
+        }
+        
+        .product {
+          span {
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+          }
+        }
+      }
+
+      .removeButton {
+        
+      }
+    }
+
+    hr {
+      border: 2px solid $lime;
+      width: 100%;
+      height: 0px;
+    }
+    
+    .underLine {
+      display: flex;
+      justify-content: space-between;
+      .price {
+        .numbers {
+          font-family: 'Floreste-Wavy';
+          font-weight: 400;
+          font-size: 28px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: white;
+        }
+        .ruble {
+          font-weight: 400;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+
+      .productCount {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        .button {
+          width: 45px;
+          height: 45px;
+          border-radius: 100%;
+          border: 2px solid white;
+          background: rgba(255, 255, 255, 0.19);
+          border-radius: 100%;
+
+          font-weight: 500;
+          font-size: 18px;
+          text-align: center;
+          color: white;
+
+          &.disabled {
+            opacity: 0.5;
+          }
+        }
+        span {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 128%;
+          color: white;
+        }
+      }
+    }    
+  }
+}

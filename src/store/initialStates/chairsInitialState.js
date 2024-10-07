@@ -1,11 +1,11 @@
-import Moonseat from './pictures/chairs/Moonseat.png';
-import Glimmer from './pictures/chairs/Glimmer.png';
+import chair_01 from '../../assets/pictures/chairs/chair_01.png';
+import chair_02 from '../../assets/pictures/chairs/chair_02.png';
 
 export const chairsInitialState = {
   entries: [
     {
       id: 'chair_01',
-      image: 'Moonseat',
+      image: chair_01,
       product: 'Кресло',
       name: 'Moonseat',
       article: 'CHR001',
@@ -20,7 +20,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_02',
-      image: 'Glimmer',
+      image: chair_02,
       product: 'Стул',
       name: 'Glimmer',
       article: 'CHR002',

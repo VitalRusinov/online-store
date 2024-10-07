@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 
 import styles from './UserInfo.module.scss';
 import { getUserData, removeUserData, setUserData } from '../../../../utils';
-import ModalTypes from '../../ModalTypes';
+import ModalTypes from '../../modalTypes';
 
 import ExitButton from './ExitButton/ExitButton';
 

@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import styles from './SignUp.module.scss';
 import RegistrationButton from './RegistrationButton/RegistrationButton';
 import { setUserData } from '../../../../utils';
-import ModalTypes from '../../ModalTypes';
+import ModalTypes from '../../modalTypes';
 
 // Схема валидации с использованием Yup
 const validationSchema = Yup.object({

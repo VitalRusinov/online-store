@@ -1,7 +1,7 @@
-import mirrors from './pictures/categories/mirrors.png';
-import lamps from './pictures/categories/lamps.png';
-import chairs from './pictures/categories/chairs.png';
-import tables from './pictures/categories/tables.png';
+import mirrors from '../../assets/pictures/categories/mirrors.png';
+import lamps from '../../assets/pictures/categories/lamps.png';
+import chairs from '../../assets/pictures/categories/chairs.png';
+import tables from '../../assets/pictures/categories/tables.png';
 
 export const categoriesInitialState = {
   entries: [

@@ -1,11 +1,11 @@
-import Lunaris from './pictures/mirrors/Lunaris.png';
-import Glade from './pictures/mirrors/Glade.png'
+import mirror_01 from '../../assets/pictures/mirrors/mirror_01.png';
+import mirror_02 from '../../assets/pictures/mirrors/mirror_02.png';
 
 export const mirrorsInitialState = {
   entries: [
     {
       id: 'mirror_01',
-      image: 'Lunaris',
+      image: mirror_01,
       product: 'Зеркало напольное',
       name: 'Lunaris',
       article: 'MIR001',
@@ -19,7 +19,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_02',
-      image: 'Glade',
+      image: mirror_02,
       product: 'Зеркало напольное',
       name: 'Glade',
       article: 'MIR002',

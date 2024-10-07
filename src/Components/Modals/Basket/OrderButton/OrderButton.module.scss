@@ -46,4 +46,9 @@ $yellow: #D9FF5A;
     position: relative;
     z-index: 2;
   }
+
+  & .disabled {
+    cursor: not-allowed;
+    pointer-events: none; /* Запретит любые события на элементе */
+  }
 }

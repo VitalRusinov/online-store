@@ -4,4 +4,6 @@ export default {
   signUp: 'signUp',
   liked: 'liked',
   basket: 'basket',
+  contacts: 'contacts',
+  search: 'search',
 }

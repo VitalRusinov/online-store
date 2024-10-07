@@ -1,11 +1,16 @@
-import Santa_Trinita from './pictures/lamps/Santa_Trinita.png';
-import Elven_Blossom from './pictures/lamps/Elven_Blossom.png'
+import lamp_01 from '../../assets/pictures/lamps/lamp_01.png';
+import lamp_02 from '../../assets/pictures/lamps/lamp_02.png'
+import lamp_03 from '../../assets/pictures/lamps/lamp_03.png'
+import lamp_04 from '../../assets/pictures/lamps/lamp_04.png'
+import lamp_05 from '../../assets/pictures/lamps/lamp_05.png'
+import lamp_06 from '../../assets/pictures/lamps/lamp_06.png'
+
 
 export const lampsInitialState = {
   entries: [
     {
       id: 'lamp_01',
-      image: Santa_Trinita,
+      image: lamp_01,
       product: 'Лампа настольная',
       name: 'Santa Trinita',
       article: 'GNM001',
@@ -19,7 +24,7 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_02',
-      image: Elven_Blossom,
+      image: lamp_02,
       product: 'Люстра',
       name: 'Elven Blossom',
       article: 'GNM002',
@@ -33,7 +38,7 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_03',
-      image: null,
+      image: lamp_03,
       product: 'Лампа настольная',
       name: 'Moonlit Branch',
       article: 'GNM003',
@@ -47,7 +52,7 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_04',
-      image: null,
+      image: lamp_04,
       product: 'Лампа настольная',
       name: 'Starfall',
       article: 'GNM004',
@@ -61,7 +66,7 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_05',
-      image: null,
+      image: lamp_05,
       product: 'Лампа настольная',
       name: 'Forest Whisper',
       article: 'GNM005',
@@ -75,7 +80,7 @@ export const lampsInitialState = {
     },
     {
       id: 'lamp_06',
-      image: null,
+      image: lamp_06,
       product: 'Лампа настольная',
       name: 'Glade Flame',
       article: 'GNM006',

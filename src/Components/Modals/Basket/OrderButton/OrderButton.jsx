@@ -1,21 +1,34 @@
+import { Link } from 'react-router-dom';
 import styles from './OrderButton.module.scss';
 import classNames from 'classnames';
+import { pages } from '../../../../utils';
 
 
-const OrderButton = ({handleSubmit, totalPrice}) => {
+const OrderButton = ({totalPrice}) => {
 
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);
+  const disabledButtonClasses = classNames(styles.button_container, styles.disabled);
 
   return (
-    <button 
-      className={styles.button_container}
-      onClick={handleSubmit}
-      type="submit"
-      disabled={totalPrice === 0 }
-    >
-      <div className={ellipseFrontClasses}></div>
-      <p className={styles.text}>Оформить</p>
-    </button>
+    <>
+      {totalPrice > 0
+        ? (<Link
+        to={pages.order}
+        className={styles.button_container}
+        type="submit"
+      >
+        <div className={ellipseFrontClasses}></div>
+        <p className={styles.text}>Оформить</p>
+      </Link>
+      ) : (
+        <div
+        className={disabledButtonClasses}
+      >
+        <div className={ellipseFrontClasses}></div>
+        <p className={styles.text}>Оформить</p>
+      </div>
+      )}
+    </>
   )
 }
 

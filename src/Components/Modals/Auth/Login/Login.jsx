@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import styles from './Login.module.scss';
 import EnterButton from './EnterButton/EnterButton';
 import { getUserData, setUserData } from '../../../../utils';
-import ModalTypes from '../../ModalTypes';
+import ModalTypes from '../../modalTypes';
 
 // Схема валидации с использованием Yup
 const validationSchema = Yup.object({

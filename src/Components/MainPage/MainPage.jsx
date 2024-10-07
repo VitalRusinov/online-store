@@ -7,11 +7,13 @@ import ProductsOfTheDay from './ProductsOfTheDay/ProductsOfTheDay';
 import Categories from './Categories/Categories';
 import Stripes from './Stripes/Stripes'
 import Blog from './Blog/Blog';
-import Menu from './Menu/Menu';
+import Menu from '../Menu/Menu.jsx';
 import Footer from './Footer/Footer';
 
 import getModal from '../Modals/index.js';
 
+
+//Перенести открытие модалок в отдельный элемент, для избежания будлирования и тп
 const renderModal = (modalInfo, openModal, closeModal) => {
   if (!modalInfo.type) {
     return null;
@@ -29,19 +31,19 @@ const renderModal = (modalInfo, openModal, closeModal) => {
 const MainPage = () => {
 
   const [modalInfo, setModalInfo] = useState({ type: null, payload: null });
-
+/*
   useEffect(() => {
     console.log(modalInfo, 'modalInfo')
   }, [modalInfo])
-
+*/
   const openModal = (type, payload = null) => setModalInfo({ type, payload });
   const closeModal = () => setModalInfo({ type: null, payload: null });
   
   return (
     <div className={styles.main_container}>
-      <Menu openModal={openModal}/>
+      <Menu openModal={openModal} closeModal={closeModal} modalInfo={modalInfo}/>
       <ProductsOfTheDay openModal={openModal}/>
-      <Categories />
+      <Categories openModal={openModal}/>
       <Stripes />
       <Blog />
       <Footer />

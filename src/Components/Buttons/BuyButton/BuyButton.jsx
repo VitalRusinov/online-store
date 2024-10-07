@@ -15,8 +15,6 @@ const BuyButton = ({ id }) => {
     dispatch(addProduct({ id }))
   }
 
-
-
   return (
     <button onClick={handle} className={styles.button_container}>
       <div className={ellipseBackClasses}></div>

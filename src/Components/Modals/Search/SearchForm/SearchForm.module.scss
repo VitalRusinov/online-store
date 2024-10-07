@@ -1,0 +1,94 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$likePink: #FFB1F7;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$darklavender: #5c4597;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+.search {
+  width: 100%;
+  height: 70px;
+  padding: 0 60px;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 140px;
+  left: 0;
+  z-index: 5;
+
+
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    border-radius: 35px;
+    backdrop-filter: blur(60px);
+    background: rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 24px;
+    padding-left: 6px;
+
+
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 10px;
+      box-sizing: border-box;
+
+
+      .submitButton {
+        width: 58px;
+        height: 58px;
+        border: 1px solid white;
+        border-radius: 100%;
+        box-sizing: border-box;
+
+        backdrop-filter: blur(30px);
+        background: $lavender;
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: transparent; /* Прозрачный фон */
+        outline: none;
+
+        font-weight: 500;
+        font-size: 18px;
+        color: white;
+    
+        &::placeholder {
+          font-weight: 500;
+          font-size: 18px;
+          text-align: start;
+          color: white;
+        }
+      }
+    }
+
+    .clearButton {
+      padding: 0;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
+  }
+}

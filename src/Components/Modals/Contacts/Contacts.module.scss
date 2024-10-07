@@ -1,0 +1,210 @@
+$green: #32b318;
+$lazure: #21e6ec;
+$orange: #f7a438;
+$pink: #FA8FEF;
+$lavender: #AE97E8;
+$blue: #0e0af3;
+$lime: #D9FF5A;
+
+.main_containers {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 60px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+
+  background: rgba(51, 32, 101, 0.18);
+  backdrop-filter: blur(10px); /* Применение размытия */
+
+  z-index: 10;
+  
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .closeButton {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 70px;
+    right: 90px;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .info {
+      width: 100%;
+      height: 46%;
+      display: flex;
+
+      & .title {
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .contacts {
+        width: 53%;
+        height: 100%;
+        background-color: $lavender;
+        box-sizing: border-box;
+        padding: 80px 180px 80px 80px;
+        display: flex;
+        justify-content: space-between;
+
+        .adress {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .city {
+            margin-top: 50px;
+            font-weight: 500;
+            font-size: 60px;
+            text-transform: uppercase;
+            color: white;
+            line-height: 60px;
+          }
+
+          .street {
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+          }
+
+          .toMap {
+            margin-top: auto;
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+
+        .phone {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .number {
+            margin-top: 60px;
+            font-family: 'Floreste-Wavy';
+            font-weight: 400;
+            font-size: 40px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: white;
+          }
+
+          .text {
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+          }
+
+          .icons {
+            margin-top: auto;
+            display: flex;
+            gap: 17px;
+
+            .icon {
+              width: 39px;
+              height: 39px;
+              border-radius: 100%;
+              background: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .feedback_form {
+        width: 47%;
+        height: 100%;
+        background: $pink;
+        padding: 80px 80px 50px 80px;
+        box-sizing: border-box;
+
+        .form {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+    
+          .input {
+            width: 100%;
+            height: 31px;
+            padding: 8px 0; /* Убираем боковые отступы и добавляем отступ сверху и снизу */
+            border: none;
+            background: transparent; /* Прозрачный фон */
+            outline: none;
+            color: #fff;
+            border-bottom: 2px solid $lime; /* Желтая линия при фокусе */
+            transition: border-color 0.3s;
+        
+            &::placeholder {
+              font-weight: 500;
+              font-size: 15px;
+              text-transform: uppercase;
+              color: white;
+            }
+          }
+    
+          .orderButton {
+            width: 189px;
+            height: 96px;
+            position: relative;
+    
+            .ellipse {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 189px;
+              height: 93px;
+              border-radius: 100%; /* Делаем эллипс */
+              border: 2px $lime solid;
+              transform: rotate(-6deg); /* Наклон назад */
+              background: rgba(255, 255, 255, 0.1);
+              z-index: 1;
+            }
+    
+            span {
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 120%;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .map {
+      width: 100%;
+      height: 54%;
+    }
+  }
+}

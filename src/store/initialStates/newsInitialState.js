@@ -1,6 +1,6 @@
-import news_1 from './pictures/news/news_1.png';
-import news_2 from './pictures/news/news_2.png';
-import news_3 from './pictures/news/news_3.png';
+import news_1 from '../../assets/pictures/news/news_1.png';
+import news_2 from '../../assets/pictures/news/news_2.png';
+import news_3 from '../../assets/pictures/news/news_3.png';
 
 export const newsInitialState = {
   entries: [

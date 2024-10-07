@@ -7,7 +7,7 @@ import MoreButton from '../../Buttons/MoreButton/MoreButton';
 import Filter from './Filter/Filter';
 
 
-const Categories = () => {
+const Categories = ({openModal}) => {
 
   const [activeCategoryIdent, setActiveCategoryIdent] = useState(null);
   const [productsCount, setProductsCount] = useState(5)
@@ -46,15 +46,7 @@ const Categories = () => {
     }
 
   }, [fullProductsList]);
-/*
-  useEffect(() => {
-    console.log(fullProductsList, 'fullProductsList')
-  }, [fullProductsList]);
 
-  useEffect(() => {
-    console.log(productsList, 'productsList');
-  }, [productsList]);
-*/
   return (
     <div className={styles.cat_container} id='categories'>
       <h2>Категории</h2>
@@ -91,7 +83,7 @@ const Categories = () => {
         {productsList && productsList.map((product) => {
           return (
             <div key={product.id} className={styles.productCard}>
-              <ProductCard prod={product}/>
+              <ProductCard prod={product} openModal={openModal}/>
             </div>
           )
         })}

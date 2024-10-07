@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import './index.css';
-import './fonts/fonts.css';
+import './assets/fonts/fonts.css';
 import App from './App';
 
 import store from './store/index';
