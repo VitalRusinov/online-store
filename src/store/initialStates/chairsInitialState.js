@@ -1,5 +1,13 @@
 import chair_01 from '../../assets/pictures/chairs/chair_01.png';
 import chair_02 from '../../assets/pictures/chairs/chair_02.png';
+import chair_03 from '../../assets/pictures/chairs/chair_03.png';
+import chair_04 from '../../assets/pictures/chairs/chair_04.png';
+import chair_05 from '../../assets/pictures/chairs/chair_05.png';
+import chair_06 from '../../assets/pictures/chairs/chair_06.png';
+import chair_07 from '../../assets/pictures/chairs/chair_07.png';
+import chair_08 from '../../assets/pictures/chairs/chair_08.png';
+import chair_09 from '../../assets/pictures/chairs/chair_09.png';
+import chair_10 from '../../assets/pictures/chairs/chair_10.png';
 
 export const chairsInitialState = {
   entries: [
@@ -35,7 +43,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_03',
-      image: null,
+      image: chair_03,
       product: 'Кресло',
       name: 'Starwood',
       article: 'CHR003',
@@ -50,7 +58,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_04',
-      image: null,
+      image: chair_04,
       product: 'Стул',
       name: 'Sylvan',
       article: 'CHR004',
@@ -65,7 +73,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_05',
-      image: null,
+      image: chair_05,
       product: 'Кресло',
       name: 'Echoes',
       article: 'CHR005',
@@ -80,7 +88,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_06',
-      image: null,
+      image: chair_06,
       product: 'Кресло',
       name: 'Twilight',
       article: 'CHR006',
@@ -95,7 +103,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_07',
-      image: null,
+      image: chair_07,
       product: 'Стул',
       name: 'Whispers',
       article: 'CHR007',
@@ -110,7 +118,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_08',
-      image: null,
+      image: chair_08,
       product: 'Кресло',
       name: 'Elven',
       article: 'CHR008',
@@ -125,7 +133,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_09',
-      image: null,
+      image: chair_09,
       product: 'Кресло',
       name: 'Mystic',
       article: 'CHR009',
@@ -140,7 +148,7 @@ export const chairsInitialState = {
     },
     {
       id: 'chair_10',
-      image: null,
+      image: chair_10,
       product: 'Стул',
       name: 'Fernleaf',
       article: 'CHR010',

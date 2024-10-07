@@ -1,5 +1,15 @@
 import table_01 from '../../assets/pictures/tables/table_01.png';
 import table_02 from '../../assets/pictures/tables/table_02.png';
+import table_03 from '../../assets/pictures/tables/table_03.png';
+import table_04 from '../../assets/pictures/tables/table_04.png';
+import table_05 from '../../assets/pictures/tables/table_05.png';
+import table_06 from '../../assets/pictures/tables/table_06.png';
+import table_07 from '../../assets/pictures/tables/table_07.png';
+import table_08 from '../../assets/pictures/tables/table_08.png';
+import table_09 from '../../assets/pictures/tables/table_09.png';
+import table_10 from '../../assets/pictures/tables/table_10.png';
+import table_11 from '../../assets/pictures/tables/table_11.png';
+
 
 export const tablesInitialState = {
   entries: [
@@ -35,7 +45,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_03',
-      image: null,
+      image: table_03,
       product: 'Круглый стол',
       name: 'ELVEN GLADE',
       article: 'TBL003',
@@ -50,7 +60,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_04',
-      image: null,
+      image: table_04,
       product: 'Деревянный стол',
       name: 'MOONFALL',
       article: 'TBL004',
@@ -65,7 +75,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_05',
-      image: null,
+      image: table_05,
       product: 'Каменный стол',
       name: 'WILDERWOOD',
       article: 'TBL005',
@@ -80,7 +90,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_06',
-      image: null,
+      image: table_06,
       product: 'Чайный столик',
       name: 'FROSTBLOOM',
       article: 'TBL006',
@@ -95,7 +105,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_07',
-      image: null,
+      image: table_07,
       product: 'Стол с секретом',
       name: 'ENCHANTED OAK',
       article: 'TBL007',
@@ -110,7 +120,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_08',
-      image: null,
+      image: table_08,
       product: 'Легендарный стол',
       name: 'STARDUST',
       article: 'TBL008',
@@ -125,7 +135,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_09',
-      image: null,
+      image: table_09,
       product: 'Стол для работы',
       name: 'MYSTIC OAK',
       article: 'TBL009',
@@ -140,7 +150,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_10',
-      image: null,
+      image: table_10,
       product: 'Стол с цветами',
       name: 'TWILIGHT BLOSSOM',
       article: 'TBL010',
@@ -155,7 +165,7 @@ export const tablesInitialState = {
     },
     {
       id: 'table_11',
-      image: null,
+      image: table_11,
       product: 'Книжный стол',
       name: 'FAYE',
       article: 'TBL011',

@@ -1,5 +1,14 @@
 import mirror_01 from '../../assets/pictures/mirrors/mirror_01.png';
 import mirror_02 from '../../assets/pictures/mirrors/mirror_02.png';
+import mirror_03 from '../../assets/pictures/mirrors/mirror_03.png';
+import mirror_04 from '../../assets/pictures/mirrors/mirror_04.png';
+import mirror_05 from '../../assets/pictures/mirrors/mirror_05.png';
+import mirror_06 from '../../assets/pictures/mirrors/mirror_06.png';
+import mirror_07 from '../../assets/pictures/mirrors/mirror_07.png';
+import mirror_08 from '../../assets/pictures/mirrors/mirror_08.png';
+import mirror_09 from '../../assets/pictures/mirrors/mirror_09.png';
+import mirror_10 from '../../assets/pictures/mirrors/mirror_10.png';
+
 
 export const mirrorsInitialState = {
   entries: [
@@ -33,7 +42,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_03',
-      image: null,
+      image: mirror_03,
       product: 'Зеркало настенное',
       name: 'Starlight',
       article: 'MIR003',
@@ -47,7 +56,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_04',
-      image: null,
+      image: mirror_04,
       product: 'Зеркало настенное',
       name: 'Sylva',
       article: 'MIR004',
@@ -61,7 +70,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_05',
-      image: null,
+      image: mirror_05,
       product: 'Зеркало напольное',
       name: 'Echo',
       article: 'MIR005',
@@ -75,7 +84,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_06',
-      image: null,
+      image: mirror_06,
       product: 'Зеркало настенное',
       name: 'Twilight',
       article: 'MIR006',
@@ -89,7 +98,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_07',
-      image: null,
+      image: mirror_07,
       product: 'Зеркало настенное',
       name: 'Whisper',
       article: 'MIR007',
@@ -103,7 +112,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_08',
-      image: null,
+      image: mirror_08,
       product: 'Зеркало настенное',
       name: 'Elvara',
       article: 'MIR008',
@@ -117,7 +126,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_09',
-      image: null,
+      image: mirror_09,
       product: 'Зеркало напольное',
       name: 'Mystique',
       article: 'MIR009',
@@ -131,7 +140,7 @@ export const mirrorsInitialState = {
     },
     {
       id: 'mirror_10',
-      image: null,
+      image: mirror_10,
       product: 'Зеркало настенное',
       name: 'Fern',
       article: 'MIR010',
