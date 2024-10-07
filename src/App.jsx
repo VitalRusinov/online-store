@@ -11,6 +11,7 @@ import {getUserData, setUserData, pages, } from './utils';
 const ScrollToSection = () => {
   const location = useLocation();
 
+  //Прокрутка к нужному блоку при нажатии на кнопку меню
   useEffect(() => {
     // Проверяем, есть ли якорь (hash) в URL
     if (location.hash) {
@@ -33,11 +34,6 @@ const App = () => {
 				<Route path={pages.main} element={<MainPage />} />
 				<Route path={pages.order} element={<OrderPage />} />
         <Route path={pages.search} element={<SearchPage />} />
-				{/*				
-
-				<Route path={pages.main} element={<OrderPage />} />
-				*/}
-
 			</Routes>
 		</BrowserRouter>
   );

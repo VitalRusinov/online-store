@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
@@ -30,6 +31,13 @@ const ProductCard = ({modalInfo, closeModal}) => {
       dispatch(addLike({ id }));
     }
   }
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   return (
     <div className={styles.productCard}>

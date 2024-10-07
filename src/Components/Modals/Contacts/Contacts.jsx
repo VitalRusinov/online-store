@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import styles from './Contacts.module.scss';
 import { useFormik } from "formik";
 import YandexMap from './YandexMap/YandexMap'; // Импортируем компонент
 
+
 const Contacts = ({closeModal}) => {
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   // Инициализация useFormik
   const formik = useFormik({

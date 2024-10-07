@@ -31,11 +31,7 @@ const renderModal = (modalInfo, openModal, closeModal) => {
 const MainPage = () => {
 
   const [modalInfo, setModalInfo] = useState({ type: null, payload: null });
-/*
-  useEffect(() => {
-    console.log(modalInfo, 'modalInfo')
-  }, [modalInfo])
-*/
+
   const openModal = (type, payload = null) => setModalInfo({ type, payload });
   const closeModal = () => setModalInfo({ type: null, payload: null });
   
