@@ -5,9 +5,10 @@ import CategoryCard from './CategoryCard/CategoryCard';
 import ProductCard from './ProductCard/ProductCard';
 import MoreButton from '../../Buttons/MoreButton/MoreButton';
 import Filter from './Filter/Filter';
+import { getPrice } from '../../../utils';
 
 
-const Categories = ({openModal}) => {
+const Categories = () => {
 
   const [activeCategoryIdent, setActiveCategoryIdent] = useState(null);
   const [productsCount, setProductsCount] = useState(5)
@@ -26,15 +27,14 @@ const Categories = ({openModal}) => {
 
   const categoriesList = useSelector((state) => state.categories.entries);
   const fullProductsList = useSelector((state) => state[activeCategoryIdent]?.entries);
-  //let productsList = null;
-  const priceFiltered = fullProductsList?.filter(prod => prod.price <= maxPrice)
-  .filter(prod => prod.price >= minPrice);
+  const priceFiltered = fullProductsList?.filter(prod => getPrice(prod.price) <= maxPrice)
+  .filter(prod => getPrice(prod.price) >= minPrice);
   const filteredList = priceFiltered?.filter(prod => colorsFilter?.includes(prod.color));
   const productsList = filteredList?.slice(0, productsCount);
 
   useEffect(() => {
     if(fullProductsList) {
-      const prices = fullProductsList.map((product) => product.price);
+      const prices = fullProductsList.map((product) => getPrice(product.price));
       const minPrice = Math.min(...prices);
       const maxPrice = Math.max(...prices);
       setMinPrice(minPrice);
@@ -83,7 +83,7 @@ const Categories = ({openModal}) => {
         {productsList && productsList.map((product) => {
           return (
             <div key={product.id} className={styles.productCard}>
-              <ProductCard prod={product} openModal={openModal}/>
+              <ProductCard prod={product} />
             </div>
           )
         })}

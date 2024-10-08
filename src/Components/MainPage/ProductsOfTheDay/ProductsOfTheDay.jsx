@@ -1,13 +1,18 @@
-import {useState, useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import {useState, useContext} from 'react';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
 
 import styles from './ProductsOfTheDay.module.scss';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
 import modalTypes from '../../Modals/modalTypes';
+import ModalContext from '../../../context/ModalContext';
+import { getPrice } from '../../../utils';
 
-const ProductsOfTheDay = ({openModal}) => {
+const ProductsOfTheDay = () => {
+
+  const { openModal } = useContext(ModalContext);
+
   const [activeProduct, setActiveProduct] = useState(null);
 
   const chairs = useSelector((state) => state.chairs.entries);
@@ -38,6 +43,8 @@ const ProductsOfTheDay = ({openModal}) => {
       {productsOfTheDayList.map(product => {
         slidesCount += 1;
         const {id, designer, image, name, description, price} = product;
+        const finishPrice = getPrice(price);
+
         return (
           <div 
             onMouseEnter={() => {
@@ -60,7 +67,7 @@ const ProductsOfTheDay = ({openModal}) => {
               <span>{description}</span>
               <hr />
               <div>
-                <span className={styles.price}>{price}</span>
+                <span className={styles.price}>{finishPrice}</span>
                 <span className={styles.ruble}>&#x20bd;</span>
               </div>
             </div>
@@ -79,20 +86,3 @@ const ProductsOfTheDay = ({openModal}) => {
 };
 
 export default ProductsOfTheDay;
-
-/*
-    {
-      id: 'lamp_01',
-      image: Santa_Trinita,
-      product: 'Лампа настольная',
-      name: 'Santa Trinita',
-      article: 'GNM001',
-      color: 'Лаванда',
-      description: 'Функциональная дизайнерская лампа для создания максимально комфортного освещения',
-      designer: 'Benjamin Moor',
-      size: {
-        height: '60см'
-      },
-      price: 150000
-    },
-    */

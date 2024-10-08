@@ -1,10 +1,14 @@
+import React, { useContext } from 'react';
+import ModalContext from '../../context/ModalContext';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Menu.module.scss';
 
 import modalTypes from '../Modals/modalTypes';
 import { pages } from '../../utils';
 
-const Menu = ({openModal, closeModal, modalInfo}) => {
+const Menu = () => {
+  const { modalInfo, openModal, closeModal } = useContext(ModalContext);
+
   const location = useLocation(); // Получаем текущее местоположение
 
   const toggleModal = (type) => {

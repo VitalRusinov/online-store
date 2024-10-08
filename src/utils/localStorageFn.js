@@ -3,10 +3,9 @@ import _ from "lodash";
 const defaultIdentifier = 'elfenLied';
 
 const getUserData = (identifier = defaultIdentifier) => {
-  const userData = sessionStorage.getItem(identifier);
+  const userData = localStorage.getItem(identifier);
   if (!userData) {
-    const email = _.uniqueId('guest_');
-    const guestData = {email, password: '', auth: false, likes: [], basket: {}};
+    const guestData = {email: 'guest', password: '', auth: false, likes: [], basket: {}};
     setUserData(guestData);
     return guestData;
   }
@@ -14,12 +13,11 @@ const getUserData = (identifier = defaultIdentifier) => {
 }
 
 const setUserData = (data, identifier = defaultIdentifier) => (
-  sessionStorage.setItem(identifier, JSON.stringify(data)));
+  localStorage.setItem(identifier, JSON.stringify(data)));
 
 const removeUserData = (identifier = defaultIdentifier) => {
-  sessionStorage.removeItem(identifier);
-  const email = _.uniqueId('guest_');
-  setUserData({email, password: '', auth: false, likes: [], basket: {}});
+  localStorage.removeItem(identifier);
+  setUserData({email: 'guest', password: '', auth: false, likes: [], basket: {}});
 };
 
 export { getUserData, setUserData, removeUserData };

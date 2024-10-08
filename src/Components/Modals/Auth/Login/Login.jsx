@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
+import ModalContext from '../../../../context/ModalContext';
 import styles from './Login.module.scss';
 import EnterButton from './EnterButton/EnterButton';
-import { getUserData, setUserData } from '../../../../utils';
+import { setUserData } from '../../../../utils';
 import ModalTypes from '../../modalTypes';
+import { addNewUserBasket } from '../../../../store/basketsSlice';
 
 // Схема валидации с использованием Yup
 const validationSchema = Yup.object({
@@ -19,7 +21,10 @@ const validationSchema = Yup.object({
     .required('Поле обязательно'),
 });
 
-const Login = ({openModal, closeModal}) => {
+const Login = () => {
+  const dispatch = useDispatch();
+
+  const { openModal, closeModal } = useContext(ModalContext);
 
   const [loginError, setLoginError] = useState(null);
 
@@ -33,7 +38,6 @@ const Login = ({openModal, closeModal}) => {
 
   // Функция, вызываемая при отправке формы
   const handleSubmit = (values) => {
-    //console.log('Данные формы:', values);
     const user = users.find(u => u.email === values.email);
     if(!user) {
       setLoginError('Данный пользователь не зарегистрирован');
@@ -45,6 +49,8 @@ const Login = ({openModal, closeModal}) => {
     }
     setLoginError(null);
     setUserData({...user});
+    dispatch(addNewUserBasket());
+
     openModal(ModalTypes.auth);
   };
 

@@ -306,12 +306,6 @@ $lime: #D9FF5A;
 
       transition-duration: 1s;
       transition-timing-function: ease-out;
-
-      &:hover {
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;   
-        transform: scale(1.05); /* Увеличение при наведении */
-      }
     }
 
     .slides_Container {

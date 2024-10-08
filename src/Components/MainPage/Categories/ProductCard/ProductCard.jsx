@@ -1,13 +1,21 @@
+import { useContext } from 'react';
 import { useDispatch } from 'react-redux';
 import styles from './ProductCard.module.scss';
 import classNames from 'classnames';
 import { addProduct } from '../../../../store/basketsSlice';
 import modalTypes from '../../../Modals/modalTypes';
+import ModalContext from '../../../../context/ModalContext';
+import { getPrice } from '../../../../utils';
 
-const ProductCard = ({prod, openModal}) => {
+const ProductCard = ({ prod }) => {
+
+  const { openModal } = useContext(ModalContext);
+
   const dispatch = useDispatch();
 
   const {id, image, product, name, color, price} = prod;
+  const finishPrice = getPrice(price);
+
 
   const ellipseClass = classNames(styles.ellipse, styles[color]);
 
@@ -30,7 +38,7 @@ const ProductCard = ({prod, openModal}) => {
         <div className={styles.product}>{product}</div>
         <hr />
         <div className={styles.price}>
-          <span className={styles.numbers}>{price}</span>
+          <span className={styles.numbers}>{finishPrice}</span>
           <span className={styles.rubles}>&#8381;</span>
         </div>
         <button onClick={handleBuy} className={styles.button}>
@@ -47,21 +55,3 @@ const ProductCard = ({prod, openModal}) => {
 };
 
 export default ProductCard;
-
-/*
-    {
-      id: 'chair_01',
-      image: 'Moonseat',
-      product: 'Кресло',
-      name: 'Moonseat',
-      article: 'CHR001',
-      color: 'Лунный серебристый',
-      description: 'Кресло с изгибами, напоминающими лунные световые дорожки',
-      designer: 'Elara Moonshadow',
-      size: {
-        height: '100см',
-        width: '70см'
-      },
-      price: 90000
-    },
-    */

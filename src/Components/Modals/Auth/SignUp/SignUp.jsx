@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addUser } from '../../../../store/usersSlice';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -8,6 +8,8 @@ import styles from './SignUp.module.scss';
 import RegistrationButton from './RegistrationButton/RegistrationButton';
 import { setUserData } from '../../../../utils';
 import ModalTypes from '../../modalTypes';
+import ModalContext from '../../../../context/ModalContext';
+import { addNewUserBasket } from '../../../../store/basketsSlice';
 
 // Схема валидации с использованием Yup
 const validationSchema = Yup.object({
@@ -23,7 +25,9 @@ const validationSchema = Yup.object({
     .required('required'),
 });
 
-const SignUp = ({openModal, closeModal}) => {
+const SignUp = () => {
+
+  const { openModal, closeModal } = useContext(ModalContext);
 
   const [signUpError, setSignUpError] = useState(null);
 
@@ -38,7 +42,6 @@ const SignUp = ({openModal, closeModal}) => {
 
   // Функция, вызываемая при отправке формы
   const handleSubmit = (values) => {
-    // console.log('Данные формы:', values);
     const user = users.find(u => u.email === values.email);
     if(user) {
       setSignUpError('Данный пользователь уже зарегистрирован');
@@ -46,15 +49,11 @@ const SignUp = ({openModal, closeModal}) => {
     }
     setSignUpError(null);
     const { confirmPassword, ...newUser } = values;
-    // console.log(newUser, 'signUp values');
     dispatch(addUser(newUser));
-    setUserData({...newUser, ...{auth: true, likes: [], basket: []}});
+    setUserData({...newUser, ...{auth: true, likes: [], basket: {}}});
+    dispatch(addNewUserBasket());
     openModal(ModalTypes.auth);
   };
-
-  // useEffect(() => {
-  //   console.log(users, 'users from signUp')
-  // }, [users])
 
   return (
     <div className={styles.loginForm}>

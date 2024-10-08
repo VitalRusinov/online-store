@@ -1,10 +1,13 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import styles from './Contacts.module.scss';
 import { useFormik } from "formik";
-import YandexMap from './YandexMap/YandexMap'; // Импортируем компонент
+import YandexMap from './YandexMap/YandexMap';
+import ModalContext from '../../../context/ModalContext';
 
 
-const Contacts = ({closeModal}) => {
+const Contacts = () => {
+
+  const { closeModal } = useContext(ModalContext);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';

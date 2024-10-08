@@ -1,19 +1,15 @@
 import classNames from 'classnames';
 import styles from './BasketCard.module.scss';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { getUserData } from '../../../../utils';
-import { addProduct, decrementProduct, removeProduct } from '../../../../store/basketsSlice';
+import { removeProduct } from '../../../../store/basketsSlice';
 
 const BasketCard = ({prod}) => {
   const dispatch = useDispatch();
-  const {email} = getUserData();
 
   const { id, image, color, name, product, price, count } = prod;
 
   const ellipseClass = classNames(styles.ellipse, styles[color]);
-  const decrementProductClass = classNames(styles.button, {[styles.disabled]: count <= 1},
-  );
 
   return (
     <div className={styles.card}>
@@ -54,21 +50,3 @@ const BasketCard = ({prod}) => {
 };
 
 export default BasketCard;
-
-/*
-{
-  id: 'chair_01',
-  image: 'Moonseat',
-  product: 'Кресло',
-  name: 'Moonseat',
-  article: 'CHR001',
-  color: 'lazure',
-  description: 'Кресло с изгибами, напоминающими лунные световые дорожки',
-  designer: 'Elara Moonshadow',
-  size: {
-    height: '100см',
-    width: '70см'
-  },
-  price: 90000
-},
-*/

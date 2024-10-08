@@ -14,7 +14,6 @@ const likesSlice = createSlice({
   reducers: {
     addLike(state, action) {
       const { id } = action.payload;
-      console.log(state.entities, 'state.entities[email] ');
       if(!state.entities[email]) {
         state.entities[email] = [];
       }

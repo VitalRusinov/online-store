@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
@@ -7,8 +7,12 @@ import styles from './ProductCard.module.scss';
 import { addLike, removeLike } from '../../../store/likesSlice';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
 import { getUserData, translateProp, translateColor } from '../../../utils';
+import ModalContext from '../../../context/ModalContext';
 
-const ProductCard = ({modalInfo, closeModal}) => {
+const ProductCard = () => {
+
+  const { modalInfo, closeModal } = useContext(ModalContext);
+
   const { email } = getUserData();
   const likes = useSelector((state) => state.likes.entities[email]);
   const dispatch = useDispatch();
@@ -103,20 +107,3 @@ const ProductCard = ({modalInfo, closeModal}) => {
 }
 
 export default ProductCard;
-
-/*
-    {
-      id: 'lamp_01',
-      image: Santa_Trinita,
-      product: 'Лампа настольная',
-      name: 'Santa Trinita',
-      article: 'GNM001',
-      color: 'Лаванда',
-      description: 'Функциональная дизайнерская лампа для создания максимально комфортного освещения',
-      designer: 'Benjamin Moor',
-      size: {
-        height: '60см'
-      },
-      price: 150000
-    },
-    */

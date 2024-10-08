@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './Liked.module.scss';
 import { getUserData } from '../../../utils';
 import LikedCard from './LikedCard/LikedCard';
+import ModalContext from '../../../context/ModalContext';
 
-const Liked = ({openModal, closeModal}) => {
+const Liked = () => {
+
+  const { closeModal } = useContext(ModalContext);
 
   const chairs = useSelector((state) => state.chairs.entries);
   const lamps = useSelector((state) => state.lamps.entries);
@@ -17,7 +20,7 @@ const Liked = ({openModal, closeModal}) => {
   const likes = useSelector((state) => state.likes.entities[email]);
 
   const likedProducts = [];
-  likes.forEach(id => {
+  likes?.forEach(id => {
     const prodById = allProducts.find(prod => prod.id === id);
     likedProducts.push(prodById);
   })

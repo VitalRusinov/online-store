@@ -1,22 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-//import { addUser } from '../../../../store/usersSlice';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import React, { useContext } from 'react';
 
 import styles from './UserInfo.module.scss';
 import { getUserData, removeUserData, setUserData } from '../../../../utils';
 import ModalTypes from '../../modalTypes';
 
 import ExitButton from './ExitButton/ExitButton';
+import ModalContext from '../../../../context/ModalContext';
+import { addNewUserBasket } from '../../../../store/basketsSlice';
+import { useDispatch } from 'react-redux';
 
 
-const UserInfo = ({openModal, closeModal}) => {
+const UserInfo = () => {  
+  const dispatch = useDispatch();
+
+  const { openModal, closeModal } = useContext(ModalContext);
 
   const user = getUserData();
   // Функция, вызываемая при отправке формы
   const handleSubmit = () => {
     removeUserData();
+    dispatch(addNewUserBasket());
     openModal(ModalTypes.auth);
   };
 

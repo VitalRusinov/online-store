@@ -6,7 +6,8 @@ import MainPage from './Components/MainPage/MainPage'
 import OrderPage from './Components/OrderPage/OrderPage';
 import SearchPage from './Components/SearchPage/SearchPage';
 
-import {getUserData, setUserData, pages, } from './utils';
+import { pages } from './utils';
+import Menu from './Components/Menu/Menu';
 
 const ScrollToSection = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const App = () => {
   return (
 		<BrowserRouter>
 			<ScrollToSection />
+      <Menu />
 			<Routes>
 				<Route path={pages.main} element={<MainPage />} />
 				<Route path={pages.order} element={<OrderPage />} />

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useContext } from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './Basket.module.scss';
-import { getUserData } from '../../../utils';
+import { getPrice, getUserData } from '../../../utils';
 import BasketCard from './BasketCard/BasketCard';
 import OrderButton from './OrderButton/OrderButton';
+import ModalContext from '../../../context/ModalContext';
 
-const Basket = ({openModal, closeModal}) => {
+const Basket = () => {
+
+  const { closeModal } = useContext(ModalContext);
 
   const chairs = useSelector((state) => state.chairs.entries);
   const lamps = useSelector((state) => state.lamps.entries);
@@ -16,6 +19,7 @@ const Basket = ({openModal, closeModal}) => {
   
   const {email} = getUserData();
   const basket = useSelector((state) => state.baskets.entities[email]);
+  console.log(basket, 'basket');
   const prodIdsInBasket = Object.keys(basket);
 
   const basketProducts = [];
@@ -23,7 +27,7 @@ const Basket = ({openModal, closeModal}) => {
   prodIdsInBasket.forEach(id => {
     const prodById = allProducts.find(prod => prod.id === id);
     basketProducts.push({...prodById, count: basket[id].count});
-    totalPrice += prodById.price * basket[id].count
+    totalPrice += getPrice(prodById.price) * basket[id].count
   })
 
   return (

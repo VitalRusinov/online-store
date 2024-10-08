@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './LikedCard.module.scss';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { removeLike } from '../../../../store/likesSlice';
 import { getUserData } from '../../../../utils';
 
@@ -46,21 +46,3 @@ const LikedCard = ({prod}) => {
 };
 
 export default LikedCard;
-
-/*
-{
-  id: 'chair_01',
-  image: 'Moonseat',
-  product: 'Кресло',
-  name: 'Moonseat',
-  article: 'CHR001',
-  color: 'lazure',
-  description: 'Кресло с изгибами, напоминающими лунные световые дорожки',
-  designer: 'Elara Moonshadow',
-  size: {
-    height: '100см',
-    width: '70см'
-  },
-  price: 90000
-},
-*/
