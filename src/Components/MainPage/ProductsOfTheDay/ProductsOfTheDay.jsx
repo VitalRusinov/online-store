@@ -1,16 +1,15 @@
-import {useState, useContext} from 'react';
-import { useSelector } from 'react-redux';
-import classNames from 'classnames';
+import { useState, useContext } from "react";
+import { useSelector } from "react-redux";
+import classNames from "classnames";
 
-import styles from './ProductsOfTheDay.module.scss';
-import BuyButton from '../../Buttons/BuyButton/BuyButton';
+import styles from "./ProductsOfTheDay.module.scss";
+import BuyButton from "../../Buttons/BuyButton/BuyButton";
 
-import modalTypes from '../../Modals/modalTypes';
-import ModalContext from '../../../context/ModalContext';
-import { getPrice } from '../../../utils';
+import modalTypes from "../../Modals/modalTypes";
+import ModalContext from "../../../context/ModalContext";
+import { getPrice } from "../../../utils";
 
 const ProductsOfTheDay = () => {
-
   const { openModal } = useContext(ModalContext);
 
   const [activeProduct, setActiveProduct] = useState(null);
@@ -20,33 +19,34 @@ const ProductsOfTheDay = () => {
   const mirrors = useSelector((state) => state.mirrors.entries);
   const tables = useSelector((state) => state.tables.entries);
   const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
-  
-  const productsOfTheDayIdList = useSelector((state) => state.productsOfTheDay.entries);
+
+  const productsOfTheDayIdList = useSelector(
+    (state) => state.productsOfTheDay.entries,
+  );
 
   const productsOfTheDayList = [];
-  productsOfTheDayIdList.forEach(id => {
-    const prodById = allProducts.find(prod => prod.id === id);
+  productsOfTheDayIdList.forEach((id) => {
+    const prodById = allProducts.find((prod) => prod.id === id);
     productsOfTheDayList.push(prodById);
   });
 
-
-  const getProductOfTheDayClasses = (product) => classNames(styles.productOfTheDay, {
-    [styles.active]: product === activeProduct,
-    [styles.inactive]: product !== activeProduct && activeProduct !== null,
-    }
-  );
+  const getProductOfTheDayClasses = (product) =>
+    classNames(styles.productOfTheDay, {
+      [styles.active]: product === activeProduct,
+      [styles.inactive]: product !== activeProduct && activeProduct !== null,
+    });
 
   let slidesCount = 0;
 
   return (
-    <div className={styles.productsOfTheDayContainer} id='productsOfTheDay'>
-      {productsOfTheDayList.map(product => {
+    <div className={styles.productsOfTheDayContainer} id="productsOfTheDay">
+      {productsOfTheDayList.map((product) => {
         slidesCount += 1;
-        const {id, designer, image, name, description, price} = product;
+        const { id, designer, image, name, description, price } = product;
         const finishPrice = getPrice(price);
 
         return (
-          <div 
+          <div
             onMouseEnter={() => {
               setActiveProduct(product);
             }}
@@ -60,7 +60,12 @@ const ProductsOfTheDay = () => {
               <span className={styles.designer}>{designer}</span>
             </div>
             <div className={styles.img_container}>
-              <img className={styles.image} src={image} alt="Изображение продукта" loading="lazy"/>
+              <img
+                className={styles.image}
+                src={image}
+                alt="Изображение продукта"
+                loading="lazy"
+              />
             </div>
             <div className={styles.description}>
               <p>{name}</p>
@@ -72,17 +77,17 @@ const ProductsOfTheDay = () => {
               </div>
             </div>
             <div className={styles.button_Container}>
-              <BuyButton id={id}/>
+              <BuyButton id={id} />
             </div>
             <div className={styles.slides_Container}>
               <p>Слайд</p>
               <span>{slidesCount}</span>
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 };
 
 export default ProductsOfTheDay;

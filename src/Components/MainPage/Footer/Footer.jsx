@@ -1,4 +1,4 @@
-import styles from './Footer.module.css';
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -6,7 +6,7 @@ const Footer = () => {
       <span>@2023</span>
       <span>Все права защищены</span>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

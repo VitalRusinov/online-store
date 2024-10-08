@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import ModalContext from '../../context/ModalContext';
-import getModal from './index.js';
+import React, { useContext } from "react";
+import ModalContext from "../../context/ModalContext";
+import getModal from "./index.js";
 
 const RenderModal = () => {
   const { modalInfo } = useContext(ModalContext);
@@ -9,9 +9,7 @@ const RenderModal = () => {
     return null;
   }
   const Component = getModal(modalInfo.type);
-  return (
-    <Component />
-  );
+  return <Component />;
 };
 
 export default RenderModal;

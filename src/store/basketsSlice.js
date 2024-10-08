@@ -48,8 +48,8 @@ export const { addProduct, decrementProduct, removeProduct } = basketsSlice.acti
 export default basketsSlice.reducer;
 */
 
-import { createSlice } from '@reduxjs/toolkit';
-import { getUserData, setUserData } from '../utils';
+import { createSlice } from "@reduxjs/toolkit";
+import { getUserData, setUserData } from "../utils";
 
 const user = getUserData();
 const { email, basket } = user;
@@ -61,7 +61,7 @@ const initialState = {
 };
 
 const basketsSlice = createSlice({
-  name: 'baskets',
+  name: "baskets",
   initialState,
   reducers: {
     addNewUserBasket(state) {
@@ -90,7 +90,7 @@ const basketsSlice = createSlice({
         basket: state.entities[email],
       });
     },
-    
+
     removeProduct(state, action) {
       const { id } = action.payload;
 
@@ -105,12 +105,16 @@ const basketsSlice = createSlice({
         });
       }
     },
-    
+
     decrementProduct(state, action) {
       const { id } = action.payload;
 
       // Проверяем существование продукта и его количества
-      if (state.entities[email] && state.entities[email][id] && state.entities[email][id].count > 0) {
+      if (
+        state.entities[email] &&
+        state.entities[email][id] &&
+        state.entities[email][id].count > 0
+      ) {
         state.entities[email][id].count -= 1;
 
         // Обновляем данные в sessionStorage
@@ -123,7 +127,6 @@ const basketsSlice = createSlice({
   },
 });
 
-export const { addNewUserBasket, addProduct, decrementProduct, removeProduct } = basketsSlice.actions;
+export const { addNewUserBasket, addProduct, decrementProduct, removeProduct } =
+  basketsSlice.actions;
 export default basketsSlice.reducer;
-
-

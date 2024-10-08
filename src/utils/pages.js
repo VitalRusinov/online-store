@@ -1,5 +1,5 @@
 export const pages = {
-  main: '/',
-  search: '/search',
-  order: '/order',
+  main: "/",
+  search: "/search",
+  order: "/order",
 };

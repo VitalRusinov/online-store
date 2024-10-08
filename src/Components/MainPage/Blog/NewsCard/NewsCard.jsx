@@ -1,22 +1,51 @@
-import styles from './NewsCard.module.scss';
+import React from "react";
+import styles from "./NewsCard.module.scss";
 
-const NewsCard = ({news}) => {
-  const {id, author, name, date, readingTime, image} = news;
+const NewsCard = ({ news }) => {
+  const { id, author, name, date, readingTime, image } = news;
 
   return (
     <div className={styles.newsCard_container}>
       <div>
-        <svg width="581" height="343" viewBox="0 0 581 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="581"
+          height="343"
+          viewBox="0 0 581 343"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <g filter="url(#filter0_b_2538_3716)">
-          <path fillRule="evenodd" clipRule="evenodd" d="M337.273 0.7666C315.182 0.7666 297.273 18.6752 297.273 40.7666L297.273 76.7666C297.273 80.6326 294.139 83.7666 290.273 83.7666C286.407 83.7666 283.273 80.6326 283.273 76.7666L283.273 40.7666C283.273 18.6752 265.365 0.7666 243.273 0.7666L40.2734 0.7666C18.1821 0.7666 0.273437 18.6752 0.273436 40.7666L0.273424 302.767C0.273423 324.858 18.1821 342.767 40.2734 342.767L103.456 342.767C110.362 342.767 116.094 337.668 118.248 331.107C127.132 304.051 151.165 284.767 179.773 284.767C208.238 284.767 232.879 303.858 242.862 330.699C245.335 337.347 251.706 342.519 258.28 339.856C272.936 333.921 283.273 319.551 283.273 302.767L283.273 266.767C283.273 262.901 286.407 259.767 290.273 259.767C294.139 259.767 297.273 262.901 297.273 266.767L297.273 302.767C297.273 324.858 315.182 342.767 337.273 342.767L540.273 342.767C562.365 342.767 580.273 324.858 580.273 302.767L580.273 40.7666C580.273 18.6752 562.365 0.766601 540.273 0.7666L337.273 0.7666Z" fill="#CBB6FF"/>
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M337.273 0.7666C315.182 0.7666 297.273 18.6752 297.273 40.7666L297.273 76.7666C297.273 80.6326 294.139 83.7666 290.273 83.7666C286.407 83.7666 283.273 80.6326 283.273 76.7666L283.273 40.7666C283.273 18.6752 265.365 0.7666 243.273 0.7666L40.2734 0.7666C18.1821 0.7666 0.273437 18.6752 0.273436 40.7666L0.273424 302.767C0.273423 324.858 18.1821 342.767 40.2734 342.767L103.456 342.767C110.362 342.767 116.094 337.668 118.248 331.107C127.132 304.051 151.165 284.767 179.773 284.767C208.238 284.767 232.879 303.858 242.862 330.699C245.335 337.347 251.706 342.519 258.28 339.856C272.936 333.921 283.273 319.551 283.273 302.767L283.273 266.767C283.273 262.901 286.407 259.767 290.273 259.767C294.139 259.767 297.273 262.901 297.273 266.767L297.273 302.767C297.273 324.858 315.182 342.767 337.273 342.767L540.273 342.767C562.365 342.767 580.273 324.858 580.273 302.767L580.273 40.7666C580.273 18.6752 562.365 0.766601 540.273 0.7666L337.273 0.7666Z"
+              fill="#CBB6FF"
+            />
           </g>
           <defs>
-          <filter id="filter0_b_2538_3716" x="-99.7266" y="-99.2334" width="780" height="542" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-          <feGaussianBlur in="BackgroundImageFix" stdDeviation="50"/>
-          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2538_3716"/>
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2538_3716" result="shape"/>
-          </filter>
+            <filter
+              id="filter0_b_2538_3716"
+              x="-99.7266"
+              y="-99.2334"
+              width="780"
+              height="542"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="50" />
+              <feComposite
+                in2="SourceAlpha"
+                operator="in"
+                result="effect1_backgroundBlur_2538_3716"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_backgroundBlur_2538_3716"
+                result="shape"
+              />
+            </filter>
           </defs>
         </svg>
       </div>
@@ -25,7 +54,7 @@ const NewsCard = ({news}) => {
         <p className={styles.measurement}>{readingTime.measurement}</p>
       </div>
       <div className={styles.img_container}>
-        <img src={image} alt="Картинка статьи" loading="lazy"/>
+        <img src={image} alt="Картинка статьи" loading="lazy" />
       </div>
       <div className={styles.number}>
         <span>{id}</span>
@@ -39,11 +68,13 @@ const NewsCard = ({news}) => {
         <p>{name.str_3}</p>
       </div>
       <div className={styles.date}>
-        <p>{date.day} {date.month}</p>
+        <p>
+          {date.day} {date.month}
+        </p>
         <p>{date.year}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default NewsCard;

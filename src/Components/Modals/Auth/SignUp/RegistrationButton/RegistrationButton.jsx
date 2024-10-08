@@ -1,13 +1,11 @@
-import styles from './RegistrationButton.module.scss';
-import classNames from 'classnames';
+import styles from "./RegistrationButton.module.scss";
+import classNames from "classnames";
 
-
-const RegistrationButton = ({handleSubmit, isSubmitting}) => {
-
+const RegistrationButton = ({ handleSubmit, isSubmitting }) => {
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);
 
   return (
-    <button 
+    <button
       className={styles.button_container}
       onClick={handleSubmit}
       type="submit"
@@ -16,7 +14,7 @@ const RegistrationButton = ({handleSubmit, isSubmitting}) => {
       <div className={ellipseFrontClasses}></div>
       <p className={styles.text}>Регистрация</p>
     </button>
-  )
-}
+  );
+};
 
 export default RegistrationButton;

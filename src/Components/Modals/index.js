@@ -1,10 +1,10 @@
-import ProductCard from './ProductCard/ProductCard.jsx';
-import Auth from './Auth/Auth.jsx';
-import SignUp from './Auth/SignUp/SignUp';
-import Liked from './Liked/Liked';
-import Basket from './Basket/Basket';
-import Contacts from './Contacts/Contacts';
-import Search from './Search/Search';
+import ProductCard from "./ProductCard/ProductCard.jsx";
+import Auth from "./Auth/Auth.jsx";
+import SignUp from "./Auth/SignUp/SignUp";
+import Liked from "./Liked/Liked";
+import Basket from "./Basket/Basket";
+import Contacts from "./Contacts/Contacts";
+import Search from "./Search/Search";
 
 const modals = {
   productCard: ProductCard,

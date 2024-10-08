@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
 import { useFormik } from "formik";
 
-import { getUserData, pages } from '../../../utils';
-import styles from './OrderForm.module.scss';
-import { useSelector } from 'react-redux';
+import { getUserData } from "../../../utils";
+import styles from "./OrderForm.module.scss";
+import { useSelector } from "react-redux";
 
-
-const OrderForm = ({setOrderStatus}) => {
-  const {email} = getUserData();
+const OrderForm = ({ setOrderStatus }) => {
+  const { email } = getUserData();
   const basket = useSelector((state) => state.baskets.entities[email]);
 
   // Инициализация useFormik
@@ -24,7 +23,7 @@ const OrderForm = ({setOrderStatus}) => {
       setOrderStatus(true);
     },
   });
-  
+
   return (
     <div className={styles.form_container}>
       <h2>Оформление заказа</h2>
@@ -35,7 +34,7 @@ const OrderForm = ({setOrderStatus}) => {
             id="name"
             name="name"
             type="text"
-            placeholder='Ваше имя'
+            placeholder="Ваше имя"
             onChange={formik.handleChange}
             value={formik.values.name}
             className={styles.input}
@@ -49,7 +48,7 @@ const OrderForm = ({setOrderStatus}) => {
             id="address"
             name="address"
             type="text"
-            placeholder='Адрес'
+            placeholder="Адрес"
             onChange={formik.handleChange}
             value={formik.values.address}
             className={styles.input}
@@ -62,21 +61,20 @@ const OrderForm = ({setOrderStatus}) => {
             id="phone"
             name="phone"
             type="tel"
-            placeholder='Телефон'
+            placeholder="Телефон"
             onChange={formik.handleChange}
             value={formik.values.phone}
             className={styles.input}
             required
           />
         </div>
-        <button className={styles.orderButton} type="submit">          
+        <button className={styles.orderButton} type="submit">
           <div className={styles.ellipse}></div>
           <span>Заказать</span>
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default OrderForm;
-

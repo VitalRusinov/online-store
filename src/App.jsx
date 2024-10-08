@@ -1,13 +1,12 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import _ from "lodash";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import MainPage from './Components/MainPage/MainPage'
-import OrderPage from './Components/OrderPage/OrderPage';
-import SearchPage from './Components/SearchPage/SearchPage';
+import MainPage from "./Components/MainPage/MainPage";
+import OrderPage from "./Components/OrderPage/OrderPage";
+import SearchPage from "./Components/SearchPage/SearchPage";
 
-import { pages } from './utils';
-import Menu from './Components/Menu/Menu';
+import { pages } from "./utils";
+import Menu from "./Components/Menu/Menu";
 
 const ScrollToSection = () => {
   const location = useLocation();
@@ -27,18 +26,17 @@ const ScrollToSection = () => {
 };
 
 const App = () => {
-
   return (
-		<BrowserRouter>
-			<ScrollToSection />
+    <BrowserRouter>
+      <ScrollToSection />
       <Menu />
-			<Routes>
-				<Route path={pages.main} element={<MainPage />} />
-				<Route path={pages.order} element={<OrderPage />} />
+      <Routes>
+        <Route path={pages.main} element={<MainPage />} />
+        <Route path={pages.order} element={<OrderPage />} />
         <Route path={pages.search} element={<SearchPage />} />
-			</Routes>
-		</BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

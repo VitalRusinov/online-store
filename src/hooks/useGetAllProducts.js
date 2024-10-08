@@ -10,4 +10,3 @@ export const useGetAllProducts = () => {
   // Возвращаем объединенные данные
   return [...chairs, ...lamps, ...mirrors, ...tables];
 };
-

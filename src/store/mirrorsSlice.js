@@ -1,14 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { mirrorsInitialState } from './initialStates/mirrorsInitialState';
+import { createSlice } from "@reduxjs/toolkit";
+import { mirrorsInitialState } from "./initialStates/mirrorsInitialState";
 
 const initialState = mirrorsInitialState;
 
 const mirrorsSlice = createSlice({
-  name: 'mirrors',
+  name: "mirrors",
   initialState,
   reducers: {},
 });
-
-export const {} = mirrorsSlice.actions;
 
 export default mirrorsSlice.reducer;
