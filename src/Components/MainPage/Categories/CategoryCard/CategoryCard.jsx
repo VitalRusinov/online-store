@@ -61,7 +61,7 @@ const CategoryCard = ({category, activeCategoryIdent, setActiveCategoryIdent}) =
       </svg>
       </div>
       <div className={styles.img_container}>
-        <img src={image} alt="Изображение категории" />
+        <img src={image} alt="Изображение категории" loading="lazy"/>
       </div>
       <div className={styles.category_name}>
         <p>{name.firstLine}</p>

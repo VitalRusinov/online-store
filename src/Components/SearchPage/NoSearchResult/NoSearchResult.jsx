@@ -6,7 +6,7 @@ const NoSearchResult = () => {
     <div className={styles.container}>
       <span>No results</span>
       <div className={styles.img_container}>
-        <img src={No_results} alt="" />
+        <img src={No_results} alt="" loading="lazy"/>
       </div>
     </div>
   )

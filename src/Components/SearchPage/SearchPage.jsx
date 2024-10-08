@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-
-import { useSelector } from 'react-redux';
-
 import styles from './SearchPage.module.scss';
 
 import SearchForm from '../Modals/Search/SearchForm/SearchForm.jsx';
 import NoSearchResult from './NoSearchResult/NoSearchResult';
 import SearchProducts from './SearchProducts/SearchProducts';
 import RenderModal from '../Modals/RenderModal.jsx';
+import { useGetAllProducts } from '../../hooks/useGetAllProducts.js';
 
 const getFilteredList = (allProducts, str) => {
   return allProducts.filter(prod => {
@@ -26,11 +24,7 @@ const SearchPage = () => {
   const data = location.state; // Данные переданные через navigate
 
   //Получаем полный список товаров и выбираем те, которые подходят под поиск
-  const chairs = useSelector((state) => state.chairs.entries);
-  const lamps = useSelector((state) => state.lamps.entries);
-  const mirrors = useSelector((state) => state.mirrors.entries);
-  const tables = useSelector((state) => state.tables.entries);
-  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+  const allProducts = useGetAllProducts();
 
   useEffect(() => {
     const filtered = getFilteredList(allProducts, data);

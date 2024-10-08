@@ -65,9 +65,8 @@ const basketsSlice = createSlice({
   initialState,
   reducers: {
     addNewUserBasket(state) {
-      if (!state.entities[email]) {
-        state.entities[email] = {};
-      }
+      const { email, basket } = getUserData();
+      state.entities[email] = basket;
     },
     addProduct(state, action) {
       const { id } = action.payload;

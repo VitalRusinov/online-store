@@ -18,7 +18,7 @@ const BasketCard = ({prod}) => {
   return (
     <div className={styles.card}>
       <div className={styles.img_container}>
-        <img src={image} alt="Изображение товара" />
+        <img src={image} alt="Изображение товара" loading="lazy" />
       </div>
       <div className={styles.main}>
         <div className={styles.aboveLine}>

@@ -6,7 +6,7 @@ import styles from './ProductCard.module.scss';
 
 import { addLike, removeLike } from '../../../store/likesSlice';
 import BuyButton from '../../Buttons/BuyButton/BuyButton';
-import { getUserData, translateProp, translateColor } from '../../../utils';
+import { getUserData, translateProp, translateColor, getPrice } from '../../../utils';
 import ModalContext from '../../../context/ModalContext';
 
 const ProductCard = () => {
@@ -64,12 +64,12 @@ const ProductCard = () => {
       </div>
       <div className={styles.central_column}>
         <div className={styles.img_container}>
-          <img className={styles.image} src={image} alt="Изображение продукта" />
+          <img className={styles.image} src={image} alt="Изображение продукта" loading="lazy"/>
         </div>
         <div className={styles.name_price}>
           <span className={styles.name}>{name}</span>
           <div>
-            <span className={styles.price}>{price}</span>
+            <span className={styles.price}>{getPrice(price)}</span>
             <span className={styles.ruble}>&#x20bd;</span>
           </div>
         </div>

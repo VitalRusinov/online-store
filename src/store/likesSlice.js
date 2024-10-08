@@ -14,24 +14,27 @@ const likesSlice = createSlice({
   reducers: {
     addLike(state, action) {
       const { id } = action.payload;
+      const userData = getUserData();
+      const {email} = userData;
       if(!state.entities[email]) {
         state.entities[email] = [];
       }
       state.entities[email].push(id);
-      //а также обновляем данные в сессионСторадж
-      const newLikes = likes.slice(0);// создаем копию массива для возможности его изменить
-      newLikes.push(id);
-      userData.likes = newLikes;
-      setUserData(userData);
+      //а также обновляем данные в Сторадж
+      /*const newLikes = likes.slice(0);// создаем копию массива для возможности его изменить
+      newLikes.push(id);*/
+      setUserData({...userData, likes: state.entities[email]})
     },
     removeLike: (state, action) => {
       const { id } = action.payload;
+      const userData = getUserData();
+      const {email} = userData;
       state.entities[email] = state.entities[email]
         .filter(i => i !== id);
       //а также обновляем данные в сессионСторадж
-      const filtered = likes.filter(i => i !== id);
-      userData.likes = filtered;
-      setUserData(userData);
+      /*const filtered = likes.filter(i => i !== id);
+      userData.likes = filtered;*/
+      setUserData({...userData, likes: state.entities[email]});
     }
   },
 });

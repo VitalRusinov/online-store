@@ -48,9 +48,9 @@ const Login = () => {
       return;
     }
     setLoginError(null);
-    setUserData({...user});
+    //Здесь не стал искать предыдущий выбор пользователя, т.к. это все не сохраняется на сервере
+    setUserData({...user, auth: true, likes: [], basket: {}});
     dispatch(addNewUserBasket());
-
     openModal(ModalTypes.auth);
   };
 

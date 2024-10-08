@@ -5,21 +5,19 @@ import styles from './Liked.module.scss';
 import { getUserData } from '../../../utils';
 import LikedCard from './LikedCard/LikedCard';
 import ModalContext from '../../../context/ModalContext';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 const Liked = () => {
 
   const { closeModal } = useContext(ModalContext);
 
-  const chairs = useSelector((state) => state.chairs.entries);
-  const lamps = useSelector((state) => state.lamps.entries);
-  const mirrors = useSelector((state) => state.mirrors.entries);
-  const tables = useSelector((state) => state.tables.entries);
-  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+  const allProducts = useGetAllProducts();
   
   const {email} = getUserData();
   const likes = useSelector((state) => state.likes.entities[email]);
 
   const likedProducts = [];
+  
   likes?.forEach(id => {
     const prodById = allProducts.find(prod => prod.id === id);
     likedProducts.push(prodById);

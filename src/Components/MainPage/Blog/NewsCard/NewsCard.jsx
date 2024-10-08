@@ -25,7 +25,7 @@ const NewsCard = ({news}) => {
         <p className={styles.measurement}>{readingTime.measurement}</p>
       </div>
       <div className={styles.img_container}>
-        <img src={image} alt="Картинка статьи" />
+        <img src={image} alt="Картинка статьи" loading="lazy"/>
       </div>
       <div className={styles.number}>
         <span>{id}</span>

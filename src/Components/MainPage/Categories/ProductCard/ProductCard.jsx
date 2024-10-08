@@ -31,7 +31,7 @@ const ProductCard = ({ prod }) => {
     >
       <div className={styles.img_container}>
         <div className={ellipseClass}></div>
-        <img className={styles.img} src={image} alt="" />
+        <img className={styles.img} src={image} alt="" loading="lazy"/>
       </div>
       <div className={styles.description_container}>
         <div className={styles.name}>{name}</div>

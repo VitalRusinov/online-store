@@ -6,24 +6,21 @@ import { getPrice, getUserData } from '../../../utils';
 import BasketCard from './BasketCard/BasketCard';
 import OrderButton from './OrderButton/OrderButton';
 import ModalContext from '../../../context/ModalContext';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 const Basket = () => {
 
   const { closeModal } = useContext(ModalContext);
 
-  const chairs = useSelector((state) => state.chairs.entries);
-  const lamps = useSelector((state) => state.lamps.entries);
-  const mirrors = useSelector((state) => state.mirrors.entries);
-  const tables = useSelector((state) => state.tables.entries);
-  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+  const allProducts = useGetAllProducts();
   
   const {email} = getUserData();
   const basket = useSelector((state) => state.baskets.entities[email]);
-  console.log(basket, 'basket');
   const prodIdsInBasket = Object.keys(basket);
 
   const basketProducts = [];
   let totalPrice = 0;
+
   prodIdsInBasket.forEach(id => {
     const prodById = allProducts.find(prod => prod.id === id);
     basketProducts.push({...prodById, count: basket[id].count});
@@ -64,5 +61,3 @@ const Basket = () => {
 };
 
 export default Basket;
-
-

@@ -18,48 +18,22 @@ const OrderCompleted = () => {
         <span>Спасибо за заказ</span>
       </div>
       <div className={styles.big_pic}>
-        <img src={lamp_01} alt="" />
+        <img src={lamp_01} alt="" loading="lazy"/>
       </div>
       <div className={`${styles.small_pic} ${styles.pic2}`}>
-        <img src={lamp_02} alt="" />
+        <img src={lamp_02} alt="" loading="lazy"/>
       </div>
       <div className={`${styles.small_pic} ${styles.pic3}`}>
-        <img src={lamp_03} alt="" />
+        <img src={lamp_03} alt="" loading="lazy"/>
       </div>
       <div className={`${styles.small_pic} ${styles.pic4}`}>
-        <img src={lamp_04} alt="" />
+        <img src={lamp_04} alt="" loading="lazy"/>
       </div>
       <div className={`${styles.small_pic} ${styles.pic5}`}>
-        <img src={lamp_05} alt="" />
+        <img src={lamp_05} alt="" loading="lazy"/>
       </div>
     </div>
   )
 }
 
 export default OrderCompleted;
-
-/*
-//здесь импортируются сразу все изображения
-
-// ImageGallery.js
-import React from 'react';
-
-// Функция для импорта всех изображений из папки
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
-
-const ImageGallery = () => {
-  return (
-    <div className="image-gallery">
-      {images.map((image, index) => (
-        <img key={index} src={image} alt={`image-${index}`} style={{ width: '200px', margin: '10px' }} />
-      ))}
-    </div>
-  );
-};
-
-export default ImageGallery;
-*/

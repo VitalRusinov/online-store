@@ -60,7 +60,7 @@ const ProductsOfTheDay = () => {
               <span className={styles.designer}>{designer}</span>
             </div>
             <div className={styles.img_container}>
-              <img className={styles.image} src={image} alt="Изображение продукта" />
+              <img className={styles.image} src={image} alt="Изображение продукта" loading="lazy"/>
             </div>
             <div className={styles.description}>
               <p>{name}</p>
