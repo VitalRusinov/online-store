@@ -1,12 +1,12 @@
 $lime: #D9FF5A;
 
 .basket {
-  width: 610px;
+  width: 38.125rem;
   height: max-content;
   min-height: 735px;
   max-height: 80vh;
 
-  padding: 48px;
+  padding: 3rem;
   box-sizing: border-box;
 
   border-radius: 40px;
@@ -24,7 +24,7 @@ $lime: #D9FF5A;
 
   h2 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
@@ -35,32 +35,32 @@ $lime: #D9FF5A;
     height: 100%;
     flex: 1;
     overflow-y: auto;
-    scrollbar-width: none; /* Скрывает скроллбар в Firefox */
+    scrollbar-width: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .cards_container::-webkit-scrollbar {
-    display: none; /* Скрывает скроллбар в Chrome, Safari и Edge */
+    display: none;
   }
 
   .footer {
-    margin-top: 50px;
+    margin-top: 3.125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .total {
       font-weight: 500;
-      font-size: 20px;
+      font-size: 1.25rem;
       text-transform: uppercase;
       color: white;
     }
 
     .totalPrice {
-      width: 237px;
-      height: 122px;
+      width: 15rem;
+      height: 7.625rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,7 +68,7 @@ $lime: #D9FF5A;
       .price {
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 40px;
+        font-size: 2.5rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: white;
@@ -76,15 +76,15 @@ $lime: #D9FF5A;
 
       .ruble {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-transform: uppercase;
         color: white;
       }
 
       .ellipse {
         position: absolute;
-        width: 241px;
-        height: 111px;
+        width: 15rem;
+        height: 7rem;
         border-radius: 100%; /* Делаем эллипс */
         border: 2px $lime solid;
         transform: rotate(-13deg); /* Наклон назад */

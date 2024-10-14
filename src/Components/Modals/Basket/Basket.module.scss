@@ -1,15 +1,15 @@
 $lime: #D9FF5A;
 
 .basket {
-  width: 610px;
+  width: 38.125rem;
   height: max-content;
-  min-height: 735px;
+  min-height: 46rem;
   max-height: 80vh;
   position: absolute;
-  top: 120px;
-  right: 60px;
+  top: 11vh;
+  right: 3vw;
 
-  padding: 48px;
+  padding: 3rem;
   box-sizing: border-box;
 
   border-radius: 40px;
@@ -26,20 +26,20 @@ $lime: #D9FF5A;
   }
 
   .closeButton {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 1.43rem;
+    right: 1.43rem;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
@@ -50,11 +50,11 @@ $lime: #D9FF5A;
     height: 100%;
     flex: 1;
     overflow-y: auto;
-    scrollbar-width: none; /* Скрывает скроллбар в Firefox */
+    scrollbar-width: none;
   }
 
   .cards_container::-webkit-scrollbar {
-    display: none; /* Скрывает скроллбар в Chrome, Safari и Edge */
+    display: none;
   }
 
   .footer {
@@ -65,7 +65,7 @@ $lime: #D9FF5A;
     .totalPrice {
       p {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-transform: uppercase;
         color: white;
       }
@@ -74,7 +74,7 @@ $lime: #D9FF5A;
 
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 40px;
+        font-size: 2.5rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: white;
@@ -82,7 +82,7 @@ $lime: #D9FF5A;
 
       .ruble {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-transform: uppercase;
         color: white;
       }

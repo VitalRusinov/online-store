@@ -1,16 +1,8 @@
-$green: #32b318;
-$lazure: #21e6ec;
-$orange: #f7a438;
-$pink: #FA8FEF;
-$lavender: #AE97E8;
-$blue: #0e0af3;
 $lime: #D9FF5A;
 
-
-
   .form_container {
-    width: 882px;
-    height: 499px;
+    width: calc(60vw - 270px);
+    height: 48vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,58 +15,58 @@ $lime: #D9FF5A;
     h2 {
       margin: 0;
       font-weight: 500;
-      font-size: 60px;
+      font-size: 3.75rem;
       text-transform: uppercase;
       color: white;
     }
     
     .form {
       width: 100%;
-      height: 358px;
+      height: 33vh;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
 
       .input {
         width: 100%;
-        height: 31px;
-        padding: 8px 0; /* Убираем боковые отступы и добавляем отступ сверху и снизу */
+        height: 2rem;
+        padding: 0.5rem 0;
         border: none;
-        background: transparent; /* Прозрачный фон */
+        background: transparent;
         outline: none;
         color: #fff;
-        border-bottom: 2px solid $lime; /* Желтая линия при фокусе */
+        border-bottom: 2px solid $lime;
         transition: border-color 0.3s;
     
         &::placeholder {
           font-weight: 500;
-          font-size: 15px;
+          font-size: 1rem;
           text-transform: uppercase;
           color: white;
         }
       }
 
       .orderButton {
-        width: 189px;
-        height: 96px;
+        width: 12rem;
+        height: 6rem;
         position: relative;
 
         .ellipse {
           position: absolute;
           left: 0;
           top: 0;
-          width: 189px;
-          height: 93px;
-          border-radius: 100%; /* Делаем эллипс */
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
           border: 2px $lime solid;
-          transform: rotate(-6deg); /* Наклон назад */
+          transform: rotate(-6deg);
           background: rgba(255, 255, 255, 0.1);
           z-index: 1;
         }
 
         span {
           font-weight: 500;
-          font-size: 20px;
+          font-size: 1.25rem;
           line-height: 120%;
           color: white;
         }

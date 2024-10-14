@@ -8,21 +8,16 @@ import BuyButton from "../../Buttons/BuyButton/BuyButton";
 import modalTypes from "../../Modals/modalTypes";
 import ModalContext from "../../../context/ModalContext";
 import { getPrice } from "../../../utils";
+import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
 
 const ProductsOfTheDay = () => {
   const { openModal } = useContext(ModalContext);
 
   const [activeProduct, setActiveProduct] = useState(null);
 
-  const chairs = useSelector((state) => state.chairs.entries);
-  const lamps = useSelector((state) => state.lamps.entries);
-  const mirrors = useSelector((state) => state.mirrors.entries);
-  const tables = useSelector((state) => state.tables.entries);
-  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+  const allProducts = useGetAllProducts()
 
-  const productsOfTheDayIdList = useSelector(
-    (state) => state.productsOfTheDay.entries,
-  );
+  const productsOfTheDayIdList = useSelector((state) => state.productsOfTheDay.entries);
 
   const productsOfTheDayList = [];
   productsOfTheDayIdList.forEach((id) => {
@@ -71,7 +66,7 @@ const ProductsOfTheDay = () => {
               <p>{name}</p>
               <span>{description}</span>
               <hr />
-              <div>
+              <div className={styles.price_container}>
                 <span className={styles.price}>{finishPrice}</span>
                 <span className={styles.ruble}>&#x20bd;</span>
               </div>

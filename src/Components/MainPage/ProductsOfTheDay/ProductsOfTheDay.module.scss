@@ -3,20 +3,14 @@ $pink: #fa8fef;
 $blue: #aecfff;
 $lime: #D9FF5A;
 
-
-//*******************************
-// 1. Проверить все размеры
-// 2. Проверить все разрешения
-//**********************************
-
-  //Контейнер для продуктов дня
 .productsOfTheDayContainer {
   width: 100%;
   height: 100vh;
-  padding: 20px;
+
+  padding: 1.25em;
   display: flex;
   box-sizing: border-box;
-  gap: 20px;
+  gap: 1.25em;
 
   & > div:nth-child(1) {
     background: $lavender;
@@ -28,11 +22,11 @@ $lime: #D9FF5A;
     background: $blue;
   }
 
-  //Продукты дня 3 шт, не выбран ни один товар
+  //Продукты дня 3 шт, состояние: не выбран ни один товар
   .productOfTheDay {
     flex: 1;
     position: relative;
-    border-radius: 40px;
+    border-radius: 2.5em;
 
     display: flex;
     justify-content: center;
@@ -49,20 +43,19 @@ $lime: #D9FF5A;
       right: 0;
       bottom: 0;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 40px;
+      border-radius: 2.5em;
     }
 
     .designer_container {
+      width: 100%;
+
       position: absolute;
       left: 50%;
-      top: calc(50% - 107px);
+      top: calc(50% - 10vh);
       transform: translate(-50%, -50%);
       text-align: center;
 
-      width: 100%;
-
       //Надпись "Товар дня"
-      //немного не та анимация
       .designer_product {
         transition-duration: 1s;
         transition-timing-function: ease-out;  
@@ -72,11 +65,9 @@ $lime: #D9FF5A;
       .designer {
         transition-duration: 1s;
         transition-timing-function: ease-out;  
-        //*****************
-        // что-то не то со шрифтом
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 70px;
+        font-size: 3.75vw;
         text-transform: uppercase;
         color: #cbb6ff;
       }
@@ -87,48 +78,46 @@ $lime: #D9FF5A;
       transition-timing-function: ease-out;  
       position: absolute;
       left: 50%;
-      //**************************
-      // Нужно уходить от пикселей
-      top: calc(50% - 107px);
+      top: calc(50% - 10vh);
       transform: translate(-50%, -50%);
-      width: 290px;
-      height: 425px;
+      width: 45%;
+      height: 40%;
       display: flex;
       justify-content: center;
       box-sizing: border-box;
 
       .image {
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
-        width: 200px;
-        height: 390px;
+        transition-timing-function: ease-out;
         object-fit: contain;
         transform: rotate(7deg);
       }
     }
 
     .description {
+      opacity: 1;
       position: absolute;
       left: 50%;
-      top: calc(50% + 282px);
+      top: calc(50% + 26vh);
       transform: translate(-50%, -50%);
-      width: 275px;
-      height: 182px;
+      width: 17.2em;
+      height: 11.4em;
       color: white;
       text-align: center;
 
+      transition-duration: 1s;
+      transition-timing-function: ease-out;
+
       p {
-        //************************
-        //Какой-то косяк со шрифтом
         font-family: 'Floreste-Wavy';
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.25em;
         text-transform: uppercase;
       }
 
       span {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 1em;
         line-height: 153%;
       }
 
@@ -137,33 +126,32 @@ $lime: #D9FF5A;
         width: 100%;
         height: 0px;
       }
+      .price_container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
 
-      .price {
-        font-family: 'Floreste-Wavy';
-        font-weight: 400;
-        font-size: 28px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: white;
-      }
-
-      .ruble {
-        margin-left: 5px;
-        font-weight: 400;
-        font-size: 20px;
-        //******************
-        //нужно поместит рубль чуть выше
-      }
+        .price {
+          font-family: 'Floreste-Wavy';
+          font-weight: 400;
+          font-size: 1.75em;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: white;
+        }
+  
+        .ruble {
+          margin-left: 0.3em;
+          font-weight: 400;
+          font-size: 1.25em;
+        }
+      }      
     }
 
-    //****************************
-    // мб перенести кнопку в другое место
     .button_Container {
       position: absolute;
       right: 0%;
       bottom: 0%;
-      width: 365px;
-      height: 156px;
       opacity: 0;
 
       transition-duration: 1s;
@@ -172,23 +160,21 @@ $lime: #D9FF5A;
 
     .slides_Container {
       position: absolute;
-      top: calc(50% + 383px);
+      top: calc(50% + 36vh);
       left: 50%;
       transform: translate(-50%, -150%); /* Начальная позиция: чуть выше и вне видимости */
-      width: 58px;
-      height: 89px;
+      width: 3.7em;
+      height: 5.6em;
       opacity: 0;
+      text-align: center;
 
       transition-duration: 1s;
       transition-timing-function: ease-out;
-      //transition: transform 0.5s ease, opacity 0.5s ease; /* Плавное перемещение и появление */
     }
   }
 
   //Товар выбран
   .active {
-    color: red;
-
     //изменение размера при наведении
     flex: 3.41;
     transition-duration: 1s;
@@ -206,11 +192,10 @@ $lime: #D9FF5A;
       transition-timing-function: ease-out;   
       position: absolute;
       left: 50%;
-      top: calc(50% - 20px);
+      top: calc(50% - 1.25em);
       transform: translate(-50%, -50%);
       width: 100%;
-      padding-left: 41px;
-      padding-right: 41px;
+      padding: 0 2vw;
       box-sizing: border-box;
 
       .designer_product {
@@ -218,7 +203,7 @@ $lime: #D9FF5A;
         transition-timing-function: ease-out;  
         display: block;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 1.125em;
         text-transform: uppercase;
         text-align: start;
         color: $lime;
@@ -227,11 +212,9 @@ $lime: #D9FF5A;
       .designer{
         transition-duration: 1s;
         transition-timing-function: ease-out;  
-        //*****************
-        // что-то не то со шрифтом
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 212px;
+        font-size: 11vw;
         text-transform: uppercase;
         text-align: center;
         color: rgba(255, 255, 255, 0.3);
@@ -243,52 +226,47 @@ $lime: #D9FF5A;
       transition-timing-function: ease-out;  
       position: absolute;
       left: 50%;
-      top: calc(50% - 25px);
+      top: calc(50% - 2.5vh);
       transform: translate(-50%, -50%);
-      width: 494px;
-      height: 724px;
+      width: 41%;
+      height: 68%;
       display: flex;
       justify-content: center;
       box-sizing: border-box;
 
-        .image {
-          transition-duration: 1s;
-          transition-timing-function: ease-out;  
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transform: rotate(0deg);
-        }
+      .image {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+
+        object-fit: contain;
+        transform: rotate(0deg);
+      }
     }
 
     .description {
+      opacity: 1;
       position: absolute;
       left: -8%;
-      top: calc(50% + 100px);
+      top: calc(50% + 10vh);
       transform: translate(50%, 50%);
-      width: 275px;
-      height: 196px;
+      width: 17.2em;
+      height: 12.25em;
       text-align: start;
 
+      transition-duration: 1s;
+      transition-timing-function: ease-out;  
+
       p {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
         font-size: 28px;
       }
 
-      .price {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;
-        font-size: 41px;
-        color: var(--lime);
-      }
+      .price_container {
+        justify-content: left;
 
-      .ruble {
-        margin-left: 5px;
-        font-weight: 400;
-        font-size: 20px;
-        //******************
-        //нужно поместит рубль чуть выше
+        .price {
+          font-size: 2.5em;
+          color: $lime;
+        }
       }
     }
 
@@ -296,11 +274,9 @@ $lime: #D9FF5A;
       display: block;
       opacity: 1;
       position: absolute;
-      right: 280px;
-      bottom: 190px;
+      right: 15vw;
+      bottom: 18vh;
       transform: translate(50%, 50%);
-      width: 365px;
-      height: 156px;
       text-align: start;
       z-index: 5;
 
@@ -308,25 +284,9 @@ $lime: #D9FF5A;
       transition-timing-function: ease-out;
     }
 
-    .slides_Container {
-      position: absolute;
-      top: calc(50% + 383px);
-      left: 50%;
-      transform: translate(-50%, -150%); /* Начальная позиция: чуть выше и вне видимости */
-      width: 58px;
-      height: 89px;
-      opacity: 0;
-
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
-      //transition: transform 0.5s ease, opacity 0.5s ease; /* Плавное перемещение и появление */
-    }
-
   }
   // Выбран другой товар
   .inactive {
-    color: green;
-
     .designer_container {
       transform: scale(0);
       transition-duration: 1s;
@@ -338,47 +298,38 @@ $lime: #D9FF5A;
       transition-timing-function: ease-out;  
       position: absolute;
       left: 50%;
-      top: calc(50% - 19px);
+      top: calc(50% - 2vh);
       transform: translate(-50%, -50%);
-      width: 231px;
-      height: 339px;
+      width: 11vw;
+      height: 30vh;
       display: flex;
       justify-content: center;
 
       .image {
-        width: 80%;
-        height: 80%;
         object-fit: contain;
         transform: rotate(7deg);
       }
     }
 
     .description {
-      display: none;
+      opacity: 0;
     }
 
     .slides_Container {
       transform: translate(-50%, -50%); /* Положение по центру блока при наведении */
       opacity: 1; /* Видимость */
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
-
-      text-align: center;
 
       p {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 1em;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.6);
       }
 
       span {
-
-        //*****************
-        ///Не работает шрифт
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 40px;
+        font-size: 2.5em;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: white;

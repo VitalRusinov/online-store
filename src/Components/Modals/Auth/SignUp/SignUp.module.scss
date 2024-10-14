@@ -1,15 +1,14 @@
 $lime: #D9FF5A;
 
 .loginForm {
-  width: 610px;
-  height: 516px;
+  width: 38.125rem;
+  height: 32.25rem;
   position: absolute;
-  top: 120px;
-  right: 60px;
+  top: 11vh;
+  right: 3vw;
 
-  padding: 48px;
+  padding: 3rem;
   box-sizing: border-box;
-
   border-radius: 40px;
   background: rgba(51, 32, 101, 0.18);
 
@@ -25,21 +24,21 @@ $lime: #D9FF5A;
   }
 
   .closeButton {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 1.43rem;
+    right: 1.43rem;
   }
 
   h2 {
     margin: 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
@@ -54,18 +53,18 @@ $lime: #D9FF5A;
   
     .input {
       width: 100%;
-      height: 31px;
-      padding: 8px 0; /* Убираем боковые отступы и добавляем отступ сверху и снизу */
+      height: 2rem;
+      padding: 0.5rem 0;
       border: none;
-      background: transparent; /* Прозрачный фон */
+      background: transparent;
       outline: none;
       color: #fff;
-      border-bottom: 2px solid $lime; /* Желтая линия при фокусе */
+      border-bottom: 2px solid $lime;
       transition: border-color 0.3s;
   
       &::placeholder {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 1rem;
         text-transform: uppercase;
         color: white;
       }
@@ -73,14 +72,14 @@ $lime: #D9FF5A;
   
     .error {
       color: red;
-      font-size: 12px;
-      margin-top: 5px;
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
     }
   
     .loginError {
       color: red;
-      font-size: 20px;
-      margin-top: 5px;
+      font-size: 1.25rem;
+      margin-top: 0.3rem;
     }
   }
 
@@ -92,14 +91,13 @@ $lime: #D9FF5A;
     }
 
     span {
-      margin-left: 20px;
+      margin-left: 1.25rem;
       font-weight: 500;
-      font-size: 15px;
-      line-height: 25px;
+      font-size: 1rem;
+      line-height: 1.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: white;
     }
-  }
-  
+  }  
 }

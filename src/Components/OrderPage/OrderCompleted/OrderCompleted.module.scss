@@ -1,12 +1,4 @@
-$green: #32b318;
-$lazure: #21e6ec;
-$orange: #f7a438;
-$likePink: #FFB1F7;
-$pink: #FA8FEF;
 $lavender: #AE97E8;
-$darklavender: #5c4597;
-$blue: #0e0af3;
-$lime: #D9FF5A;
 
 .container {
   width: 100%;
@@ -22,17 +14,16 @@ $lime: #D9FF5A;
     text-align: center;
     width: 100%;
     overflow: hidden;
-    //z-index: -1;
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 6.25rem;
     span {
       font-family: 'Floreste-Wavy';
       font-weight: 400;
-      font-size: 212px;
+      font-size: calc(25px + 10vw);
       text-transform: uppercase;
       color: rgba(203, 182, 255, 0.6);
-      white-space: nowrap; /* Запрещает перенос текста на другую строку */
+      white-space: nowrap;
     }
   }
 
@@ -43,7 +34,7 @@ $lime: #D9FF5A;
 
     span {
       font-weight: 500;
-      font-size: 18px;
+      font-size: 1.125rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: white;
@@ -57,17 +48,15 @@ $lime: #D9FF5A;
   }
 
   .big_pic {
-    width: 388px;
-    height: 776px;
+    height: 72%;
     position: absolute;
-    top: calc(50% + 50px);
+    top: calc(50% + 5vh);
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .small_pic {
-    width: 158px;
-    height: 224px;
+    height: 20vh;
   }
 
   .pic2 {

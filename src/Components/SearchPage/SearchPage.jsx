@@ -39,7 +39,6 @@ const SearchPage = () => {
     setSearchProducts(filtered);
   };
 
-  // дублируется код
   return (
     <div className={styles.container}>
       <SearchForm string={data} submit={handleSubmit} />

@@ -8,11 +8,10 @@ const NewsCard = ({ news }) => {
     <div className={styles.newsCard_container}>
       <div>
         <svg
-          width="581"
-          height="343"
           viewBox="0 0 581 343"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={styles.svg}
         >
           <g filter="url(#filter0_b_2538_3716)">
             <path

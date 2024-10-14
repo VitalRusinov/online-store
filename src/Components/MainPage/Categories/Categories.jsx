@@ -79,7 +79,7 @@ const Categories = () => {
           />
           <div className={styles.products_count}>
             {/* слова через i18*/}
-            <span>{filteredList.length} позиция(и/ий) в категории</span>
+            <span>{filteredList.length} позиция(й) в категории</span>
           </div>
         </div>
       )}

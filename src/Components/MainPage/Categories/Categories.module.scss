@@ -1,15 +1,14 @@
 .cat_container {
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 3vh;
   box-sizing: border-box;
 
   h2 {
     font-weight: 500;
-    font-size: 60px;
+    font-size: 3.75em;
     text-transform: uppercase;
     color: white;
     text-align: center;
@@ -19,6 +18,7 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Элементы будут переноситься на следующую строку, если не помещаются */
   }
 
 
@@ -28,13 +28,13 @@
     display: flex;
     justify-content: space-between;
     z-index: 3;
-    padding: 0px 60px;
+    padding: 0px 3vw;
     box-sizing: border-box;
 
     .products_count {
+      padding-top: 1em;
       span {
         font-weight: 500;
-        font-size: 15px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: white;
@@ -44,14 +44,18 @@
 
   .productsList {
     width: 100%;
+    padding: 0 calc(10px + 2.5vw);
+    box-sizing: border-box;
+
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(calc(200px + 4vw), 1fr));
+    grid-row-gap: calc(50px + 5vh);
+    grid-column-gap: calc(50px + 2.5vw);
 
     .productCard {
+      width: 100%;
       display: flex;
-      justify-content: center;
-      
+      justify-content: center;      
     }
   }
 }

@@ -1,10 +1,4 @@
-$green: #32b318;
-$lazure: #21e6ec;
-$orange: #f7a438;
-$pink: #FA8FEF;
 $lavender: #AE97E8;
-$blue: #0e0af3;
-$lime: #D9FF5A;
 
 .order_container {
   width: 100%;
@@ -14,6 +8,6 @@ $lime: #D9FF5A;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 60px;
+  padding: 0 calc(10px + 2.5vw);
 }
 

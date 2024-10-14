@@ -2,8 +2,8 @@ $yellow: #D9FF5A;
 
 .button_container {
   position: relative;
-  width: 119px;
-  height: 85px;
+  width: 7.5rem;
+  height: 5.3rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -14,33 +14,29 @@ $yellow: #D9FF5A;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 
-  margin-top: 30px;
+  margin-top: 1.875rem;
 
-  //*********************************
-  //Не работает анимация при наведении
   &:hover {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;   
-    transform: scale(1.05); /* Увеличение при наведении */
+    transform: scale(1.05);
   }
   
   .ellipse_front {
     position: absolute;
-    width: 120px;
-    height: 81px;
-    border-radius: 100%; /* Делаем эллипс */
+    width: 7.5rem;
+    height: 5.3rem;
+    border-radius: 100%;
     border: 2px $yellow solid;
-    transform: rotate(-15deg); /* Наклон назад */
+    transform: rotate(-15deg);
     background: rgba(255, 255, 255, 0.1);
     z-index: 1;
   }
   
-  ///////******************
-  /// // поправить местоположение надписи
   .text {
     margin: 0;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 120%;
     color: white;
 

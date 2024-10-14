@@ -1,12 +1,4 @@
-$green: #32b318;
-$lazure: #21e6ec;
-$orange: #f7a438;
-$likePink: #FFB1F7;
-$pink: #FA8FEF;
 $lavender: #AE97E8;
-$darklavender: #5c4597;
-$blue: #0e0af3;
-$lime: #D9FF5A;
 
 .container {
   width: 100%;
@@ -14,19 +6,19 @@ $lime: #D9FF5A;
   background: $lavender;
   display: flex;
   flex-direction: column;
-  padding-top: 15%;
+  padding-top: 26vh;
   box-sizing: border-box;
 
   h2 {
     font-weight: 500;
-    font-size: 28px;
+    font-size: 1.75rem;
     text-transform: uppercase;
     color: white;
   }
 
   .searchResults {
     width: 100%;
-    height: 100%;
+    flex-grow: 1;
     position: relative;
     box-sizing: border-box;
   }

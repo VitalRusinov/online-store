@@ -1,45 +1,46 @@
 $lime: #D9FF5A;
 
 .userInfo {
-  width: 610px;
-  height: 516px;
+  width: 38.125rem;
+  height: 32.25rem;
   position: absolute;
-  top: 120px;
-  right: 60px;
+  top: 11vh;
+  right: 3vw;
 
-  padding: 48px;
+  padding: 3rem;
   box-sizing: border-box;
 
   border-radius: 40px;
   background: rgba(51, 32, 101, 0.18);
 
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная рамка */
-  backdrop-filter: blur(10px); /* Применение размытия */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   button {
     background-color: rgba(255, 255, 255, 0);
     border: none;
   }
 
   .closeButton {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 1.43rem;
+    right: 1.43rem;
   }
 
   h2 {
     margin: 0;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
@@ -47,9 +48,8 @@ $lime: #D9FF5A;
 
   p {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 120%;
     color: white;
-  }
-  
+  }  
 }

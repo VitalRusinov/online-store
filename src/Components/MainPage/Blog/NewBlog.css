@@ -1,0 +1,23 @@
+.news-slider {
+  display: flex;
+  align-items: center;
+}
+
+.cards-container {
+  overflow: hidden;
+  width: 100%; /* Контейнер на всю ширину */
+}
+
+.cards-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}

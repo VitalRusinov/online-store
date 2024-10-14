@@ -3,21 +3,26 @@ $pink: #FA8FEF;
 $lavender: #AE97E8;
 
 .categoriesCard {
-  width: 428px;
-  height: 517px;
+  width: 22vw;
+  min-width: 240px;
+  max-width: 500px;
+  aspect-ratio: 82 / 100;
   position: relative;
-  //border: 1px black solid;
+
+  .svg {
+    width: 92.2%;
+  }
 
   .cat_button {
-    width: 101px;
-    height: 101px;
+    width: 23.5%;
+    aspect-ratio: 1 / 1;
     border-radius: 100%;
     background: rgba(235, 227, 255, 0.19);
     border: 2px $lime solid;
 
     position: absolute;
-    bottom: 0px;
-    left: 142px;
+    bottom: 0;
+    left: 35%;
     z-index: 2;
 
     transition-duration: 0.3s;
@@ -27,7 +32,7 @@ $lavender: #AE97E8;
       transform: scale(1.05);
     }
 
-    svg {
+    .svg {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -40,63 +45,66 @@ $lavender: #AE97E8;
   }
 
   .cat_prodCount {
-    width: 81px;
-    height: 72px;
+    width: 4.2vw;
+    height: 3.7vw;
+
     transform: rotate(-23deg);
     border-radius: 100%;
     background-color: $pink;
 
     position: absolute;
-    top: 150px;
-    left: 342px;
+    top: 30%;
+    right: 0;
 
     display: flex;
-    justify-content: center; /* Горизонтальное центрирование */
-    align-items: center; /* Вертикальное центрирование */
+    justify-content: center;
+    align-items: center;
 
     .cat_prodCount_text {
       transition-duration: 0.3s;
-      transition-timing-function: ease-out;   
+      transition-timing-function: ease-out;
+      font-family: 'Floreste-Wavy';
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
 
       p {
-        font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 40px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        text-align: center;
-        color: white;
-  
+        font-size: 2.5rem;
+        letter-spacing: 0.04rem;
+
         span {
-          font-family: 'Floreste-Wavy';
           font-weight: 500;
-          font-size: 15px;
-          text-transform: uppercase;
-          text-align: center;
-          color: white;
+          font-size: 1rem;
         }
       }
     }
-    
   }
   .inscription {
-    width: 400px;
-    height: 470px;
+    width: 100%;
     position: absolute;
-    top: 72px;
-    left: 18px;
+    top: 0;
+    left: 0;
     fill: white;
 
     transition-duration: 0.3s;
-    transition-timing-function: ease-out;  
+    transition-timing-function: ease-out;
+    .svg {
+      width: 100%;
+      g{
+        text {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 
   .img_container {
-    width: 231px;
-    height: 248px;
+    width: 55%;
+    aspect-ratio: 93 / 100;
     position: absolute;
-    top: 106px;
-    left: 83px;
+    top: 21%;
+    left: 19.5%;
     z-index: 1;
 
     transition-duration: 0.3s;
@@ -111,15 +119,15 @@ $lavender: #AE97E8;
 
   .category_name {
     position: absolute;
-    top: 37px;
+    top: 7%;
     left: 0;
     z-index: 1;
 
     p {
       margin: 0;
-      margin-top: 5px;
+      margin-top: 0.3rem;
       font-weight: 500;
-      font-size: 28px;
+      font-size: 1.75rem;
       text-transform: uppercase;
       color: white;
     }

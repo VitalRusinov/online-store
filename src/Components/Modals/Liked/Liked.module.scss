@@ -1,15 +1,15 @@
 $lime: #D9FF5A;
 
 .liked {
-  width: 610px;
+  width: 38.125rem;
   height: max-content;
-  min-height: 735px;
+  min-height: 46rem;
   max-height: 80vh;
   position: absolute;
-  top: 120px;
-  right: 60px;
+  top: 11vh;
+  right: 3vw;
 
-  padding: 48px;
+  padding: 3rem;
   box-sizing: border-box;
 
   border-radius: 40px;
@@ -26,20 +26,20 @@ $lime: #D9FF5A;
   }
 
   .closeButton {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25em;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 1.43rem;
+    right: 1.43rem;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;

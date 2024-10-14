@@ -9,7 +9,7 @@ $lime: #D9FF5A;
 .main_containers {
   width: 100%;
   height: 100vh;
-  padding: 40px 60px;
+  padding: calc(12px + 1.5vh) calc(10px + 2.5vw);
 
   position: fixed;
   top: 0;
@@ -28,15 +28,15 @@ $lime: #D9FF5A;
   }
 
   .closeButton {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
-    top: 70px;
-    right: 90px;
+    top: calc(42px + 1.5vh);
+    right: calc(40px + 2.5vw);
   }
 
   .container {
@@ -52,7 +52,7 @@ $lime: #D9FF5A;
 
       & .title {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 1rem;
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.5);
       }
@@ -62,7 +62,7 @@ $lime: #D9FF5A;
         height: 100%;
         background-color: $lavender;
         box-sizing: border-box;
-        padding: 80px 180px 80px 80px;
+        padding: 7.4vh 9.3vw 7.4vh 4vw;
         display: flex;
         justify-content: space-between;
 
@@ -72,30 +72,35 @@ $lime: #D9FF5A;
           flex-direction: column;
 
           .city {
-            margin-top: 50px;
+            margin-top: 3.125rem;
             font-weight: 500;
-            font-size: 60px;
+            font-size: 3.75rem;
             text-transform: uppercase;
             color: white;
-            line-height: 60px;
+            line-height: 3.75rem;
           }
 
           .street {
-            margin-top: 30px;
+            margin-top: 1.875rem;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 1.125rem;
             color: white;
           }
 
           .toMap {
             margin-top: auto;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 1.125rem;
             color: white;
 
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 1.25rem;
+
+            svg {
+              width: 0.875rem;
+              height: 1.375rem;
+            }
           }
         }
 
@@ -105,30 +110,30 @@ $lime: #D9FF5A;
           flex-direction: column;
 
           .number {
-            margin-top: 60px;
+            margin-top: 3.75rem;
             font-family: 'Floreste-Wavy';
             font-weight: 400;
-            font-size: 40px;
+            font-size: 2.5rem;
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: white;
           }
 
           .text {
-            margin-top: 40px;
+            margin-top: 2.5rem;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 1.125rem;
             color: white;
           }
 
           .icons {
             margin-top: auto;
             display: flex;
-            gap: 17px;
+            gap: 1rem;
 
             .icon {
-              width: 39px;
-              height: 39px;
+              width: 2.5rem;
+              height: 2.5rem;
               border-radius: 100%;
               background: white;
               display: flex;
@@ -143,7 +148,7 @@ $lime: #D9FF5A;
         width: 47%;
         height: 100%;
         background: $pink;
-        padding: 80px 80px 50px 80px;
+        padding: 7.4vh 4vw 4rem 4vw;
         box-sizing: border-box;
 
         .form {
@@ -156,8 +161,8 @@ $lime: #D9FF5A;
     
           .input {
             width: 100%;
-            height: 31px;
-            padding: 8px 0; /* Убираем боковые отступы и добавляем отступ сверху и снизу */
+            height: 2rem;
+            padding: 0.5rem 0;
             border: none;
             background: transparent; /* Прозрачный фон */
             outline: none;
@@ -167,23 +172,23 @@ $lime: #D9FF5A;
         
             &::placeholder {
               font-weight: 500;
-              font-size: 15px;
+              font-size: 1rem;
               text-transform: uppercase;
               color: white;
             }
           }
     
           .orderButton {
-            width: 189px;
-            height: 96px;
+            width: 12rem;
+            height: 6rem;
             position: relative;
     
             .ellipse {
               position: absolute;
               left: 0;
               top: 0;
-              width: 189px;
-              height: 93px;
+              width: 100%;
+              height: 100%;
               border-radius: 100%; /* Делаем эллипс */
               border: 2px $lime solid;
               transform: rotate(-6deg); /* Наклон назад */
@@ -193,7 +198,7 @@ $lime: #D9FF5A;
     
             span {
               font-weight: 500;
-              font-size: 20px;
+              font-size: 1.25rem;
               line-height: 120%;
               color: white;
             }
