@@ -18,7 +18,21 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap; /* Элементы будут переноситься на следующую строку, если не помещаются */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    white-space: nowrap;
+    gap: 1vw;
+  }
+
+  .categoriesList::-webkit-scrollbar {
+    height: 0;
+  }
+  .categoriesList::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+  }
+  .categoriesList::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
 

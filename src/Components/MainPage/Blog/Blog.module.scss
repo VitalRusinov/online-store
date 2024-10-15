@@ -1,5 +1,6 @@
 .blog_container {
   width: 100%;
+  
   padding: 0px calc(10px + 2.5vw);
   box-sizing: border-box;
 
@@ -70,5 +71,20 @@
   .blog_body {
     display: flex;
     justify-content: space-between;
+    gap: 1vw;
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    white-space: nowrap;
+  }
+
+  .blog_body::-webkit-scrollbar {
+    height: 0;
+  }
+  .blog_body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+  }
+  .blog_body::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 }

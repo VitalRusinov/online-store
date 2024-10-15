@@ -70,12 +70,12 @@ $lavender: #AE97E8;
 
       p {
         font-weight: 400;
-        font-size: 2.5rem;
+        font-size: calc(20px + 0.75vw);
         letter-spacing: 0.04rem;
 
         span {
           font-weight: 500;
-          font-size: 1rem;
+          font-size: calc(8px + 0.5vw);
         }
       }
     }

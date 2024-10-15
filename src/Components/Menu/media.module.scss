@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+  .search {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+
+  .menu_container {
+
+    & svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .desctop_container {
+      display: none;
+    }
+  
+    .mobile_container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .label_container {
+        font-family: 'LeMurmure';
+        font-weight: 600;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      .icons {
+        gap: 0.5rem;
+        display: flex;
+      }
+    }
+  }
+
+}

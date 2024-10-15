@@ -1,3 +1,5 @@
+
+
 .menu_container {
   width: 100%;
   height: 2.3rem;
@@ -6,14 +8,17 @@
   left: 0;
   z-index: 5;
 
-  display: flex;
-  align-items: center;
   box-sizing: border-box;
 
   button {
     background-color: rgba(255, 255, 255, 0);
     border: none;
   }
+
+  .desctop_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
 
   & span {
     font-weight: 500;
@@ -24,7 +29,7 @@
   & a {
     text-decoration: none;
     color: inherit;
-}
+  }
 
   & > * {
     display: flex;
@@ -32,22 +37,22 @@
   }
 
   .label_container {
-    width: 7%;
+    width: 15ch;
     .label {
       font-family: 'LeMurmure';
       font-weight: 600;
-      font-size: 2.3rem;
+      font-size: calc(30px + 0.75vw);
       color: white;
     }
   }
   
   .catalog {
-    width: 23%;
+    width: 20%;
     gap: 0.875rem;
   }
 
   .central_panel {
-    width: 31%;
+    flex: 1;
     gap: 1.875rem;
   }
   
@@ -68,3 +73,10 @@
     gap: 2.125rem;
   }
 }
+  .mobile_container {
+    display: none;    
+  }
+
+}
+
+@import './media.module.scss';

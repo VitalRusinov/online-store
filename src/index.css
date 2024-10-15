@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth; /* Плавная прокрутка */
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
 }
 
 * {
