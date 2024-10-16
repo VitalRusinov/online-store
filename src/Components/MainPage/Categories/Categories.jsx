@@ -6,9 +6,10 @@ import ProductCard from "./ProductCard/ProductCard";
 import MoreButton from "../../Buttons/MoreButton/MoreButton";
 import Filter from "./Filter/Filter";
 import { getPrice } from "../../../utils";
+import MobileModalProductsList from "./MobileModalProductsList/MobileModalProductsList";
 
 const Categories = () => {
-  const [activeCategoryIdent, setActiveCategoryIdent] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(null);
   const [productsCount, setProductsCount] = useState(5);
 
   const [fullListPrices, setFullListPrices] = useState([]);
@@ -20,12 +21,12 @@ const Categories = () => {
   useEffect(() => {
     //Изменяет кол-во отображаемого товара
     setProductsCount(5);
-    //console.log(activeCategoryIdent, 'activeCategoryIdent');
-  }, [activeCategoryIdent]);
+  }, [activeCategory]);
 
   const categoriesList = useSelector((state) => state.categories.entries);
+
   const fullProductsList = useSelector(
-    (state) => state[activeCategoryIdent]?.entries,
+    (state) => state[activeCategory?.categoryIdent]?.entries,
   );
   const priceFiltered = fullProductsList
     ?.filter((prod) => getPrice(prod.price) <= maxPrice)
@@ -58,8 +59,8 @@ const Categories = () => {
             <div key={category.id}>
               <CategoryCard
                 category={category}
-                activeCategoryIdent={activeCategoryIdent}
-                setActiveCategoryIdent={setActiveCategoryIdent}
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
               />
             </div>
           );
@@ -93,12 +94,21 @@ const Categories = () => {
             );
           })}
       </div>
-      {productsList && filteredList?.length > productsList?.length && (
-        <MoreButton
-          productsCount={productsCount}
-          setProductsCount={setProductsCount}
-        />
-      )}
+      {fullProductsList && <div className={styles.mobile_productsList}>
+        <MobileModalProductsList 
+          list={fullProductsList}
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+          />
+      </div>}
+      <div className={styles.more_Button}>
+        {productsList && filteredList?.length > productsList?.length && (
+          <MoreButton
+            productsCount={productsCount}
+            setProductsCount={setProductsCount}
+          />
+        )}
+      </div>
     </div>
   );
 };

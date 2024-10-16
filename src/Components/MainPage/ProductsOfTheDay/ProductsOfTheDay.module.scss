@@ -7,332 +7,343 @@ $lime: #D9FF5A;
   width: 100%;
   height: 100vh;
 
-  padding: 1.25em;
-  display: flex;
-  box-sizing: border-box;
-  gap: 1.25em;
-
-  & > div:nth-child(1) {
-    background: $lavender;
-  }
-  & > div:nth-child(2) {
-    background: $pink;
-  }
-  & > div:nth-child(3) {
-    background: $blue;
-  }
-
   //Продукты дня 3 шт, состояние: не выбран ни один товар
-  .productOfTheDay {
-    flex: 1;
-    position: relative;
-    border-radius: 2.5em;
+  .desctop {
+    width: 100%;
+    height: 100%;
 
+    padding: 1.25em;
     display: flex;
-    justify-content: center;
+    box-sizing: border-box;
+    gap: 1.25em;
 
-    transition-duration: 1s;
-    transition-timing-function: ease-out;    
+    & > div:nth-child(1) {
+      background: $lavender;
+    }
+    & > div:nth-child(2) {
+      background: $pink;
+    }
+    & > div:nth-child(3) {
+      background: $blue;
+    }
 
-    //использую для изменения цвета фона
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.1);
+    .productOfTheDay {
+      flex: 1;
+      position: relative;
       border-radius: 2.5em;
-    }
 
-    .designer_container {
-      width: 100%;
-
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 10vh);
-      transform: translate(-50%, -50%);
-      text-align: center;
-
-      //Надпись "Товар дня"
-      .designer_product {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
-        font-size: 0;
-      }
-
-      .designer {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
-        font-family: 'Floreste-Wavy';
-        font-weight: 400;
-        font-size: 3.75vw;
-        text-transform: uppercase;
-        color: #cbb6ff;
-      }
-    }
-
-    .img_container {
-      transition-duration: 1s;
-      transition-timing-function: ease-out;  
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 10vh);
-      transform: translate(-50%, -50%);
-      height: 40%;
       display: flex;
       justify-content: center;
-      box-sizing: border-box;
 
-      .image {
+      transition-duration: 1s;
+      transition-timing-function: ease-out;    
+
+      //использую для изменения цвета фона
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2.5em;
+      }
+
+      .designer_container {
+        width: 100%;
+
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 10vh);
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        //Надпись "Товар дня"
+        .designer_product {
+          transition-duration: 1s;
+          transition-timing-function: ease-out;  
+          font-size: 0;
+        }
+
+        .designer {
+          transition-duration: 1s;
+          transition-timing-function: ease-out;  
+          font-family: 'Floreste-Wavy';
+          font-weight: 400;
+          font-size: 3.75vw;
+          text-transform: uppercase;
+          color: #cbb6ff;
+        }
+      }
+
+      .img_container {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 10vh);
+        transform: translate(-50%, -50%);
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .image {
+          transition-duration: 1s;
+          transition-timing-function: ease-out;
+          object-fit: contain;
+          transform: rotate(7deg);
+        }
+      }
+
+      .description {
+        opacity: 1;
+        position: absolute;
+        left: 50%;
+        bottom: 6vh;
+        transform: translate(-50%, 0);
+        width: 17.2em;
+        height: 11.4em;
+        color: white;
+        text-align: center;
+
         transition-duration: 1s;
         transition-timing-function: ease-out;
-        object-fit: contain;
-        transform: rotate(7deg);
+
+        p {
+          font-family: 'Floreste-Wavy';
+          font-weight: 500;
+          font-size: 1.25em;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-weight: 500;
+          font-size: 1em;
+          line-height: 153%;
+        }
+
+        hr {
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          width: 100%;
+          height: 0px;
+        }
+        .price_container {
+          display: flex;
+          justify-content: center;
+          align-items: start;
+
+          .price {
+            font-family: 'Floreste-Wavy';
+            font-weight: 400;
+            font-size: 1.75em;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: white;
+          }
+    
+          .ruble {
+            margin-left: 0.3em;
+            font-weight: 400;
+            font-size: 1.25em;
+          }
+        }      
+      }
+
+      .button_Container {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        opacity: 0;
+
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+      }
+
+      .slides_Container {
+        position: absolute;
+        top: calc(50% + 36vh);
+        left: 50%;
+        transform: translate(-50%, -150%); /* Начальная позиция: чуть выше и вне видимости */
+        width: 3.7em;
+        height: 5.6em;
+        opacity: 0;
+        text-align: center;
+
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
       }
     }
 
-    .description {
-      opacity: 1;
-      position: absolute;
-      left: 50%;
-      bottom: 6vh;
-      transform: translate(-50%, 0);
-      width: 17.2em;
-      height: 11.4em;
-      color: white;
-      text-align: center;
-
+    //Товар выбран
+    .active {
+      //изменение размера при наведении
+      flex: 3.41;
       transition-duration: 1s;
-      transition-timing-function: ease-out;
-
-      p {
-        font-family: 'Floreste-Wavy';
-        font-weight: 500;
-        font-size: 1.25em;
-        text-transform: uppercase;
+      transition-timing-function: ease-out;   
+              
+      // изменение цвета фона при наведении
+      &::after {
+        background: rgba(255, 255, 255, 0);
+        transition-duration: 1s;
+        transition: background-color 1s ease-out;
       }
 
-      span {
-        font-weight: 500;
-        font-size: 1em;
-        line-height: 153%;
-      }
-
-      hr {
-        border: 1px solid rgba(255, 255, 255, 0.2);
+      .designer_container {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;   
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 1.25em);
+        transform: translate(-50%, -50%);
         width: 100%;
-        height: 0px;
-      }
-      .price_container {
-        display: flex;
-        justify-content: center;
-        align-items: start;
+        padding: 0 2vw;
+        box-sizing: border-box;
 
-        .price {
+        .designer_product {
+          transition-duration: 1s;
+          transition-timing-function: ease-out;  
+          display: block;
+          font-weight: 500;
+          font-size: 1.125em;
+          text-transform: uppercase;
+          text-align: start;
+          color: $lime;
+        }
+
+        .designer{
+          transition-duration: 1s;
+          transition-timing-function: ease-out;  
           font-family: 'Floreste-Wavy';
           font-weight: 400;
-          font-size: 1.75em;
+          font-size: 11vw;
+          text-transform: uppercase;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .img_container {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 2.5vh);
+        transform: translate(-50%, -50%);
+        width: 41%;
+        height: 68%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .image {
+          transition-duration: 1s;
+          transition-timing-function: ease-out;  
+
+          object-fit: contain;
+          transform: rotate(0deg);
+        }
+      }
+
+      .description {
+        opacity: 1;
+        position: absolute;
+        left: 2vw;
+        bottom: 10vh;
+        transform: translate(0, 0);
+        width: 17.2em;
+        height: 12.25em;
+        text-align: start;
+
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+
+        p {
+          font-size: 28px;
+        }
+
+        .price_container {
+          justify-content: left;
+
+          .price {
+            font-size: 2.5em;
+            color: $lime;
+          }
+        }
+      }
+
+      .button_Container {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        right: 15vw;
+        bottom: 18vh;
+        transform: translate(50%, 50%);
+        text-align: start;
+        z-index: 0;
+
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+      }
+
+    }
+    // Выбран другой товар
+    .inactive {
+      .designer_container {
+        transform: scale(0);
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+      }
+
+      .img_container {
+        transition-duration: 1s;
+        transition-timing-function: ease-out;  
+        position: absolute;
+        left: 50%;
+        top: calc(50% - 2vh);
+        transform: translate(-50%, -50%);
+        width: 11vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+
+        .image {
+          object-fit: contain;
+          transform: rotate(7deg);
+        }
+      }
+
+      .description {
+        opacity: 0;
+      }
+
+      .slides_Container {
+        transform: translate(-50%, -50%); /* Положение по центру блока при наведении */
+        opacity: 1; /* Видимость */
+
+        p {
+          font-weight: 500;
+          font-size: 1em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        span {
+          font-family: 'Floreste-Wavy';
+          font-weight: 400;
+          font-size: 2.5em;
           letter-spacing: 0.04em;
           text-transform: uppercase;
           color: white;
         }
-  
-        .ruble {
-          margin-left: 0.3em;
-          font-weight: 400;
-          font-size: 1.25em;
-        }
-      }      
-    }
-
-    .button_Container {
-      position: absolute;
-      right: 0%;
-      bottom: 0%;
-      opacity: 0;
-
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
-    }
-
-    .slides_Container {
-      position: absolute;
-      top: calc(50% + 36vh);
-      left: 50%;
-      transform: translate(-50%, -150%); /* Начальная позиция: чуть выше и вне видимости */
-      width: 3.7em;
-      height: 5.6em;
-      opacity: 0;
-      text-align: center;
-
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
+      }
     }
   }
 
-  //Товар выбран
-  .active {
-    //изменение размера при наведении
-    flex: 3.41;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;   
-            
-    // изменение цвета фона при наведении
-    &::after {
-      background: rgba(255, 255, 255, 0);
-      transition-duration: 1s;
-      transition: background-color 1s ease-out;
-    }
-
-    .designer_container {
-      transition-duration: 1s;
-      transition-timing-function: ease-out;   
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 1.25em);
-      transform: translate(-50%, -50%);
-      width: 100%;
-      padding: 0 2vw;
-      box-sizing: border-box;
-
-      .designer_product {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
-        display: block;
-        font-weight: 500;
-        font-size: 1.125em;
-        text-transform: uppercase;
-        text-align: start;
-        color: $lime;
-      }
-
-      .designer{
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
-        font-family: 'Floreste-Wavy';
-        font-weight: 400;
-        font-size: 11vw;
-        text-transform: uppercase;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.3);
-      }
-    }
-
-    .img_container {
-      transition-duration: 1s;
-      transition-timing-function: ease-out;  
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 2.5vh);
-      transform: translate(-50%, -50%);
-      width: 41%;
-      height: 68%;
-      display: flex;
-      justify-content: center;
-      box-sizing: border-box;
-
-      .image {
-        transition-duration: 1s;
-        transition-timing-function: ease-out;  
-
-        object-fit: contain;
-        transform: rotate(0deg);
-      }
-    }
-
-    .description {
-      opacity: 1;
-      position: absolute;
-      left: 2vw;
-      bottom: 10vh;
-      transform: translate(0, 0);
-      width: 17.2em;
-      height: 12.25em;
-      text-align: start;
-
-      transition-duration: 1s;
-      transition-timing-function: ease-out;  
-
-      p {
-        font-size: 28px;
-      }
-
-      .price_container {
-        justify-content: left;
-
-        .price {
-          font-size: 2.5em;
-          color: $lime;
-        }
-      }
-    }
-
-    .button_Container {
-      display: block;
-      opacity: 1;
-      position: absolute;
-      right: 15vw;
-      bottom: 18vh;
-      transform: translate(50%, 50%);
-      text-align: start;
-      z-index: 0;
-
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
-    }
-
-  }
-  // Выбран другой товар
-  .inactive {
-    .designer_container {
-      transform: scale(0);
-      transition-duration: 1s;
-      transition-timing-function: ease-out;  
-    }
-
-    .img_container {
-      transition-duration: 1s;
-      transition-timing-function: ease-out;  
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 2vh);
-      transform: translate(-50%, -50%);
-      width: 11vw;
-      height: 30vh;
-      display: flex;
-      justify-content: center;
-
-      .image {
-        object-fit: contain;
-        transform: rotate(7deg);
-      }
-    }
-
-    .description {
-      opacity: 0;
-    }
-
-    .slides_Container {
-      transform: translate(-50%, -50%); /* Положение по центру блока при наведении */
-      opacity: 1; /* Видимость */
-
-      p {
-        font-weight: 500;
-        font-size: 1em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      span {
-        font-family: 'Floreste-Wavy';
-        font-weight: 400;
-        font-size: 2.5em;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: white;
-      }
-    }
+  .mobile {
+    display: none;
   }
 }
+
+@import './media.module.scss';

@@ -72,4 +72,10 @@
       justify-content: center;      
     }
   }
+
+  .mobile_productsList {
+    display: none;
+  }
 }
+
+@import './media.module.scss';

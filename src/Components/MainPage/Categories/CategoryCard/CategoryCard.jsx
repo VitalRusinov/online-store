@@ -4,17 +4,17 @@ import classNames from "classnames";
 
 const CategoryCard = ({
   category,
-  activeCategoryIdent,
-  setActiveCategoryIdent,
+  activeCategory,
+  setActiveCategory,
 }) => {
   const { image, name, categoryIdent } = category;
 
   const handleClick = () => {
-    if (categoryIdent === activeCategoryIdent) {
-      setActiveCategoryIdent(null);
+    if (categoryIdent === activeCategory?.categoryIdent) {
+      setActiveCategory(null);
       return;
     }
-    setActiveCategoryIdent(categoryIdent);
+    setActiveCategory(category);
     return;
   };
 
@@ -22,7 +22,7 @@ const CategoryCard = ({
 
   let categoryCardClasses = classNames(
     styles.categoriesCard,
-    categoryIdent === activeCategoryIdent ? styles.active : "",
+    categoryIdent === activeCategory?.categoryIdent ? styles.active : "",
   );
 
   return (

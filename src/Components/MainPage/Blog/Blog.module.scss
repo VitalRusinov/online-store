@@ -20,7 +20,6 @@
         align-items: center;
         gap: 0.5rem;
 
-
         .primary_dot {
           width: 0.5rem;
           height: 0.5rem;
@@ -38,23 +37,23 @@
       }
 
       h2 {
-        margin-left: 3rem;
+        margin-left: calc(10px + 2vw);
         font-weight: 500;
-        font-size: 3.75rem;
+        font-size: calc(14px + 2.5vw);
         text-transform: uppercase;
         color: white;
       }
     }
 
     .pages {
-      width: 10vw;
+      width: calc(90px + 5vw);
       display: flex;
       align-items: center;
 
       span {
         font-family: 'Floreste-Wavy';
         font-weight: 400;
-        font-size: 2.5rem;
+        font-size: calc(20px + 1vw);
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: white;
@@ -62,7 +61,7 @@
 
       hr {
         border: 2px solid #cbb6ff;
-        width: 3.2vw;
+        width: calc(25px + 2vw);
         height: 0px;
       }
     }
@@ -88,3 +87,5 @@
     background-color: transparent;
   }
 }
+
+@import './media.module.scss';

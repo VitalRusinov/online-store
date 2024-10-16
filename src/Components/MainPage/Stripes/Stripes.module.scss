@@ -6,3 +6,11 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: 500px) {
+  .stripes {
+    img {
+      transform: scaleY(2) rotate(-1deg);
+    }
+  }
+}

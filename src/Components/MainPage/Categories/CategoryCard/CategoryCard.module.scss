@@ -45,8 +45,8 @@ $lavender: #AE97E8;
   }
 
   .cat_prodCount {
-    width: 4.2vw;
-    height: 3.7vw;
+    width: 19%;
+    height: 12%;
 
     transform: rotate(-23deg);
     border-radius: 100%;
@@ -125,9 +125,9 @@ $lavender: #AE97E8;
 
     p {
       margin: 0;
-      margin-top: 0.3rem;
+      margin-top: 0.2rem;
       font-weight: 500;
-      font-size: 1.75rem;
+      font-size: calc(0.75rem + 1vw);
       text-transform: uppercase;
       color: white;
     }
