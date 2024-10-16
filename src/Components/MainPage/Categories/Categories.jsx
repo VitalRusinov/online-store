@@ -50,6 +50,23 @@ const Categories = () => {
     }
   }, [fullProductsList]);
 
+  //чтоб экран не блокировался при открытии товаров
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Функция для проверки размера экрана
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 500);
+  };
+
+  // Запускаем проверку при монтировании и при каждом изменении размера окна
+  useEffect(() => {
+    handleResize(); // Выполнить проверку при загрузке
+    window.addEventListener('resize', handleResize); // Слушать изменение размера окна
+
+    // Убираем слушатель при размонтировании компонента
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className={styles.cat_container} id="categories">
       <h2>Категории</h2>
@@ -94,13 +111,15 @@ const Categories = () => {
             );
           })}
       </div>
-      {fullProductsList && <div className={styles.mobile_productsList}>
-        <MobileModalProductsList 
-          list={fullProductsList}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          />
-      </div>}
+      {fullProductsList && isMobile &&
+        <div className={styles.mobile_productsList}>
+          <MobileModalProductsList 
+            list={fullProductsList}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+            />
+        </div>
+      }
       <div className={styles.more_Button}>
         {productsList && filteredList?.length > productsList?.length && (
           <MoreButton
