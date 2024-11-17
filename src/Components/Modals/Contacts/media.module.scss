@@ -1,0 +1,70 @@
+@media (max-width: 1025px) {
+  .main_containers {
+    .container {
+      .info {
+        .contacts {
+          padding: 5vh 3vw 5vh 1vw;
+          .adress {
+            .city {
+              margin-top: calc(1rem + 0.5vw);
+            }
+          }
+          .phone {
+            .number {
+              margin-top: calc(1rem + 0.5vw);
+              font-size: calc(1.5rem + 0.65vw);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+  .main_containers {
+    height: fit-content;
+    .closeButton {
+      width: 24px;
+    }
+    .container {
+      //position: relative;
+      //overflow-y: scroll;
+      overflow-y: auto; /* Позволяем содержимому прокручиваться */
+      -webkit-overflow-scrolling: touch; /* Улучшение для iOS */
+      .info {
+        flex-direction: column;
+        .contacts {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 55px;
+          .adress {
+            .toMap {
+              display: none;
+            }
+          }
+          .phone {
+            .icons {
+              margin-top: 55px;
+            }
+          }
+        }
+        .feedback_form {
+          width: 100%;
+
+          .form {
+            margin-top: 52px;
+
+            .orderButton {
+              margin-top: 52px;
+            }
+          }
+        }
+      }
+      .map{
+        height: 500px;
+      }
+    }
+  }
+}

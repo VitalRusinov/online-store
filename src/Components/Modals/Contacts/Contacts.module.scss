@@ -28,8 +28,9 @@ $lime: #D9FF5A;
   }
 
   .closeButton {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 20px;
+    aspect-ratio: 1;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +44,6 @@ $lime: #D9FF5A;
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    overflow: hidden;
 
     .info {
       width: 100%;
@@ -52,7 +52,7 @@ $lime: #D9FF5A;
 
       & .title {
         font-weight: 500;
-        font-size: 1rem;
+        font-size: calc(0.6875rem + 0.25vw);
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.5);
       }
@@ -62,9 +62,9 @@ $lime: #D9FF5A;
         height: 100%;
         background-color: $lavender;
         box-sizing: border-box;
-        padding: 7.4vh 9.3vw 7.4vh 4vw;
+        padding: 7.4vh 5vw 7.4vh 1vw;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .adress {
           height: 100%;
@@ -72,34 +72,33 @@ $lime: #D9FF5A;
           flex-direction: column;
 
           .city {
-            margin-top: 3.125rem;
+            margin-top: calc(2rem + 1vw);
             font-weight: 500;
-            font-size: 3.75rem;
+            font-size: calc(0.75rem + 2.5vw);
             text-transform: uppercase;
             color: white;
-            line-height: 3.75rem;
+            line-height: calc(2.5rem + 1vw);
           }
 
           .street {
-            margin-top: 1.875rem;
+            margin-top: calc(1.0625rem + 0.75vw);
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: calc(0.75rem + 0.3vw);
             color: white;
           }
 
           .toMap {
             margin-top: auto;
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: calc(0.75rem + 0.3vw);
             color: white;
 
             display: flex;
             align-items: center;
-            gap: 1.25rem;
+            gap: calc(0.75rem + 0.3vw);;
 
             svg {
-              width: 0.875rem;
-              height: 1.375rem;
+              height: calc(0.75rem + 0.4vw);
             }
           }
         }
@@ -110,19 +109,20 @@ $lime: #D9FF5A;
           flex-direction: column;
 
           .number {
-            margin-top: 3.75rem;
+            margin-top: calc(2rem + 1vw);
             font-family: 'Floreste-Wavy';
             font-weight: 400;
-            font-size: 2.5rem;
+            font-size: calc(1.6875rem + 0.65vw);
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: white;
+            line-height: calc(2.5rem + 1vw);
           }
 
           .text {
-            margin-top: 2.5rem;
+            margin-top: calc(1.0625rem + 0.75vw);
             font-weight: 500;
-            font-size: 1.125rem;
+            font-size: calc(0.75rem + 0.3vw);
             color: white;
           }
 
@@ -157,7 +157,6 @@ $lime: #D9FF5A;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-
     
           .input {
             width: 100%;
@@ -169,6 +168,7 @@ $lime: #D9FF5A;
             color: #fff;
             border-bottom: 2px solid $lime; /* Желтая линия при фокусе */
             transition: border-color 0.3s;
+            font-size: 1rem;
         
             &::placeholder {
               font-weight: 500;
@@ -179,8 +179,9 @@ $lime: #D9FF5A;
           }
     
           .orderButton {
-            width: 12rem;
-            height: 6rem;
+            width: calc(9rem + 2.2vw);
+            aspect-ratio: 22 / 13;
+            //height: calc(5.625rem + 0.25vw);
             position: relative;
     
             .ellipse {
@@ -198,7 +199,7 @@ $lime: #D9FF5A;
     
             span {
               font-weight: 500;
-              font-size: 1.25rem;
+              font-size: calc(0.9375rem + 0.25vw);
               line-height: 120%;
               color: white;
             }
@@ -210,6 +211,11 @@ $lime: #D9FF5A;
     .map {
       width: 100%;
       height: 54%;
+
+      //overflow-y: auto; /* Карта также может скроллироваться */
+
     }
   }
 }
+
+@import './media.module.scss';

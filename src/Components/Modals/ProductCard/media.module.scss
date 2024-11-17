@@ -1,0 +1,60 @@
+@media (max-width: 500px) and (orientation: portrait) {
+  .productCard {
+    .designer {
+      top: 31%;
+    }
+
+    .article {
+      width: 5ch;
+      top: 12%;
+      overflow-wrap: break-word;
+    }
+
+    .color {     
+      top: 39%;
+      left: auto;
+      right: calc(10px + 2.5vw);
+      width: 8ch;
+      justify-content: end;
+      gap: 7px;
+      .text {
+        display: none;
+      }
+    }
+
+    .description {
+      width: 25ch;
+      bottom: 30%
+    }
+
+    .name {
+      bottom: 39%;
+      left: calc(10px + 2.5vw);
+      transform: translate(0, 0);
+      span {
+        font-family: 'Euclid';
+        font-weight: 500;
+      }
+    }
+
+    .price {
+      bottom: 15%;
+      left: calc(10px + 2.5vw);
+      transform: translate(0, -50%);
+    }
+
+    .size {
+      top: 39.5%;
+      right: auto;
+      left: calc(10px + 2.5vw);
+      width: 8ch;
+      justify-content: end;
+      gap: 0.625rem;
+    }
+    
+    .buy {
+      bottom: 15%;
+      
+    }
+  }
+}
