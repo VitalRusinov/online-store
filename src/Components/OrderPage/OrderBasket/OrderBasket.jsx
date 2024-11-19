@@ -5,13 +5,11 @@ import styles from "./OrderBasket.module.scss";
 import { getUserData } from "../../../utils";
 import BasketCard from "./BasketCard/BasketCard";
 import { getPrice } from "../../../utils/getPrice";
+import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
 
 const OrderBasket = () => {
-  const chairs = useSelector((state) => state.chairs.entries);
-  const lamps = useSelector((state) => state.lamps.entries);
-  const mirrors = useSelector((state) => state.mirrors.entries);
-  const tables = useSelector((state) => state.tables.entries);
-  const allProducts = [...chairs, ...lamps, ...mirrors, ...tables];
+
+  const allProducts = useGetAllProducts()
 
   const { email } = getUserData();
   const basket = useSelector((state) => state.baskets.entities[email]);
@@ -27,7 +25,8 @@ const OrderBasket = () => {
 
   return (
     <div className={styles.basket}>
-      <h2>Состав заказа</h2>
+      <h2 className={styles.desctop_h2}>Состав заказа</h2>
+      <h2 className={styles.mobile_h2}>Ваш заказ</h2>
       <div className={styles.cards_container}>
         {basketProducts.map((product) => {
           return (

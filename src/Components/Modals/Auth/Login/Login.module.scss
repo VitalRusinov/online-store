@@ -1,98 +1,108 @@
 $lime: #D9FF5A;
 
-.loginForm {
+.container {
+
   width: 37rem;
   height: 32rem;
   position: absolute;
   top: 11vh;
   right: 3vw;
 
-  padding: 3rem;
-  box-sizing: border-box;
-
-  border-radius: 40px;
-  background: rgba(51, 32, 101, 0.18);
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  button {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-  }
-
-  .closeButton {
-    width: 2.25rem;
-    height: 2.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 1.43rem;
-    right: 1.43rem;
-  }
-
-  h2 {
-    margin: 0;
-    font-weight: 500;
-    font-size: 1.125rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: white;
-  }
-
-  .form {
+  .loginForm {
     width: 100%;
-    height: 75%;
+    height: 100%;
+  
+    padding: 3rem;
+    box-sizing: border-box;
+  
+    border-radius: 40px;
+    background: rgba(51, 32, 101, 0.18);
+  
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-  
-    .input {
-      width: 100%;
-      height: 2rem;
-      padding: 0.5rem 0;
-      background: transparent;
-      outline: none;
-      color: #fff;
-      border-bottom: 2px solid $lime;
-      transition: border-color 0.3s;
-  
-      &::placeholder {
-        font-weight: 500;
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: white;
-      }
+    justify-content: space-between;
+    button {
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
     }
   
-    .error {
-      color: red;
-      font-size: 0.75rem;
-      margin-top: 0.3rem;
+    .closeButton {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      position: absolute;
+      top: 1.43rem;
+      right: 1.43rem;
     }
   
-    .loginError {
-      color: red;
-      font-size: 1.25rem;
-      margin-top: 0.3rem;
-    }
-  }
-
-  .toRegistration {
-    align-self: flex-start;
-
-    span {
-      margin-right: 1.25rem;
+    h2 {
+      margin: 0;
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 1.125rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: white;
     }
-  }  
+  
+    .form {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    
+      .input {
+        width: 100%;
+        height: 2rem;
+        padding: 0.5rem 0;
+        background: transparent;
+        outline: none;
+        color: #fff;
+        border-bottom: 2px solid $lime;
+        transition: border-color 0.3s;
+    
+        &::placeholder {
+          font-weight: 500;
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: white;
+        }
+      }
+    
+      .error {
+        color: red;
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+      }
+    
+      .loginError {
+        color: red;
+        font-size: 1.25rem;
+        margin-top: 0.3rem;
+      }
+    }
+  
+    .toRegistration {
+      align-self: flex-start;
+      display: flex;
+      align-items: center;
+  
+      span {
+        margin-right: 1.25rem;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: white;
+      }
+    }  
+  }
 }
+
+@import './media.module.scss';

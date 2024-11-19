@@ -16,7 +16,9 @@ const OrderPage = () => {
       ) : (
         <>
           <OrderForm setOrderStatus={setOrderStatus} />
-          <OrderBasket />
+          <div className={styles.orderBasket}>
+            <OrderBasket />
+          </div>
         </>
       )}
       <RenderModal />

@@ -1,0 +1,44 @@
+@media (max-width: 1024px) {
+  .basket {
+    width: calc(20rem + 16vw);
+  }
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+  .basket {
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+    box-sizing: border-box;
+
+    border-radius: 0;
+    background: none;
+
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+
+    .desctop_h2 {
+      display: none;
+    }
+  
+    .mobile_h2 {
+      display: block;
+      font-weight: 500;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .cards_container {
+      overflow: visible;
+      margin: 15px 0;
+    }
+
+    .footer {
+      display: none;
+    }
+  }
+}

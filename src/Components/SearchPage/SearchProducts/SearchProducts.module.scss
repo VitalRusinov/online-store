@@ -1,11 +1,19 @@
 .productsList {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(calc(200px + 4vw), 1fr));
+  grid-row-gap: calc(50px + 5vh);
+  grid-column-gap: calc(50px + 2.5vw);
 
   .productCard {
     display: flex;
     justify-content: center;    
   }
 }
+
+.mobileProductsList {
+  display: none;
+}
+
+@import './media.module.scss';

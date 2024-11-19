@@ -9,6 +9,8 @@ import ModalContext from "../../../../context/ModalContext";
 import { addNewUserBasket } from "../../../../store/basketsSlice";
 import { useDispatch } from "react-redux";
 
+import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
+
 const UserInfo = () => {
   const dispatch = useDispatch();
 
@@ -23,23 +25,17 @@ const UserInfo = () => {
   };
 
   return (
-    <div className={styles.userInfo}>
-      <div>
-        <h2>User:</h2>
-        <p>{user.email}</p>
+    <div className={styles.container}>
+      <div className={styles.userInfo}>
+        <div>
+          <h2>User:</h2>
+          <p>{user.email}</p>
+        </div>
+        <button className={styles.closeButton} onClick={closeModal}>
+          <CloseButton />
+        </button>
+        <ExitButton handleSubmit={handleSubmit} />
       </div>
-      <button className={styles.closeButton} onClick={closeModal}>
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line x1="2" y1="2" x2="16" y2="16" stroke="white" strokeWidth="2" />
-          <line x1="2" y1="16" x2="16" y2="2" stroke="white" strokeWidth="2" />
-        </svg>
-      </button>
-      <ExitButton handleSubmit={handleSubmit} />
     </div>
   );
 };

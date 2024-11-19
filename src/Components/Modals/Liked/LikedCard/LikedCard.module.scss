@@ -94,6 +94,11 @@ $lime: #D9FF5A;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
 
@@ -122,3 +127,5 @@ $lime: #D9FF5A;
     }
   }
 }
+
+@import './media.module.scss';

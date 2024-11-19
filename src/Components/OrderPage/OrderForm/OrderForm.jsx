@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import { getUserData } from "../../../utils";
 import styles from "./OrderForm.module.scss";
 import { useSelector } from "react-redux";
+import OrderBasket from "../OrderBasket/OrderBasket";
 
 const OrderForm = ({ setOrderStatus }) => {
   const { email } = getUserData();
@@ -27,7 +28,7 @@ const OrderForm = ({ setOrderStatus }) => {
   return (
     <div className={styles.form_container}>
       <h2>Оформление заказа</h2>
-      <form className={styles.form} onSubmit={formik.handleSubmit}>
+      <form className={styles.form} onSubmit={formik.handleSubmit} id="myForm">
         <div>
           <label htmlFor="name"></label>
           <input
@@ -68,11 +69,14 @@ const OrderForm = ({ setOrderStatus }) => {
             required
           />
         </div>
-        <button className={styles.orderButton} type="submit">
-          <div className={styles.ellipse}></div>
-          <span>Заказать</span>
-        </button>
       </form>
+      <div className={styles.mobile_basket}>
+        <OrderBasket />
+      </div>
+      <button className={styles.orderButton} type="submit" form="myForm">
+        <div className={styles.ellipse}></div>
+        <span>Заказать</span>
+      </button>
     </div>
   );
 };

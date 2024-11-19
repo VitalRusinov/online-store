@@ -1,0 +1,15 @@
+@media (max-width: 500px) and (orientation: portrait) {
+  .form_container {
+    width: 100%;
+    height: auto;
+    gap: 30px;
+
+    .form {
+      gap: 15px;
+    }
+
+    .mobile_basket {
+      display: block;
+    }
+  }
+}

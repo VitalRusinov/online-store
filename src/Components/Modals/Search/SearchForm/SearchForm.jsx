@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./SearchForm.module.scss";
 
+import { ReactComponent as Loupe } from '../../../../assets/svg/Loupe.svg';
+import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
+
 const SearchForm = ({ string = "", submit }) => {
   const [searchStr, setSearchStr] = useState(string);
   const inputRef = useRef(null); // Создаем реф для input
@@ -24,28 +27,7 @@ const SearchForm = ({ string = "", submit }) => {
       <div className={styles.container}>
         <form onSubmit={handleSubmit}>
           <button className={styles.submitButton} type="submit">
-            <svg
-              width="24"
-              height="23"
-              viewBox="0 0 24 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"
-                stroke="#D9FF5A"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M23 22L18 17"
-                stroke="#D9FF5A"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <Loupe />
           </button>
           <input
             type="text"
@@ -57,7 +39,17 @@ const SearchForm = ({ string = "", submit }) => {
           />
         </form>
         <button className={styles.clearButton} onClick={handleClear}>
-          <svg
+          <CloseButton />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SearchForm;
+
+/*
+<svg
             width="22"
             height="22"
             viewBox="0 0 22 22"
@@ -80,10 +72,4 @@ const SearchForm = ({ string = "", submit }) => {
               strokeWidth="2"
             />
           </svg>
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default SearchForm;
+          */

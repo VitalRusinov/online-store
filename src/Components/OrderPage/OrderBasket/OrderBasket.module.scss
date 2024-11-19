@@ -2,9 +2,7 @@ $lime: #D9FF5A;
 
 .basket {
   width: 38.125rem;
-  height: max-content;
-  min-height: 735px;
-  max-height: 80vh;
+  height: 80vh;
 
   padding: 3rem;
   box-sizing: border-box;
@@ -22,12 +20,16 @@ $lime: #D9FF5A;
     border: none;
   }
 
-  h2 {
+  .desctop_h2 {
     font-weight: 500;
     font-size: 1.125rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
+  }
+
+  .mobile_h2 {
+    display: none;
   }
 
   .cards_container {
@@ -93,3 +95,5 @@ $lime: #D9FF5A;
     }
   }
 }
+
+@import './media.module.scss';

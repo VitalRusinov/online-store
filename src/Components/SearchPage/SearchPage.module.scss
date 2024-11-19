@@ -11,7 +11,7 @@ $lavender: #AE97E8;
 
   h2 {
     font-weight: 500;
-    font-size: 1.75rem;
+    font-size: calc(13px + 0.75vw);
     text-transform: uppercase;
     color: white;
   }
@@ -23,3 +23,5 @@ $lavender: #AE97E8;
     box-sizing: border-box;
   }
 }
+
+@import './media.module.scss';
