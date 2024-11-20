@@ -10,12 +10,12 @@ const OrderCompleted = () => {
     <div className={styles.container}>
       <div className={styles.bg_span}>
         <span>Thank you</span>
-        <span>Thank you</span>
-        <span>Thank you</span>
+        <span className={styles.not_Mobile}>Thank you</span>
+        <span className={styles.not_Mobile}>Thank you</span>
       </div>
       <div className={styles.span}>
         <span>Ваш заказ оформлен</span>
-        <span>Спасибо за заказ</span>
+        <span className={styles.not_Mobile}>Спасибо за заказ</span>
       </div>
       <div className={styles.big_pic}>
         <img src={lamp_01} alt="" loading="lazy" />

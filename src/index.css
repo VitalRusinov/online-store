@@ -3,9 +3,9 @@ html {
   scrollbar-width: none; /* Скрываем скроллбар в Firefox */
 }
 
-* {
+/* * {
   border: 1px solid rgba(12, 1, 1, 0.726);
-}
+} */
 
 body {
   margin: 0;  

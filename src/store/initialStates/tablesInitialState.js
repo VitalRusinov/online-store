@@ -47,7 +47,7 @@ export const tablesInitialState = {
       id: "table_03",
       image: table_03,
       product: "Круглый стол",
-      name: "ELVEN GLADE",
+      name: "ELVEN",
       article: "TBL003",
       color: "green",
       description: "Круглый стол с резьбой в виде листвы и лесных мотивов",
@@ -110,7 +110,7 @@ export const tablesInitialState = {
       id: "table_07",
       image: table_07,
       product: "Стол с секретом",
-      name: "ENCHANTED OAK",
+      name: "ENCHANTED",
       article: "TBL007",
       color: "orange",
       description:
@@ -142,7 +142,7 @@ export const tablesInitialState = {
       id: "table_09",
       image: table_09,
       product: "Стол для работы",
-      name: "MYSTIC OAK",
+      name: "MYSTIC",
       article: "TBL009",
       color: "orange",
       description:
@@ -158,7 +158,7 @@ export const tablesInitialState = {
       id: "table_10",
       image: table_10,
       product: "Стол с цветами",
-      name: "TWILIGHT BLOSSOM",
+      name: "BLOSSOM",
       article: "TBL010",
       color: "lavender",
       description:

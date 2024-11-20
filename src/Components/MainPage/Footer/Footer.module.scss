@@ -25,6 +25,7 @@
 
 @media (max-width: 500px) {
   .footer {
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +39,7 @@
 
     .logo {
       display: block;
+      bottom: 0;
     }
   }
 }

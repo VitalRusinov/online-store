@@ -1,0 +1,56 @@
+@media (max-width: 500px) and (orientation: portrait) {
+  $lavender: #AE97E8;
+
+  .container {
+  
+    .not_Mobile {
+      display: none;
+    }
+
+    .bg_span {
+      top: 30%;
+
+      span {
+        font-size: 110px;
+      }
+    }
+  
+    .span{
+      justify-content: center;
+  
+      span {
+        font-size: 1rem;
+      }
+    }
+  
+    .big_pic {
+      height: 26vh;
+      top: 30%;
+      left: 33%;
+      transform: rotate(-7deg);
+    }
+  
+    .small_pic {
+      height: 12vh;
+    }
+  
+    .pic2 {
+      top: 45%;
+      transform: rotate(-10deg);
+    }
+  
+    .pic3 {
+      left: 25%;
+      transform: rotate(0);
+    }
+  
+    .pic4 {
+      top: 50%;
+      right: 8%;
+    }
+  
+    .pic5 {
+      display: none;
+    }
+  }
+}
