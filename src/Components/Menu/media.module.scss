@@ -33,9 +33,12 @@
       .icons {
         gap: 0.5rem;
         display: flex;
+        align-items: start;
 
         .basket {
-          
+          position: relative;
+          top: 0;
+          left: 0;
             .dot {
               width: 10px;
               height: 10px;
@@ -43,14 +46,14 @@
               border: 5px $lavender solid;
               background: red;
               position: absolute;
-              top: 0;
-              right: 60px;
+              top: -7px;
+              right: 0;
   
-              & .visible {
+              &.visible {
                 display: block;
               }
   
-              & .hidden {
+              &.hidden {
                 display: none;
               }
             }

@@ -114,7 +114,7 @@ const Menu = () => {
             className={styles.basket}
           >
             <MenuBasket />
-            <div className={styles.dot}></div>
+            <div className={dotClass}></div>
           </button>
           <button
             onClick={() => openModal(modalTypes.contacts)}
