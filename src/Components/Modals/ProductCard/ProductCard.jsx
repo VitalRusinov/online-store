@@ -14,6 +14,8 @@ import {
 } from "../../../utils";
 import ModalContext from "../../../context/ModalContext";
 
+import { ReactComponent as CloseButton } from '../../../assets/svg/CloseButton.svg';
+
 const ProductCard = () => {
   const { modalInfo, closeModal } = useContext(ModalContext);
 
@@ -92,10 +94,7 @@ const ProductCard = () => {
       </div>
       <button onClick={() => closeModal()} className={styles.closeButton}>
         <span>закрыть</span>
-        <svg className={styles.svg} viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" >
-          <line x1="2" y1="2" x2="16" y2="16" stroke="white" strokeWidth="2" />
-          <line x1="2" y1="16" x2="16" y2="2" stroke="white" strokeWidth="2" />
-        </svg>
+        <CloseButton />
       </button>
       <button className={likeButtonClasses} onClick={putLike}>
         <svg viewBox="0 0 34 31" fill="none" xmlns="http://www.w3.org/2000/svg" >

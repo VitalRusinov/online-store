@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import styles from './MobileModalProductsList.module.scss';
 import MobileProductCard from './MobileProductCard/MobileProductCard';
 
+import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
 
 const MobileModalProductsList = ({list, activeCategory, setActiveCategory}) => {
 
@@ -17,17 +18,7 @@ const MobileModalProductsList = ({list, activeCategory, setActiveCategory}) => {
       {list &&
         <>
           <button onClick={() => setActiveCategory(null)} className={styles.close_button}>
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clipPath="url(#clip0_2712_5002)">
-                <path d="M21 1L1 21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M1 1L21 21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </g>
-              <defs>
-                <clipPath id="clip0_2712_5002">
-                  <rect width="22" height="22" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+            <CloseButton />
           </button>
           <div className={styles.name}>
             <span>{activeCategory?.name?.firstLine + ' ' + activeCategory?.name?.secondLine}</span>

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect } from "react";
 import styles from "./Contacts.module.scss";
 import { useFormik } from "formik";
 import YandexMap from "./YandexMap/YandexMap";
@@ -21,40 +21,6 @@ const Contacts = () => {
     };
   }, []);
 
-/*
-  useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).overflow; // Сохраняем оригинальный стиль
-    document.body.style.overflow = "hidden"; // Блокируем прокрутку фона
-    return () => {
-      document.body.style.overflow = originalStyle; // Восстанавливаем стиль при закрытии
-    };
-  }, []);
-  */
-  const modalRef = useRef(null);
-/*
-  useEffect(() => {
-    // Сохраняем текущий стиль overflow для восстановления
-    const originalOverflow = window.getComputedStyle(document.body).overflow;
-
-    // Блокируем прокрутку фона
-    document.body.style.overflow = "hidden";
-
-    // Устанавливаем overflow-y: auto для контейнера модального окна
-    if (modalRef.current) {
-      modalRef.current.style.overflowY = "auto";
-    }
-
-    return () => {
-      // Восстанавливаем прокрутку фона
-      document.body.style.overflow = originalOverflow;
-
-      // Сбрасываем стиль модального окна
-      if (modalRef.current) {
-        modalRef.current.style.overflowY = "";
-      }
-    };
-  }, []);
-*/
   // Инициализация useFormik
   const formik = useFormik({
     initialValues: {
@@ -68,7 +34,7 @@ const Contacts = () => {
 
   return (
     <div className={styles.main_containers}>
-      <div className={styles.container} ref={modalRef}>
+      <div className={styles.container}>
         <button className={styles.closeButton} onClick={closeModal}>
           <CloseButton />
         </button>
@@ -142,7 +108,6 @@ const Contacts = () => {
           </div>
         </div>
         <div className={styles.map}>
-          {/*возможно красивее будет заменить на googleMap*/}
           <YandexMap />
         </div>
       </div>

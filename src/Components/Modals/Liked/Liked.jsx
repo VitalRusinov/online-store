@@ -30,12 +30,10 @@ const Liked = () => {
       document.body.style.overflow = "hidden";
     }
 
-    // Очистка стилей при размонтировании компонента
     return () => {
       document.body.style.overflow = "";
     };
-  }, []); // Пустой массив зависимостей - эффект срабатывает только при монтировании и размонтировании
-
+  }, []); 
 
   return (
     <div className={styles.container}>
@@ -60,15 +58,3 @@ const Liked = () => {
 };
 
 export default Liked;
-
-/*
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line x1="2" y1="2" x2="16" y2="16" stroke="white" strokeWidth="2" />
-          <line x1="2" y1="16" x2="16" y2="2" stroke="white" strokeWidth="2" />
-        </svg>
-        */

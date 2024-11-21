@@ -17,6 +17,8 @@ $lavender: #ae97e8;
     position: fixed;
     top:20px;
     right: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .name {
@@ -39,7 +41,7 @@ $lavender: #ae97e8;
     margin-top: calc(52px + 1.5rem);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     box-sizing: border-box;
   }
 }

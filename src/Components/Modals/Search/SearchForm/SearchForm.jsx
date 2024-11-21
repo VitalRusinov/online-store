@@ -9,8 +9,8 @@ const SearchForm = ({ string = "", submit }) => {
   const inputRef = useRef(null); // Создаем реф для input
 
   useEffect(() => {
-    inputRef.current.focus(); // Устанавливаем фокус на input при открытии модального окна
-  }, []); // Запускаем эффект при изменении состояния isOpen
+    inputRef.current.focus();
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,29 +47,3 @@ const SearchForm = ({ string = "", submit }) => {
 };
 
 export default SearchForm;
-
-/*
-<svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="2"
-              y1="2"
-              x2="20"
-              y2="20"
-              stroke="white"
-              strokeWidth="2"
-            />
-            <line
-              x1="2"
-              y1="20"
-              x2="20"
-              y2="2"
-              stroke="white"
-              strokeWidth="2"
-            />
-          </svg>
-          */

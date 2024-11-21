@@ -9,14 +9,13 @@ $lavender: #AE97E8;
   box-sizing: border-box;
   overflow: hidden;
 
-  .svg {
+  svg {
     width: 100%
   }
 
   .readingTime {
     width: 16%;
     height: 22%;
-    //aspect-ratio: 23 / 20;
 
     border-radius: 100%;
     background: rgba(255, 255, 255, 0.19);
