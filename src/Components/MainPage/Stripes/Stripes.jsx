@@ -1,5 +1,5 @@
-import stripes from "./stripes.png";
-import styles from "./Stripes.module.scss";
+import stripes from './stripes.png';
+import styles from './Stripes.module.scss';
 
 const Stripes = () => {
   return (

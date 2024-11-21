@@ -1,15 +1,14 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import styles from "./OrderBasket.module.scss";
-import { getUserData } from "../../../utils";
-import BasketCard from "./BasketCard/BasketCard";
-import { getPrice } from "../../../utils/getPrice";
-import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
+import styles from './OrderBasket.module.scss';
+import { getUserData } from '../../../utils';
+import BasketCard from './BasketCard/BasketCard';
+import { getPrice } from '../../../utils/getPrice';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 const OrderBasket = () => {
-
-  const allProducts = useGetAllProducts()
+  const allProducts = useGetAllProducts();
 
   const { email } = getUserData();
   const basket = useSelector((state) => state.baskets.entities[email]);

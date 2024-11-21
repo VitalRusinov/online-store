@@ -1,4 +1,4 @@
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .container {
   width: 38.125rem;
@@ -11,39 +11,39 @@ $lime: #D9FF5A;
   .liked {
     width: 100%;
     height: 100%;
-  
+
     padding: 3rem;
     box-sizing: border-box;
-  
+
     border-radius: 40px;
     background: rgba(51, 32, 101, 0.18);
-  
+
     border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная рамка */
     backdrop-filter: blur(10px); /* Применение размытия */
-  
+
     display: flex;
     flex-direction: column;
     z-index: 20;
 
     overflow-y: auto;
-    
+
     button {
       background-color: rgba(255, 255, 255, 0);
       border: none;
     }
-  
+
     .closeButton {
       width: 2.25rem;
       height: 2.25em;
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       position: absolute;
       top: 23px;
       right: 23px;
     }
-  
+
     h2 {
       font-weight: 500;
       font-size: 1.125rem;
@@ -51,7 +51,7 @@ $lime: #D9FF5A;
       text-transform: uppercase;
       color: white;
     }
-  
+
     .cards_container {
       width: 100%;
       height: 100%;
@@ -59,7 +59,7 @@ $lime: #D9FF5A;
       overflow-y: auto;
       scrollbar-width: none; /* Скрывает скроллбар в Firefox */
     }
-  
+
     .cards_container::-webkit-scrollbar {
       display: none; /* Скрывает скроллбар в Chrome, Safari и Edge */
     }

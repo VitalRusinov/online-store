@@ -1,12 +1,12 @@
-import classNames from "classnames";
-import styles from "./MobileProductCard.module.scss";
-import { useDispatch } from "react-redux";
+import classNames from 'classnames';
+import styles from './MobileProductCard.module.scss';
+import { useDispatch } from 'react-redux';
 
-import { addProduct } from "../../../../../store/basketsSlice";
-import { getPrice } from "../../../../../utils";
-import { useContext } from "react";
-import ModalContext from "../../../../../context/ModalContext";
-import modalTypes from "../../../../Modals/modalTypes";
+import { addProduct } from '../../../../../store/basketsSlice';
+import { getPrice } from '../../../../../utils';
+import { useContext } from 'react';
+import ModalContext from '../../../../../context/ModalContext';
+import modalTypes from '../../../../Modals/modalTypes';
 
 import { ReactComponent as Basket } from '../../../../../assets/svg/Basket.svg';
 
@@ -26,7 +26,10 @@ const MobileProductCard = ({ prod }) => {
   };
 
   return (
-    <div className={styles.card} onClick={() => openModal(modalTypes.productCard, prod)}>
+    <div
+      className={styles.card}
+      onClick={() => openModal(modalTypes.productCard, prod)}
+    >
       <div className={styles.img_container}>
         <img src={image} alt="Изображение товара" loading="lazy" />
       </div>

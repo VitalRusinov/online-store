@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { productsOfTheDayInitialState } from "./initialStates/productsOfTheDayInitialState";
+import { createSlice } from '@reduxjs/toolkit';
+import { productsOfTheDayInitialState } from './initialStates/productsOfTheDayInitialState';
 
 const initialState = productsOfTheDayInitialState;
 
 const productsOfTheDaySlice = createSlice({
-  name: "productsOfTheDay",
+  name: 'productsOfTheDay',
   initialState,
   reducers: {},
 });

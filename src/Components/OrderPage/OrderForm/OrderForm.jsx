@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { useFormik } from "formik";
+import { useFormik } from 'formik';
 
-import { getUserData } from "../../../utils";
-import styles from "./OrderForm.module.scss";
-import { useSelector } from "react-redux";
-import OrderBasket from "../OrderBasket/OrderBasket";
+import { getUserData } from '../../../utils';
+import styles from './OrderForm.module.scss';
+import { useSelector } from 'react-redux';
+import OrderBasket from '../OrderBasket/OrderBasket';
 
 const OrderForm = ({ setOrderStatus }) => {
   const { email } = getUserData();
@@ -14,13 +14,13 @@ const OrderForm = ({ setOrderStatus }) => {
   // Инициализация useFormik
   const formik = useFormik({
     initialValues: {
-      name: "",
-      address: "",
-      phone: "",
+      name: '',
+      address: '',
+      phone: '',
     },
     onSubmit: (values) => {
-      console.log("Данные формы:", values);
-      console.log("Корзина:", basket);
+      console.log('Данные формы:', values);
+      console.log('Корзина:', basket);
       setOrderStatus(true);
     },
   });

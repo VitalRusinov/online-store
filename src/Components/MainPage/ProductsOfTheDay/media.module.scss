@@ -16,11 +16,10 @@
       box-sizing: border-box;
       scrollbar-width: none; /* Для Firefox */
       -ms-overflow-style: none; /* Для Internet Explorer 10+ */
-    
-    
-    &::-webkit-scrollbar {
-      display: none; /* Для Chrome, Safari и Edge */
-    }
+
+      &::-webkit-scrollbar {
+        display: none; /* Для Chrome, Safari и Edge */
+      }
 
       &::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.2);

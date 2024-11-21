@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { categoriesInitialState } from "./initialStates/categoriesInitialState";
+import { createSlice } from '@reduxjs/toolkit';
+import { categoriesInitialState } from './initialStates/categoriesInitialState';
 
 const initialState = categoriesInitialState;
 
 const categoriesSlice = createSlice({
-  name: "categories",
+  name: 'categories',
   initialState,
   reducers: {},
 });

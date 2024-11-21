@@ -48,8 +48,8 @@ export const { addProduct, decrementProduct, removeProduct } = basketsSlice.acti
 export default basketsSlice.reducer;
 */
 
-import { createSlice } from "@reduxjs/toolkit";
-import { getUserData, setUserData } from "../utils";
+import { createSlice } from '@reduxjs/toolkit';
+import { getUserData, setUserData } from '../utils';
 
 const user = getUserData();
 const { email, basket } = user;
@@ -61,7 +61,7 @@ const initialState = {
 };
 
 const basketsSlice = createSlice({
-  name: "baskets",
+  name: 'baskets',
   initialState,
   reducers: {
     addNewUserBasket(state) {

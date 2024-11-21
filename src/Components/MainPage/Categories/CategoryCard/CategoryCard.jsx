@@ -1,12 +1,8 @@
-import { useSelector } from "react-redux";
-import styles from "./CategoryCard.module.scss";
-import classNames from "classnames";
+import { useSelector } from 'react-redux';
+import styles from './CategoryCard.module.scss';
+import classNames from 'classnames';
 
-const CategoryCard = ({
-  category,
-  activeCategory,
-  setActiveCategory,
-}) => {
+const CategoryCard = ({ category, activeCategory, setActiveCategory }) => {
   const { image, name, categoryIdent } = category;
 
   const handleClick = () => {
@@ -22,7 +18,7 @@ const CategoryCard = ({
 
   let categoryCardClasses = classNames(
     styles.categoriesCard,
-    categoryIdent === activeCategory?.categoryIdent ? styles.active : "",
+    categoryIdent === activeCategory?.categoryIdent ? styles.active : ''
   );
 
   return (

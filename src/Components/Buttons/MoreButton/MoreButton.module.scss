@@ -1,4 +1,4 @@
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .button_container {
   position: relative;
@@ -17,10 +17,10 @@ $lime: #D9FF5A;
 
   &:hover {
     transition-duration: 0.3s;
-    transition-timing-function: ease-out;   
+    transition-timing-function: ease-out;
     transform: scale(1.05); /* Увеличение при наведении */
   }
-  
+
   .ellipse_front {
     position: absolute;
     width: 100%;
@@ -31,11 +31,11 @@ $lime: #D9FF5A;
     background: rgba(255, 255, 255, 0.1);
     z-index: 1;
   }
-  
+
   .icon {
     position: absolute;
     top: calc(50% + 1.7rem);
-    left:calc(50% - 0.3rem);
+    left: calc(50% - 0.3rem);
     transform: translate(-50%, -50%);
     z-index: 2;
   }
@@ -49,7 +49,3 @@ $lime: #D9FF5A;
     z-index: 2;
   }
 }
-
-
-
-

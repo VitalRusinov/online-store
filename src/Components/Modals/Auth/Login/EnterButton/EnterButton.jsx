@@ -1,5 +1,5 @@
-import styles from "./EnterButton.module.scss";
-import classNames from "classnames";
+import styles from './EnterButton.module.scss';
+import classNames from 'classnames';
 
 const EnterButton = ({ handleSubmit, isSubmitting }) => {
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);

@@ -1,11 +1,11 @@
-const defaultIdentifier = "elfenLied";
+const defaultIdentifier = 'elfenLied';
 
 const getUserData = (identifier = defaultIdentifier) => {
   const userData = localStorage.getItem(identifier);
   if (!userData) {
     const guestData = {
-      email: "guest",
-      password: "",
+      email: 'guest',
+      password: '',
       auth: false,
       likes: [],
       basket: {},
@@ -22,8 +22,8 @@ const setUserData = (data, identifier = defaultIdentifier) =>
 const removeUserData = (identifier = defaultIdentifier) => {
   localStorage.removeItem(identifier);
   setUserData({
-    email: "guest",
-    password: "",
+    email: 'guest',
+    password: '',
     auth: false,
     likes: [],
     basket: {},

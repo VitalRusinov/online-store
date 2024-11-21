@@ -1,13 +1,13 @@
-import classNames from "classnames";
-import styles from "./BasketCard.module.scss";
-import { useDispatch } from "react-redux";
+import classNames from 'classnames';
+import styles from './BasketCard.module.scss';
+import { useDispatch } from 'react-redux';
 
 import {
   addProduct,
   decrementProduct,
   removeProduct,
-} from "../../../../store/basketsSlice";
-import { getPrice } from "../../../../utils";
+} from '../../../../store/basketsSlice';
+import { getPrice } from '../../../../utils';
 
 import { ReactComponent as DeleteButton } from '../../../../assets/svg/DeleteButton.svg';
 

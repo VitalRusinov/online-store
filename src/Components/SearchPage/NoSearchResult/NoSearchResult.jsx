@@ -1,5 +1,5 @@
-import styles from "./NoSearchResult.module.scss";
-import No_results from "./No_results.png";
+import styles from './NoSearchResult.module.scss';
+import No_results from './No_results.png';
 
 const NoSearchResult = () => {
   return (

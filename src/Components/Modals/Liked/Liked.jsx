@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useContext, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-import styles from "./Liked.module.scss";
-import { getUserData } from "../../../utils";
-import LikedCard from "./LikedCard/LikedCard";
-import ModalContext from "../../../context/ModalContext";
-import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
+import styles from './Liked.module.scss';
+import { getUserData } from '../../../utils';
+import LikedCard from './LikedCard/LikedCard';
+import ModalContext from '../../../context/ModalContext';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 import { ReactComponent as CloseButton } from '../../../assets/svg/CloseButton.svg';
 
@@ -27,13 +27,13 @@ const Liked = () => {
   useEffect(() => {
     // Отключаем скролл основного окна при монтировании компонента
     if (window.innerWidth < 500) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
-  }, []); 
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -53,7 +53,6 @@ const Liked = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

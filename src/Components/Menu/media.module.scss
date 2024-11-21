@@ -7,9 +7,7 @@
 }
 
 @media (max-width: 500px) and (orientation: portrait) {
-
   .menu_container {
-
     & svg {
       width: 25px;
       height: 25px;
@@ -18,7 +16,7 @@
     .desctop_container {
       display: none;
     }
-  
+
     .mobile_container {
       display: flex;
       justify-content: space-between;
@@ -38,5 +36,4 @@
       }
     }
   }
-
 }

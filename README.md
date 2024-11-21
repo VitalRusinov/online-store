@@ -29,15 +29,19 @@
 ### 💡 Установка
 
 1. Клонируйте репозиторий:
-  ```bash
-   git clone https://github.com/VitalRusinov/online-store.git
-  ```
+
+```bash
+ git clone https://github.com/VitalRusinov/online-store.git
+```
 
 2. Установите зависимости:
-  ```bash
-   npm install
-  ```
+
+```bash
+ npm install
+```
+
 3. Запустите проект:
-  ```bash
-   npm start
-  ```
+
+```bash
+ npm start
+```

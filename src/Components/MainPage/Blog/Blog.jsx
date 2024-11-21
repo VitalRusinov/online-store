@@ -1,7 +1,7 @@
 import React from 'react';
-import { useSelector } from "react-redux";
-import styles from "./Blog.module.scss";
-import NewsCard from "./NewsCard/NewsCard";
+import { useSelector } from 'react-redux';
+import styles from './Blog.module.scss';
+import NewsCard from './NewsCard/NewsCard';
 
 const Blog = () => {
   const newsList = useSelector((state) => state.news.entries);

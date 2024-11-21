@@ -1,6 +1,6 @@
-$lime: #D9FF5A;
-$pink: #FA8FEF;
-$lavender: #AE97E8;
+$lime: #d9ff5a;
+$pink: #fa8fef;
+$lavender: #ae97e8;
 
 .categoriesCard {
   width: 22vw;
@@ -91,7 +91,7 @@ $lavender: #AE97E8;
     transition-timing-function: ease-out;
     .svg {
       width: 100%;
-      g{
+      g {
         text {
           font-size: 1rem;
         }
@@ -108,7 +108,7 @@ $lavender: #AE97E8;
     z-index: 1;
 
     transition-duration: 0.3s;
-    transition-timing-function: ease-out;   
+    transition-timing-function: ease-out;
 
     img {
       width: 100%;

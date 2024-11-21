@@ -1,23 +1,25 @@
-import { useState, useContext } from "react";
-import { useSelector } from "react-redux";
-import classNames from "classnames";
+import { useState, useContext } from 'react';
+import { useSelector } from 'react-redux';
+import classNames from 'classnames';
 
-import styles from "./ProductsOfTheDay.module.scss";
-import BuyButton from "../../Buttons/BuyButton/BuyButton";
+import styles from './ProductsOfTheDay.module.scss';
+import BuyButton from '../../Buttons/BuyButton/BuyButton';
 
-import modalTypes from "../../Modals/modalTypes";
-import ModalContext from "../../../context/ModalContext";
-import { getPrice } from "../../../utils";
-import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
+import modalTypes from '../../Modals/modalTypes';
+import ModalContext from '../../../context/ModalContext';
+import { getPrice } from '../../../utils';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 const ProductsOfTheDay = () => {
   const { openModal } = useContext(ModalContext);
 
   const [activeProduct, setActiveProduct] = useState(null);
 
-  const allProducts = useGetAllProducts()
+  const allProducts = useGetAllProducts();
 
-  const productsOfTheDayIdList = useSelector((state) => state.productsOfTheDay.entries);
+  const productsOfTheDayIdList = useSelector(
+    (state) => state.productsOfTheDay.entries
+  );
 
   const productsOfTheDayList = [];
   productsOfTheDayIdList.forEach((id) => {
@@ -36,8 +38,7 @@ const ProductsOfTheDay = () => {
 
   const formattedSliceCount = (num) => {
     return String(num).padStart(2, '0');
-  }
-
+  };
 
   return (
     <div className={styles.productsOfTheDayContainer} id="productsOfTheDay">

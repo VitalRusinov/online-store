@@ -1,4 +1,4 @@
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .button_container {
   position: relative;
@@ -15,7 +15,7 @@ $lime: #D9FF5A;
 
   &:hover {
     transition-duration: 0.3s;
-    transition-timing-function: ease-out;   
+    transition-timing-function: ease-out;
     transform: scale(1.05); /* Увеличение при наведении */
   }
 
@@ -25,26 +25,26 @@ $lime: #D9FF5A;
     height: 100%;
     border-radius: 100%; /* Делаем эллипс */
   }
-  
+
   .ellipse_back {
     border: 2px $lime solid;
     transform: rotate(-2deg); /* Наклон назад */
   }
-  
+
   .ellipse_front {
     border: 2px $lime solid;
     transform: rotate(-13deg); /* Наклон назад */
     background: rgba(255, 255, 255, 0.1);
     z-index: 1;
   }
-  
+
   .icon {
     position: relative;
     z-index: 2;
     color: #333;
     margin-right: 0.6rem;
   }
-  
+
   .text {
     font-weight: 500;
     font-size: 1.25rem;
@@ -55,7 +55,3 @@ $lime: #D9FF5A;
     z-index: 2;
   }
 }
-
-
-
-

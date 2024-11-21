@@ -1,14 +1,14 @@
-import React, { useState, useContext } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import React, { useState, useContext } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
-import ModalContext from "../../../../context/ModalContext";
-import styles from "./Login.module.scss";
-import EnterButton from "./EnterButton/EnterButton";
-import { setUserData } from "../../../../utils";
-import ModalTypes from "../../modalTypes";
-import { addNewUserBasket } from "../../../../store/basketsSlice";
+import ModalContext from '../../../../context/ModalContext';
+import styles from './Login.module.scss';
+import EnterButton from './EnterButton/EnterButton';
+import { setUserData } from '../../../../utils';
+import ModalTypes from '../../modalTypes';
+import { addNewUserBasket } from '../../../../store/basketsSlice';
 
 import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
 import { ReactComponent as RightArrow } from '../../../../assets/svg/RightArrow.svg';
@@ -16,12 +16,12 @@ import { ReactComponent as RightArrow } from '../../../../assets/svg/RightArrow.
 // Схема валидации с использованием Yup
 const validationSchema = Yup.object({
   email: Yup.string()
-    .email("Некорректный e-mail")
-    .required("Поле обязательно")
+    .email('Некорректный e-mail')
+    .required('Поле обязательно')
     .trim(),
   password: Yup.string()
-    .min(6, "Минимальная длина - 6 символов")
-    .required("Поле обязательно"),
+    .min(6, 'Минимальная длина - 6 символов')
+    .required('Поле обязательно'),
 });
 
 const Login = () => {
@@ -35,19 +35,19 @@ const Login = () => {
 
   // Начальные значения полей формы
   const initialValues = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   };
 
   // Функция, вызываемая при отправке формы
   const handleSubmit = (values) => {
     const user = users.find((u) => u.email === values.email);
     if (!user) {
-      setLoginError("Данный пользователь не зарегистрирован");
+      setLoginError('Данный пользователь не зарегистрирован');
       return;
     }
     if (user.password !== values.password) {
-      setLoginError("Введен неверный пароль");
+      setLoginError('Введен неверный пароль');
       return;
     }
     setLoginError(null);
@@ -122,7 +122,6 @@ const Login = () => {
         </button>
       </div>
     </div>
-    
   );
 };
 

@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./NewsCard.module.scss";
+import React from 'react';
+import styles from './NewsCard.module.scss';
 
 import { ReactComponent as BlogCard } from '../../../../assets/svg/BlogCard.svg';
 

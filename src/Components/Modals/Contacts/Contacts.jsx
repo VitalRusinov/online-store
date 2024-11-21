@@ -1,8 +1,8 @@
-import { useContext, useEffect } from "react";
-import styles from "./Contacts.module.scss";
-import { useFormik } from "formik";
-import YandexMap from "./YandexMap/YandexMap";
-import ModalContext from "../../../context/ModalContext";
+import { useContext, useEffect } from 'react';
+import styles from './Contacts.module.scss';
+import { useFormik } from 'formik';
+import YandexMap from './YandexMap/YandexMap';
+import ModalContext from '../../../context/ModalContext';
 
 import { ReactComponent as CloseButton } from '../../../assets/svg/CloseButton.svg';
 import { ReactComponent as DownArrow } from '../../../assets/svg/DownArrow.svg';
@@ -15,20 +15,20 @@ const Contacts = () => {
   const { closeModal } = useContext(ModalContext);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = 'unset';
     };
   }, []);
 
   // Инициализация useFormik
   const formik = useFormik({
     initialValues: {
-      email: "",
-      message: "",
+      email: '',
+      message: '',
     },
     onSubmit: (values) => {
-      console.log("Сообщение от клиента:", values);
+      console.log('Сообщение от клиента:', values);
     },
   });
 

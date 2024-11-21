@@ -1,12 +1,12 @@
 $green: #32b318;
 $lazure: #21e6ec;
 $orange: #f7a438;
-$likePink: #FFB1F7;
-$pink: #FA8FEF;
-$lavender: #AE97E8;
+$likePink: #ffb1f7;
+$pink: #fa8fef;
+$lavender: #ae97e8;
 $darklavender: #5c4597;
 $blue: #0e0af3;
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .card {
   width: 100%;
@@ -46,7 +46,7 @@ $lime: #D9FF5A;
             height: 1rem;
             border-radius: 100%;
             border: 3px white solid;
-        
+
             &.green {
               background-color: $green;
             }
@@ -74,7 +74,7 @@ $lime: #D9FF5A;
             color: white;
           }
         }
-        
+
         .product {
           span {
             font-weight: 500;
@@ -91,7 +91,7 @@ $lime: #D9FF5A;
       width: 100%;
       height: 0px;
     }
-    
+
     .underLine {
       display: flex;
       justify-content: space-between;
@@ -113,7 +113,6 @@ $lime: #D9FF5A;
           font-weight: 400;
           font-size: 0.8125rem;
           color: white;
-
         }
       }
 
@@ -129,6 +128,6 @@ $lime: #D9FF5A;
           color: white;
         }
       }
-    }    
+    }
   }
 }

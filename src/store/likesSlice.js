@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { getUserData, setUserData } from "../utils";
+import { createSlice } from '@reduxjs/toolkit';
+import { getUserData, setUserData } from '../utils';
 
 const userData = getUserData();
 const { email, likes } = userData;
@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const likesSlice = createSlice({
-  name: "likes",
+  name: 'likes',
   initialState,
   reducers: {
     addLike(state, action) {

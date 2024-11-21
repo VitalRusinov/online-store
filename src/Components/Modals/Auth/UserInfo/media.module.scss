@@ -9,14 +9,13 @@
     padding: 15px;
     box-sizing: border-box;
     backdrop-filter: blur(10px); /* Применение размытия */
-    
+
     .userInfo {
       height: auto;
       border-radius: 30px;
       padding: 23px 15px;
       justify-content: start;
       gap: 35px;
-
 
       .closeButton {
         width: 2.5rem;
@@ -25,5 +24,5 @@
         right: 1rem;
       }
     }
-  }  
+  }
 }

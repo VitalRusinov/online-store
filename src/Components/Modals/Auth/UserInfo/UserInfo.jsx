@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import styles from "./UserInfo.module.scss";
-import { getUserData, removeUserData } from "../../../../utils";
-import ModalTypes from "../../modalTypes";
+import styles from './UserInfo.module.scss';
+import { getUserData, removeUserData } from '../../../../utils';
+import ModalTypes from '../../modalTypes';
 
-import ExitButton from "./ExitButton/ExitButton";
-import ModalContext from "../../../../context/ModalContext";
-import { addNewUserBasket } from "../../../../store/basketsSlice";
-import { useDispatch } from "react-redux";
+import ExitButton from './ExitButton/ExitButton';
+import ModalContext from '../../../../context/ModalContext';
+import { addNewUserBasket } from '../../../../store/basketsSlice';
+import { useDispatch } from 'react-redux';
 
 import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
 

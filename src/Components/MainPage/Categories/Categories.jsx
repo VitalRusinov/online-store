@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import styles from "./Categories.module.scss";
-import CategoryCard from "./CategoryCard/CategoryCard";
-import ProductCard from "./ProductCard/ProductCard";
-import MoreButton from "../../Buttons/MoreButton/MoreButton";
-import Filter from "./Filter/Filter";
-import { getPrice } from "../../../utils";
-import MobileModalProductsList from "./MobileModalProductsList/MobileModalProductsList";
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import styles from './Categories.module.scss';
+import CategoryCard from './CategoryCard/CategoryCard';
+import ProductCard from './ProductCard/ProductCard';
+import MoreButton from '../../Buttons/MoreButton/MoreButton';
+import Filter from './Filter/Filter';
+import { getPrice } from '../../../utils';
+import MobileModalProductsList from './MobileModalProductsList/MobileModalProductsList';
 
 const Categories = () => {
   const [activeCategory, setActiveCategory] = useState(null);
@@ -26,13 +26,13 @@ const Categories = () => {
   const categoriesList = useSelector((state) => state.categories.entries);
 
   const fullProductsList = useSelector(
-    (state) => state[activeCategory?.categoryIdent]?.entries,
+    (state) => state[activeCategory?.categoryIdent]?.entries
   );
   const priceFiltered = fullProductsList
     ?.filter((prod) => getPrice(prod.price) <= maxPrice)
     .filter((prod) => getPrice(prod.price) >= minPrice);
   const filteredList = priceFiltered?.filter((prod) =>
-    colorsFilter?.includes(prod.color),
+    colorsFilter?.includes(prod.color)
   );
   const productsList = filteredList?.slice(0, productsCount);
 
@@ -111,15 +111,15 @@ const Categories = () => {
             );
           })}
       </div>
-      {fullProductsList && isMobile &&
+      {fullProductsList && isMobile && (
         <div className={styles.mobile_productsList}>
-          <MobileModalProductsList 
+          <MobileModalProductsList
             list={fullProductsList}
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}
-            />
+          />
         </div>
-      }
+      )}
       <div className={styles.more_Button}>
         {productsList && filteredList?.length > productsList?.length && (
           <MoreButton

@@ -1,10 +1,10 @@
 $green: #32b318;
 $lazure: #21e6ec;
 $orange: #f7a438;
-$pink: #FA8FEF;
-$lavender: #AE97E8;
+$pink: #fa8fef;
+$lavender: #ae97e8;
 $blue: #0e0af3;
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .productCard_container {
   width: calc(200px + 4vw);
@@ -23,7 +23,7 @@ $lime: #D9FF5A;
       height: 1.125rem;
       border-radius: 100%;
       border: 0.25rem white solid;
-  
+
       &.green {
         background-color: $green;
       }
@@ -79,7 +79,7 @@ $lime: #D9FF5A;
       width: 100%;
       height: 0px;
     }
-    
+
     .price {
       position: absolute;
       bottom: 0;

@@ -1,4 +1,4 @@
-$yellow: #D9FF5A;
+$yellow: #d9ff5a;
 
 .button_container {
   position: relative;
@@ -16,10 +16,10 @@ $yellow: #D9FF5A;
 
   &:hover {
     transition-duration: 0.3s;
-    transition-timing-function: ease-out;   
+    transition-timing-function: ease-out;
     transform: scale(1.05);
   }
-  
+
   .ellipse_front {
     position: absolute;
     width: 7.5rem;

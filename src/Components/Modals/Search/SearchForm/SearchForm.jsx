@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import styles from "./SearchForm.module.scss";
+import { useEffect, useRef, useState } from 'react';
+import styles from './SearchForm.module.scss';
 
 import { ReactComponent as Loupe } from '../../../../assets/svg/Loupe.svg';
 import { ReactComponent as CloseButton } from '../../../../assets/svg/CloseButton.svg';
 
-const SearchForm = ({ string = "", submit }) => {
+const SearchForm = ({ string = '', submit }) => {
   const [searchStr, setSearchStr] = useState(string);
   const inputRef = useRef(null); // Создаем реф для input
 
@@ -18,7 +18,7 @@ const SearchForm = ({ string = "", submit }) => {
   };
 
   const handleClear = () => {
-    setSearchStr("");
+    setSearchStr('');
     inputRef.current.focus();
   };
 

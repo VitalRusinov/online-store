@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import styles from "./BasketCard.module.scss";
-import { useDispatch } from "react-redux";
+import classNames from 'classnames';
+import styles from './BasketCard.module.scss';
+import { useDispatch } from 'react-redux';
 
-import { removeProduct } from "../../../../store/basketsSlice";
+import { removeProduct } from '../../../../store/basketsSlice';
 
 import { ReactComponent as DeleteButton } from '../../../../assets/svg/DeleteButton.svg';
 

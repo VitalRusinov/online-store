@@ -1,4 +1,4 @@
-import { getUserData } from "./localStorageFn";
+import { getUserData } from './localStorageFn';
 
 const sale = 0.2;
 

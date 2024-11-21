@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./MoreButton.module.scss";
-import classNames from "classnames";
+import React from 'react';
+import styles from './MoreButton.module.scss';
+import classNames from 'classnames';
 
 import { ReactComponent as MoreArrow } from '../../../assets/svg/MoreArrow.svg';
 
@@ -22,4 +22,3 @@ const MoreButton = ({ productsCount, setProductsCount }) => {
 };
 
 export default MoreButton;
-

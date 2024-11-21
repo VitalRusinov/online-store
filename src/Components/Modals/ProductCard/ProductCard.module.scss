@@ -1,12 +1,12 @@
 $green: #32b318;
 $lazure: #21e6ec;
 $orange: #f7a438;
-$likePink: #FFB1F7;
-$pink: #FA8FEF;
-$lavender: #AE97E8;
+$likePink: #ffb1f7;
+$pink: #fa8fef;
+$lavender: #ae97e8;
 $darklavender: #5c4597;
 $blue: #0e0af3;
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .productCard {
   position: fixed;
@@ -21,7 +21,7 @@ $lime: #D9FF5A;
   background-color: $lavender;
 
   transition-duration: 0.3s;
-  transition-timing-function: ease-out;  
+  transition-timing-function: ease-out;
 
   button {
     background-color: rgba(255, 255, 255, 0);
@@ -78,7 +78,7 @@ $lime: #D9FF5A;
       border: 3px white solid;
       margin-left: 1.2vw;
       margin-right: 0.5vw;
-  
+
       &.green {
         background-color: #32b318;
       }
@@ -89,10 +89,10 @@ $lime: #D9FF5A;
         background-color: #f7a438;
       }
       &.pink {
-        background-color: #FA8FEF;
+        background-color: #fa8fef;
       }
       &.lavender {
-        background-color: #AE97E8;
+        background-color: #ae97e8;
       }
       &.blue {
         background-color: #0e0af3;
@@ -107,7 +107,7 @@ $lime: #D9FF5A;
 
     width: 35ch;
     margin-top: auto;
-    
+
     span {
       font-weight: 500;
       font-size: calc(0.6875rem + 0.5vw);
@@ -164,7 +164,7 @@ $lime: #D9FF5A;
       vertical-align: top;
       color: $lime;
     }
-  }  
+  }
 
   .closeButton {
     position: absolute;
@@ -205,7 +205,7 @@ $lime: #D9FF5A;
 
     svg {
       width: calc(22px + 0.6vw);
-      height: calc(20px + 0.6vw); 
+      height: calc(20px + 0.6vw);
     }
 
     &.notLike {
@@ -219,7 +219,7 @@ $lime: #D9FF5A;
         }
       }
     }
-    
+
     &.like {
       border: 2px solid $likePink;
       svg {

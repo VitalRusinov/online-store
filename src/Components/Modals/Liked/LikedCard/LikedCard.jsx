@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import styles from "./LikedCard.module.scss";
-import { useDispatch } from "react-redux";
-import { removeLike } from "../../../../store/likesSlice";
-import { getUserData } from "../../../../utils";
+import classNames from 'classnames';
+import styles from './LikedCard.module.scss';
+import { useDispatch } from 'react-redux';
+import { removeLike } from '../../../../store/likesSlice';
+import { getUserData } from '../../../../utils';
 
 import { ReactComponent as Like } from '../../../../assets/svg/Like.svg';
 

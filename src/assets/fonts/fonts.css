@@ -1,9 +1,11 @@
 @font-face {
   font-family: 'LeMurmure';
   src: url('./LeMurmure/LeMurmure-Regular.eot');
-  src: local('LeMurmureRegular'), local('LeMurmure-Regular'),
-      url('./LeMurmure/LeMurmure-Regular.eot?#iefix') format('embedded-opentype'),
-      url('./LeMurmure/LeMurmure-Regular.woff2') format('woff2');
+  src:
+    local('LeMurmureRegular'),
+    local('LeMurmure-Regular'),
+    url('./LeMurmure/LeMurmure-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./LeMurmure/LeMurmure-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,14 +44,16 @@
 
 @font-face {
   font-family: 'Euclid'; /* Название может быть другое, если это отдельный стиль */
-  src: url('./Euclid-circular-a/Euclid_Circular_A_Regular.ttf') format('truetype');
+  src: url('./Euclid-circular-a/Euclid_Circular_A_Regular.ttf')
+    format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Euclid'; /* Название может быть другое, если это отдельный стиль */
-  src: url('./Euclid-circular-a/Euclid_Circular_A_Medium.ttf') format('truetype');
+  src: url('./Euclid-circular-a/Euclid_Circular_A_Medium.ttf')
+    format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -60,4 +64,3 @@
   font-weight: bold;
   font-style: normal;
 }
-

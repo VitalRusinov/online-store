@@ -1,4 +1,4 @@
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .form_container {
   width: calc(60vw - 270px);
@@ -21,7 +21,7 @@ $lime: #D9FF5A;
     text-transform: uppercase;
     color: white;
   }
-  
+
   .form {
     width: 100%;
     height: 33vh;
@@ -39,14 +39,14 @@ $lime: #D9FF5A;
       color: #fff;
       border-bottom: 2px solid $lime;
       transition: border-color 0.3s;
-  
+
       &::placeholder {
         font-weight: 500;
         font-size: 1rem;
         text-transform: uppercase;
         color: white;
       }
-    }    
+    }
   }
 
   .mobile_basket {
@@ -81,4 +81,3 @@ $lime: #D9FF5A;
 }
 
 @import './media.module.scss';
-

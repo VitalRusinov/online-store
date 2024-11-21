@@ -1,8 +1,8 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { addProduct } from "../../../store/basketsSlice";
-import styles from "./BuyButton.module.scss";
-import classNames from "classnames";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../../store/basketsSlice';
+import styles from './BuyButton.module.scss';
+import classNames from 'classnames';
 
 import { ReactComponent as Basket } from '../../../assets/svg/Basket.svg';
 

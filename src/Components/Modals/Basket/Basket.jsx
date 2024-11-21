@@ -1,12 +1,12 @@
-import React, { useContext, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useContext, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-import styles from "./Basket.module.scss";
-import { getPrice, getUserData } from "../../../utils";
-import BasketCard from "./BasketCard/BasketCard";
-import OrderButton from "./OrderButton/OrderButton";
-import ModalContext from "../../../context/ModalContext";
-import { useGetAllProducts } from "../../../hooks/useGetAllProducts";
+import styles from './Basket.module.scss';
+import { getPrice, getUserData } from '../../../utils';
+import BasketCard from './BasketCard/BasketCard';
+import OrderButton from './OrderButton/OrderButton';
+import ModalContext from '../../../context/ModalContext';
+import { useGetAllProducts } from '../../../hooks/useGetAllProducts';
 
 import { ReactComponent as CloseButton } from '../../../assets/svg/CloseButton.svg';
 
@@ -31,14 +31,13 @@ const Basket = () => {
   useEffect(() => {
     // Отключаем скролл основного окна при монтировании компонента
     if (window.innerWidth < 500) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, []);
-
 
   return (
     <div className={styles.container}>

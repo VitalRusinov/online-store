@@ -1,5 +1,5 @@
-$lime: #D9FF5A;
-$lavender: #AE97E8;
+$lime: #d9ff5a;
+$lavender: #ae97e8;
 
 .newsCard_container {
   width: calc(300px + 16vw);
@@ -10,7 +10,7 @@ $lavender: #AE97E8;
   overflow: hidden;
 
   svg {
-    width: 100%
+    width: 100%;
   }
 
   .readingTime {
@@ -98,7 +98,7 @@ $lavender: #AE97E8;
       display: inline-block;
       text-align: right;
       font-weight: 500;
-      font-size: calc(0.75rem + 0.3vw);      
+      font-size: calc(0.75rem + 0.3vw);
       color: white;
     }
   }
@@ -118,7 +118,7 @@ $lavender: #AE97E8;
       font-size: calc(0.75rem + 0.8vw);
       text-transform: uppercase;
       color: white;
-    }    
+    }
   }
 
   .date {
@@ -143,7 +143,7 @@ $lavender: #AE97E8;
       background: $lime;
       p {
         color: $lavender;
-      }  
+      }
     }
 
     .img_container {

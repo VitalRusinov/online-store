@@ -1,5 +1,5 @@
-import styles from "./ExitButton.module.scss";
-import classNames from "classnames";
+import styles from './ExitButton.module.scss';
+import classNames from 'classnames';
 
 const ExitButton = ({ handleSubmit }) => {
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);

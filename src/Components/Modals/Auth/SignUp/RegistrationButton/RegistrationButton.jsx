@@ -1,5 +1,5 @@
-import styles from "./RegistrationButton.module.scss";
-import classNames from "classnames";
+import styles from './RegistrationButton.module.scss';
+import classNames from 'classnames';
 
 const RegistrationButton = ({ handleSubmit, isSubmitting }) => {
   const ellipseFrontClasses = classNames(styles.ellipse, styles.ellipse_front);

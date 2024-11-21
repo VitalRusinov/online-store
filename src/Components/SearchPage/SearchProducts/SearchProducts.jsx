@@ -1,6 +1,6 @@
-import styles from "./SearchProducts.module.scss";
-import ProductCard from "../../MainPage/Categories/ProductCard/ProductCard";
-import MobileProductCard from "../../MainPage/Categories/MobileModalProductsList/MobileProductCard/MobileProductCard";
+import styles from './SearchProducts.module.scss';
+import ProductCard from '../../MainPage/Categories/ProductCard/ProductCard';
+import MobileProductCard from '../../MainPage/Categories/MobileModalProductsList/MobileProductCard/MobileProductCard';
 
 const SearchProducts = ({ productsList }) => {
   return (

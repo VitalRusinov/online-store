@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { useDispatch } from "react-redux";
-import styles from "./ProductCard.module.scss";
-import classNames from "classnames";
-import { addProduct } from "../../../../store/basketsSlice";
-import modalTypes from "../../../Modals/modalTypes";
-import ModalContext from "../../../../context/ModalContext";
-import { getPrice } from "../../../../utils";
+import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
+import styles from './ProductCard.module.scss';
+import classNames from 'classnames';
+import { addProduct } from '../../../../store/basketsSlice';
+import modalTypes from '../../../Modals/modalTypes';
+import ModalContext from '../../../../context/ModalContext';
+import { getPrice } from '../../../../utils';
 
 import { ReactComponent as Basket } from '../../../../assets/svg/Basket.svg';
 

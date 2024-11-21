@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-import MainPage from "./Components/MainPage/MainPage";
-import OrderPage from "./Components/OrderPage/OrderPage";
-import SearchPage from "./Components/SearchPage/SearchPage";
+import MainPage from './Components/MainPage/MainPage';
+import OrderPage from './Components/OrderPage/OrderPage';
+import SearchPage from './Components/SearchPage/SearchPage';
 
-import { pages } from "./utils";
-import Menu from "./Components/Menu/Menu";
+import { pages } from './utils';
+import Menu from './Components/Menu/Menu';
 
 const ScrollToSection = () => {
   const location = useLocation();

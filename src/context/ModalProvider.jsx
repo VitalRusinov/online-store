@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from "react";
-import ModalContext from "./ModalContext.js";
+import React, { useState, useMemo } from 'react';
+import ModalContext from './ModalContext.js';
 
 const ModalProvider = ({ children }) => {
   const [modalInfo, setModalInfo] = useState({ type: null, payload: null });
@@ -10,7 +10,7 @@ const ModalProvider = ({ children }) => {
 
   const props = useMemo(
     () => ({ modalInfo, openModal, closeModal }),
-    [modalInfo],
+    [modalInfo]
   );
   return (
     <ModalContext.Provider value={props}>{children}</ModalContext.Provider>

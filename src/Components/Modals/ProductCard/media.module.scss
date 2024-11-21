@@ -10,7 +10,7 @@
       overflow-wrap: break-word;
     }
 
-    .color {     
+    .color {
       top: 39%;
       left: auto;
       right: calc(10px + 2.5vw);
@@ -24,7 +24,7 @@
 
     .description {
       width: 25ch;
-      bottom: 30%
+      bottom: 30%;
     }
 
     .name {
@@ -51,10 +51,9 @@
       justify-content: end;
       gap: 0.625rem;
     }
-    
+
     .buy {
       bottom: 15%;
-      
     }
   }
 }

@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { getUserData } from "../utils";
+import { createSlice } from '@reduxjs/toolkit';
+import { getUserData } from '../utils';
 
 const userData = getUserData();
 
@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
   reducers: {
     addUser: (state, action) => {

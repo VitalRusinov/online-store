@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
+import React, { useState } from 'react';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
-import styles from "./Filter.module.scss";
+import styles from './Filter.module.scss';
 
 import { ReactComponent as FilterSVG } from '../../../../assets/svg/Filter.svg';
 
@@ -26,13 +26,13 @@ const Filter = ({
   }, {});
 
   const handleMinChange = (e) => {
-    const value = e.target.value.replace(/\s/g, "").replace(/[^\d]/g, "");
+    const value = e.target.value.replace(/\s/g, '').replace(/[^\d]/g, '');
     const numberValue = value ? Math.min(Number(value), maxPrice) : 0;
     setMinPrice(numberValue);
   };
 
   const handleMaxChange = (e) => {
-    const value = e.target.value.replace(/\s/g, "").replace(/[^\d]/g, "");
+    const value = e.target.value.replace(/\s/g, '').replace(/[^\d]/g, '');
     const numberValue = value ? Math.max(Number(value), minPrice) : 0;
     setMaxPrice(numberValue);
   };
@@ -55,7 +55,7 @@ const Filter = ({
   };
 
   const formatPrice = (price) => {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   };
 
   return (
@@ -88,9 +88,9 @@ const Filter = ({
               onChange={handleSliderChange}
               step={1000}
               styles={{
-                rail: { backgroundColor: "white", height: 3, borderRadius: 72 }, // Задний трек
+                rail: { backgroundColor: 'white', height: 3, borderRadius: 72 }, // Задний трек
                 track: {
-                  backgroundColor: "#D9FF5A",
+                  backgroundColor: '#D9FF5A',
                   height: 3,
                   borderRadius: 72,
                 }, // Активный трек
@@ -98,10 +98,10 @@ const Filter = ({
                   width: 25,
                   height: 25,
                   marginTop: -8, // Центрирование ползунка относительно трека
-                  backgroundColor: "#D9FF5A", // Внутренний круг (первый цвет)
-                  borderRadius: "50%",
-                  border: "5px solid #AE97E8", // Среднее кольцо толщиной 5px (второй цвет)
-                  boxShadow: "0 0 0 2px #D9FF5A", // Внешнее кольцо толщиной 2px (первый цвет)
+                  backgroundColor: '#D9FF5A', // Внутренний круг (первый цвет)
+                  borderRadius: '50%',
+                  border: '5px solid #AE97E8', // Среднее кольцо толщиной 5px (второй цвет)
+                  boxShadow: '0 0 0 2px #D9FF5A', // Внешнее кольцо толщиной 2px (первый цвет)
                 },
               }}
             />

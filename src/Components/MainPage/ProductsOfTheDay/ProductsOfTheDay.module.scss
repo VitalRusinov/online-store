@@ -1,7 +1,7 @@
 $lavender: #ae97e8;
 $pink: #fa8fef;
 $blue: #aecfff;
-$lime: #D9FF5A;
+$lime: #d9ff5a;
 
 .productsOfTheDayContainer {
   width: 100%;
@@ -36,7 +36,7 @@ $lime: #D9FF5A;
       justify-content: center;
 
       transition-duration: 1s;
-      transition-timing-function: ease-out;    
+      transition-timing-function: ease-out;
 
       //использую для изменения цвета фона
       &::after {
@@ -62,13 +62,13 @@ $lime: #D9FF5A;
         //Надпись "Товар дня"
         .designer_product {
           transition-duration: 1s;
-          transition-timing-function: ease-out;  
+          transition-timing-function: ease-out;
           font-size: 0;
         }
 
         .designer {
           transition-duration: 1s;
-          transition-timing-function: ease-out;  
+          transition-timing-function: ease-out;
           font-family: 'Floreste-Wavy';
           font-weight: 400;
           font-size: 3.75vw;
@@ -79,7 +79,7 @@ $lime: #D9FF5A;
 
       .img_container {
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
+        transition-timing-function: ease-out;
         position: absolute;
         left: 50%;
         top: calc(50% - 10vh);
@@ -142,13 +142,13 @@ $lime: #D9FF5A;
             text-transform: uppercase;
             color: white;
           }
-    
+
           .ruble {
             margin-left: 0.3em;
             font-weight: 400;
             font-size: 1.25em;
           }
-        }      
+        }
       }
 
       .button_Container {
@@ -165,7 +165,10 @@ $lime: #D9FF5A;
         position: absolute;
         top: calc(50% + 36vh);
         left: 50%;
-        transform: translate(-50%, -150%); /* Начальная позиция: чуть выше и вне видимости */
+        transform: translate(
+          -50%,
+          -150%
+        ); /* Начальная позиция: чуть выше и вне видимости */
         width: 3.7em;
         height: 5.6em;
         opacity: 0;
@@ -181,8 +184,8 @@ $lime: #D9FF5A;
       //изменение размера при наведении
       flex: 3.41;
       transition-duration: 1s;
-      transition-timing-function: ease-out;   
-              
+      transition-timing-function: ease-out;
+
       // изменение цвета фона при наведении
       &::after {
         background: rgba(255, 255, 255, 0);
@@ -192,7 +195,7 @@ $lime: #D9FF5A;
 
       .designer_container {
         transition-duration: 1s;
-        transition-timing-function: ease-out;   
+        transition-timing-function: ease-out;
         position: absolute;
         left: 50%;
         top: calc(50% - 1.25em);
@@ -203,7 +206,7 @@ $lime: #D9FF5A;
 
         .designer_product {
           transition-duration: 1s;
-          transition-timing-function: ease-out;  
+          transition-timing-function: ease-out;
           display: block;
           font-weight: 500;
           font-size: 1.125em;
@@ -212,9 +215,9 @@ $lime: #D9FF5A;
           color: $lime;
         }
 
-        .designer{
+        .designer {
           transition-duration: 1s;
-          transition-timing-function: ease-out;  
+          transition-timing-function: ease-out;
           font-family: 'Floreste-Wavy';
           font-weight: 400;
           font-size: 11vw;
@@ -226,7 +229,7 @@ $lime: #D9FF5A;
 
       .img_container {
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
+        transition-timing-function: ease-out;
         position: absolute;
         left: 50%;
         top: calc(50% - 2.5vh);
@@ -239,7 +242,7 @@ $lime: #D9FF5A;
 
         .image {
           transition-duration: 1s;
-          transition-timing-function: ease-out;  
+          transition-timing-function: ease-out;
 
           object-fit: contain;
           transform: rotate(0deg);
@@ -257,7 +260,7 @@ $lime: #D9FF5A;
         text-align: start;
 
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
+        transition-timing-function: ease-out;
 
         p {
           font-size: 28px;
@@ -286,19 +289,18 @@ $lime: #D9FF5A;
         transition-duration: 1s;
         transition-timing-function: ease-out;
       }
-
     }
     // Выбран другой товар
     .inactive {
       .designer_container {
         transform: scale(0);
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
+        transition-timing-function: ease-out;
       }
 
       .img_container {
         transition-duration: 1s;
-        transition-timing-function: ease-out;  
+        transition-timing-function: ease-out;
         position: absolute;
         left: 50%;
         top: calc(50% - 2vh);
@@ -319,7 +321,10 @@ $lime: #D9FF5A;
       }
 
       .slides_Container {
-        transform: translate(-50%, -50%); /* Положение по центру блока при наведении */
+        transform: translate(
+          -50%,
+          -50%
+        ); /* Положение по центру блока при наведении */
         opacity: 1; /* Видимость */
 
         p {

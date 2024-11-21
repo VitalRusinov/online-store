@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import ModalContext from "../../context/ModalContext";
-import { Link, useLocation } from "react-router-dom";
-import styles from "./Menu.module.scss";
+import React, { useContext } from 'react';
+import ModalContext from '../../context/ModalContext';
+import { Link, useLocation } from 'react-router-dom';
+import styles from './Menu.module.scss';
 
-import modalTypes from "../Modals/modalTypes";
-import { pages } from "../../utils";
+import modalTypes from '../Modals/modalTypes';
+import { pages } from '../../utils';
 
 import { ReactComponent as MenuCategories } from '../../assets/svg/MenuCategories.svg';
 import { ReactComponent as MenuSearch } from '../../assets/svg/MenuSearch.svg';
@@ -52,55 +52,67 @@ const Menu = () => {
             </button>
           </div>
         </div>
-          <div className={styles.search}>
-            <button onClick={() => searchClick(modalTypes.search)}>
-              <MenuSearch />
-              <span>Поиск</span>
-            </button>
-          </div>
-          <div className={styles.personalAccount}>
-            <div className={styles.likes}>
-              <button onClick={() => toggleModal(modalTypes.liked)}>
-                <MenuLike />
-              </button>
-            </div>
-            <div className={styles.auth}>
-              <button onClick={() => toggleModal(modalTypes.auth)}>
-                <MenuAuth />
-              </button>
-            </div>
-            <div className={styles.basket}>
-              <button onClick={() => toggleModal(modalTypes.basket)}>
-                <MenuBasket />
-              </button>
-            </div>
-          </div>
-        </div>      
-        <div className={styles.mobile_container}>
-          <Link
-            to={`${pages.main}#productsOfTheDay`}
-            className={styles.label_container}
-          >
-            <span className={styles.label}>Elfen Lied</span>
-          </Link>
-          <div className={styles.icons}>
-            <button onClick={() => searchClick(modalTypes.search)}>
+        <div className={styles.search}>
+          <button onClick={() => searchClick(modalTypes.search)}>
             <MenuSearch />
-            </button>
-            <button onClick={() => toggleModal(modalTypes.liked)} className={styles.likes}>
+            <span>Поиск</span>
+          </button>
+        </div>
+        <div className={styles.personalAccount}>
+          <div className={styles.likes}>
+            <button onClick={() => toggleModal(modalTypes.liked)}>
               <MenuLike />
             </button>
-            <button onClick={() => toggleModal(modalTypes.auth)} className={styles.auth}>
+          </div>
+          <div className={styles.auth}>
+            <button onClick={() => toggleModal(modalTypes.auth)}>
               <MenuAuth />
             </button>
-            <button onClick={() => toggleModal(modalTypes.basket)} className={styles.basket}>
+          </div>
+          <div className={styles.basket}>
+            <button onClick={() => toggleModal(modalTypes.basket)}>
               <MenuBasket />
             </button>
-            <button onClick={() => openModal(modalTypes.contacts)} className={styles.mobile_contacts}>
-              <MenuContacts />
-            </button>
-          </div>          
-      </div>      
+          </div>
+        </div>
+      </div>
+      <div className={styles.mobile_container}>
+        <Link
+          to={`${pages.main}#productsOfTheDay`}
+          className={styles.label_container}
+        >
+          <span className={styles.label}>Elfen Lied</span>
+        </Link>
+        <div className={styles.icons}>
+          <button onClick={() => searchClick(modalTypes.search)}>
+            <MenuSearch />
+          </button>
+          <button
+            onClick={() => toggleModal(modalTypes.liked)}
+            className={styles.likes}
+          >
+            <MenuLike />
+          </button>
+          <button
+            onClick={() => toggleModal(modalTypes.auth)}
+            className={styles.auth}
+          >
+            <MenuAuth />
+          </button>
+          <button
+            onClick={() => toggleModal(modalTypes.basket)}
+            className={styles.basket}
+          >
+            <MenuBasket />
+          </button>
+          <button
+            onClick={() => openModal(modalTypes.contacts)}
+            className={styles.mobile_contacts}
+          >
+            <MenuContacts />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

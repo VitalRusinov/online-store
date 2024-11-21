@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import styles from "./SearchPage.module.scss";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import styles from './SearchPage.module.scss';
 
-import SearchForm from "../Modals/Search/SearchForm/SearchForm.jsx";
-import NoSearchResult from "./NoSearchResult/NoSearchResult";
-import SearchProducts from "./SearchProducts/SearchProducts";
-import RenderModal from "../Modals/RenderModal.jsx";
-import { useGetAllProducts } from "../../hooks/useGetAllProducts.js";
+import SearchForm from '../Modals/Search/SearchForm/SearchForm.jsx';
+import NoSearchResult from './NoSearchResult/NoSearchResult';
+import SearchProducts from './SearchProducts/SearchProducts';
+import RenderModal from '../Modals/RenderModal.jsx';
+import { useGetAllProducts } from '../../hooks/useGetAllProducts.js';
 
 const getFilteredList = (allProducts, str) => {
   return allProducts.filter((prod) => {
