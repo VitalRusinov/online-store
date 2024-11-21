@@ -55,7 +55,7 @@ $lime: #d9ff5a;
 
   .orderButton {
     width: 12rem;
-    height: 6rem;
+    aspect-ratio: 2 / 1;
     position: relative;
 
     &:hover {
