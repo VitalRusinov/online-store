@@ -6,6 +6,8 @@ $lime: #d9ff5a;
 .productsOfTheDayContainer {
   width: 100%;
   height: 100vh;
+  padding-top: 7vh;
+  box-sizing: border-box;
 
   //Продукты дня 3 шт, состояние: не выбран ни один товар
   .desctop {

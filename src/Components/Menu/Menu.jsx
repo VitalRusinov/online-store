@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Menu.module.scss';
 
 import modalTypes from '../Modals/modalTypes';
-import { pages } from '../../utils';
+import { getUserData, pages } from '../../utils';
 
 import { ReactComponent as MenuCategories } from '../../assets/svg/MenuCategories.svg';
 import { ReactComponent as MenuSearch } from '../../assets/svg/MenuSearch.svg';
@@ -12,6 +12,8 @@ import { ReactComponent as MenuLike } from '../../assets/svg/MenuLike.svg';
 import { ReactComponent as MenuAuth } from '../../assets/svg/MenuAuth.svg';
 import { ReactComponent as MenuBasket } from '../../assets/svg/MenuBasket.svg';
 import { ReactComponent as MenuContacts } from '../../assets/svg/MenuContacts.svg';
+import { useSelector } from 'react-redux';
+import classNames from 'classnames';
 
 const Menu = () => {
   const { modalInfo, openModal, closeModal } = useContext(ModalContext);
@@ -28,6 +30,13 @@ const Menu = () => {
     }
     return;
   };
+
+  //Отслеживание наполненя корзины
+  const { email } = getUserData();
+  const basket = useSelector((state) => state.baskets.entities[email]);
+  const prodIdsInBasket = Object.keys(basket);
+  console.log(prodIdsInBasket, 'basket');
+  const dotClass = classNames(styles.dot, prodIdsInBasket.length === 0 ? styles.hidden: styles.visible);
 
   return (
     <div className={styles.menu_container}>
@@ -72,6 +81,7 @@ const Menu = () => {
           <div className={styles.basket}>
             <button onClick={() => toggleModal(modalTypes.basket)}>
               <MenuBasket />
+              <div className={dotClass}></div>
             </button>
           </div>
         </div>
@@ -104,6 +114,7 @@ const Menu = () => {
             className={styles.basket}
           >
             <MenuBasket />
+            <div className={styles.dot}></div>
           </button>
           <button
             onClick={() => openModal(modalTypes.contacts)}

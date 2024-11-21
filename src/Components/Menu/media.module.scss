@@ -33,6 +33,29 @@
       .icons {
         gap: 0.5rem;
         display: flex;
+
+        .basket {
+          
+            .dot {
+              width: 10px;
+              height: 10px;
+              border-radius: 100%;
+              border: 5px $lavender solid;
+              background: red;
+              position: absolute;
+              top: 0;
+              right: 60px;
+  
+              & .visible {
+                display: block;
+              }
+  
+              & .hidden {
+                display: none;
+              }
+            }
+
+        }
       }
     }
   }
