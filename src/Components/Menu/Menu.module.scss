@@ -37,6 +37,8 @@
 
     .label_container {
       width: 15ch;
+      display: flex;
+      justify-content: end;
       .label {
         font-family: 'LeMurmure';
         font-weight: 600;
@@ -63,6 +65,7 @@
       button {
         display: flex;
         align-items: center;
+        gap: 10px;
       }
     }
 

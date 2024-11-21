@@ -83,7 +83,7 @@ const ProductsOfTheDay = () => {
                 <BuyButton id={id} />
               </div>
               <div className={styles.slides_Container}>
-                <p>Слайд</p>
+                <p>{name}</p>
                 <span>{formattedSliceCount(slidesCount)}</span>
               </div>
             </div>

@@ -58,6 +58,12 @@ $lime: #d9ff5a;
     height: 6rem;
     position: relative;
 
+    &:hover {
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+      transform: scale(1.05); /* Увеличение при наведении */
+    }
+
     .ellipse {
       position: absolute;
       left: 0;
